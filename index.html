@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mano Deyvid — Tattoo Artist</title>
+  <meta name="description" content="Mano Deyvid, tatuador há 6 anos e artista premiado. Anime, realismo, black & grey, blackwork, gothic e projetos autorais. Manda sua ideia e bora tatuar.">
+  <meta name="theme-color" content="#090909">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Mano Deyvid — Tattoo Artist">
+  <meta property="og:description" content="Há 6 anos transformando ideia em desenho e desenho em pele. Bora tatuar?">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/mano-trabalhando.jpg">
+
+  <!-- Tipografia: Blackletter legível + Sans editorial -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pirata+One&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preload" as="image" href="assets/images/mano-trabalhando.jpg">
+</head>
+<body data-theme="dark">
+
+  <!-- ============================== 00 · INTRO ============================== -->
+  <div class="intro" id="intro" aria-hidden="true">
+    <div class="intro__inner">
+      <p class="intro__name font-display">Mano Deyvid</p>
+      <span class="intro__line"></span>
+      <p class="intro__role">Tattoo Artist</p>
+    </div>
+  </div>
+
+  <!-- Cursor contextual (somente desktop / fine pointer) -->
+  <div class="cursor" id="cursor" aria-hidden="true"><span class="cursor__label" id="cursorLabel"></span></div>
+
+  <a class="skip-link" href="#hero">Pular para o conteúdo</a>
+
+  <header class="site-head">
+    <a href="#hero" class="site-head__brand" aria-label="Mano Deyvid — voltar ao topo">
+      <span class="font-display">MD</span>
+    </a>
+    <p class="site-head__meta">[ 01 — Mano Deyvid ]</p>
+  </header>
+
+  <main id="main">
+
+    <!-- ============================== 01 · HERO ============================== -->
+    <section class="hero section--dark" id="hero" aria-label="Apresentação">
+      <div class="hero__grid">
+        <div class="hero__text">
+          <p class="hero__eyebrow reveal-line"><span>Tatuador · 6 anos de tattoo · Artista premiado</span></p>
+          <h1 class="hero__title">
+            <span class="hero__title-row"><span class="font-display reveal-word">Fala,</span></span>
+            <span class="hero__title-row"><span class="font-display reveal-word">meus <em class="accent">fiéis.</em></span></span>
+          </h1>
+          <p class="hero__sub reveal-fade">Ideia vira desenho. Desenho vira pele.<br>O resto é história sua pra contar.</p>
+          <a class="cta-line reveal-fade" href="https://api.whatsapp.com/message/VNUKTYS4BCTCB1?autoload=1&amp;app_absent=0&amp;utm_source=ig" target="_blank" rel="noopener noreferrer" data-cursor="OPEN">
+            <span class="cta-line__text">Bora tatuar</span>
+            <span class="cta-line__arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+        <figure class="hero__media reveal-mask">
+          <img src="assets/images/mano-trabalhando.jpg" alt="Mano Deyvid concentrado, tatuando com a máquina na mão" width="638" height="803" fetchpriority="high">
+          <figcaption class="hero__caption">Mano Deyvid — em sessão</figcaption>
+        </figure>
+      </div>
+      <div class="hero__footer">
+        <p class="micro">Scroll pra explorar</p>
+        <span class="hero__scrollline" aria-hidden="true"></span>
+        <p class="micro">Anime × Realismo × Blackwork</p>
+      </div>
+    </section>
+
+    <!-- ============================== 02 · SELECTED WORK ============================== -->
+    <section class="work section--light" id="work" aria-label="Trabalhos selecionados">
+      <div class="section-head">
+        <p class="section-label">[ 02 — Selected Work ]</p>
+        <h2 class="section-title">
+          <span class="font-display">Arte que</span><br>
+          <span class="font-display">já virou <em class="accent">pele.</em></span>
+        </h2>
+        <p class="section-sub">Alguns trabalhos. O resto você descobre no estúdio.</p>
+      </div>
+    </section>
+
+    <!-- ============================== 03 · GALERIA HORIZONTAL ============================== -->
+    <section class="gallery section--light" id="gallery" aria-label="Galeria de trabalhos">
+      <div class="gallery__pin">
+        <div class="gallery__track" id="galleryTrack" data-cursor="DRAG" tabindex="0" role="region" aria-label="Galeria horizontal — use as setas ou arraste">
+          <figure class="gcard gcard--tall">
+            <img src="assets/images/tattoo-anjo-braco.jpg" alt="Fechamento de braço em black and grey: anjo em estilo escultura clássica com ornamentos" loading="lazy" width="466" height="755">
+            <figcaption><span class="gcard__num">01</span> Black &amp; Grey · Braço</figcaption>
+          </figure>
+          <figure class="gcard gcard--mid gcard--down">
+            <img src="assets/images/tattoo-anime.jpg" alt="Tatuagem de anime em black and grey na panturrilha, personagem com raio e sol em negative space" loading="lazy" width="484" height="704">
+            <figcaption><span class="gcard__num">02</span> Anime · Panturrilha</figcaption>
+          </figure>
+          <figure class="gcard gcard--tall">
+            <img src="assets/images/tattoo-dragao-fechamento.jpg" alt="Fechamento completo de braço com dragões em realismo black and grey" loading="lazy" width="441" height="708">
+            <figcaption><span class="gcard__num">03</span> Realismo · Fechamento</figcaption>
+          </figure>
+          <figure class="gcard gcard--small gcard--up">
+            <img src="assets/images/processo-freehand.jpg" alt="Desenho freehand marcado direto no ombro do cliente antes da sessão" loading="lazy" width="416" height="397">
+            <figcaption><span class="gcard__num">04</span> Processo · Freehand</figcaption>
+          </figure>
+          <figure class="gcard gcard--mid">
+            <img src="assets/images/tattoo-cruz-gotica.jpg" alt="Cruz gótica ornamental em blackwork no ombro" loading="lazy" width="586" height="730">
+            <figcaption><span class="gcard__num">05</span> Gothic · Ombro</figcaption>
+          </figure>
+          <figure class="gcard gcard--tall gcard--down">
+            <img src="assets/images/tattoo-chicana.jpg" alt="Rosto feminino estilo chicano com rosa e cédula em black and grey" loading="lazy" width="479" height="666">
+            <figcaption><span class="gcard__num">06</span> Black &amp; Grey · Chicana</figcaption>
+          </figure>
+          <figure class="gcard gcard--mid gcard--up">
+            <img src="assets/images/tattoo-anjo-antebraco.jpg" alt="Anjo em estilo escultura com rosácea de catedral no antebraço" loading="lazy" width="674" height="717">
+            <figcaption><span class="gcard__num">07</span> Realismo · Antebraço</figcaption>
+          </figure>
+          <figure class="gcard gcard--small">
+            <img src="assets/images/tattoo-anjo-close.jpg" alt="Close de antebraço com anjo e ornamentos em black and grey" loading="lazy" width="458" height="445">
+            <figcaption><span class="gcard__num">08</span> Detalhe · Close</figcaption>
+          </figure>
+          <div class="gcard gcard--text">
+            <p class="font-display gcard__end">O resto<br>tá na <em class="accent">pele</em><br>por aí.</p>
+            <a class="cta-line" href="https://www.instagram.com/manodeyvid_tattoo/" target="_blank" rel="noopener noreferrer" data-cursor="OPEN">
+              <span class="cta-line__text">Ver no Instagram</span>
+              <span class="cta-line__arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== MARQUEE ============================== -->
+    <div class="marquee section--dark" aria-hidden="true">
+      <div class="marquee__inner" id="marqueeInner">
+        <span class="marquee__chunk font-display">Anime <i>×</i> Realismo <i>×</i> Black &amp; Grey <i>×</i> Blackwork <i>×</i> Gothic <i>×</i> Ornamental <i>×</i> Projetos Autorais <i>×</i>&nbsp;</span>
+        <span class="marquee__chunk font-display">Anime <i>×</i> Realismo <i>×</i> Black &amp; Grey <i>×</i> Blackwork <i>×</i> Gothic <i>×</i> Ornamental <i>×</i> Projetos Autorais <i>×</i>&nbsp;</span>
+      </div>
+    </div>
+
+    <!-- ============================== 04 · STYLES ============================== -->
+    <section class="styles section--dark" id="styles" aria-label="Estilos">
+      <div class="section-head">
+        <p class="section-label section-label--light">[ 03 — Styles ]</p>
+        <h2 class="section-title section-title--light">
+          <span class="font-display">Não tem</span><br>
+          <span class="font-display">uma <em class="accent">caixinha.</em></span>
+        </h2>
+        <p class="section-sub section-sub--light">Cada projeto pede um caminho. O estilo é ferramenta, não limite.</p>
+      </div>
+      <div class="styles__grid">
+        <ul class="styles__list" id="stylesList">
+          <li><button type="button" class="styles__item is-active" data-style="anime" aria-pressed="true"><span class="styles__num">01</span><span class="styles__name font-display">Anime</span></button></li>
+          <li><button type="button" class="styles__item" data-style="realismo" aria-pressed="false"><span class="styles__num">02</span><span class="styles__name font-display">Realismo</span></button></li>
+          <li><button type="button" class="styles__item" data-style="blackgrey" aria-pressed="false"><span class="styles__num">03</span><span class="styles__name font-display">Black &amp; Grey</span></button></li>
+          <li><button type="button" class="styles__item" data-style="blackwork" aria-pressed="false"><span class="styles__num">04</span><span class="styles__name font-display">Blackwork</span></button></li>
+          <li><button type="button" class="styles__item" data-style="ornamental" aria-pressed="false"><span class="styles__num">05</span><span class="styles__name font-display">Gothic / Ornamental</span></button></li>
+          <li><button type="button" class="styles__item" data-style="autoral" aria-pressed="false"><span class="styles__num">06</span><span class="styles__name font-display">Projetos Autorais</span></button></li>
+        </ul>
+        <div class="styles__media" aria-live="polite">
+          <figure class="styles__img is-active" data-style-img="anime">
+            <img src="assets/images/tattoo-anime.jpg" alt="Tatuagem de anime em black and grey" loading="lazy" width="484" height="704">
+          </figure>
+          <figure class="styles__img" data-style-img="realismo">
+            <img src="assets/images/tattoo-dragao-fechamento.jpg" alt="Fechamento de braço com dragões em realismo" loading="lazy" width="441" height="708">
+          </figure>
+          <figure class="styles__img" data-style-img="blackgrey">
+            <img src="assets/images/tattoo-chicana.jpg" alt="Rosto chicano com rosa em black and grey" loading="lazy" width="479" height="666">
+          </figure>
+          <figure class="styles__img" data-style-img="blackwork">
+            <img src="assets/images/tattoo-cruz-gotica.jpg" alt="Cruz gótica em blackwork pesado no ombro" loading="lazy" width="586" height="730">
+          </figure>
+          <figure class="styles__img" data-style-img="ornamental">
+            <img src="assets/images/processo-freehand.jpg" alt="Traço ornamental freehand desenhado direto na pele" loading="lazy" width="416" height="397">
+          </figure>
+          <figure class="styles__img" data-style-img="autoral">
+            <img src="assets/images/tattoo-anjo-antebraco.jpg" alt="Projeto autoral: anjo com rosácea de catedral no antebraço" loading="lazy" width="674" height="717">
+          </figure>
+          <span class="styles__frame" aria-hidden="true"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== 05 · MANIFESTO ============================== -->
+    <section class="manifesto section--black" id="manifesto" aria-label="Manifesto">
+      <svg class="flash flash--skull" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 6C18 6 10 16 10 28c0 8 4 13 8 16v8c0 2 2 4 4 4h4v-6h4v6h4v-6h4v6h4c2 0 4-2 4-4v-8c4-3 8-8 8-16C54 16 46 6 32 6Z" fill="none" stroke="currentColor" stroke-width="2.4"/><circle cx="23" cy="28" r="5" fill="currentColor"/><circle cx="41" cy="28" r="5" fill="currentColor"/><path d="M32 34l-3 7h6l-3-7Z" fill="currentColor"/></svg>
+      <svg class="flash flash--star" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 3l4 15 17 2-13 10 5 16-13-9-13 9 5-16L3 20l17-2 4-15Z" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+      <svg class="flash flash--bolt" viewBox="0 0 40 64" aria-hidden="true"><path d="M26 2 6 36h12L14 62 34 26H22L26 2Z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/></svg>
+      <div class="manifesto__inner">
+        <h2 class="manifesto__title">
+          <span class="font-display reveal-word">Não é</span><br>
+          <span class="font-display reveal-word">só <em class="accent">tinta.</em></span>
+        </h2>
+        <p class="manifesto__sub reveal-fade">É uma ideia que vai ficar com você.</p>
+      </div>
+    </section>
+
+    <!-- ============================== 06 · ABOUT ============================== -->
+    <section class="about section--light" id="about" aria-label="Sobre o Mano Deyvid">
+      <div class="about__grid">
+        <figure class="about__media reveal-mask">
+          <img src="assets/images/mano-trabalhando.jpg" alt="Mano Deyvid tatuando em preto e branco, cabelo cacheado e alargadores" loading="lazy" width="638" height="803">
+          <figcaption class="about__caption micro">Estúdio · em sessão</figcaption>
+        </figure>
+        <div class="about__text">
+          <p class="section-label">[ 04 — About ]</p>
+          <h2 class="section-title"><span class="font-display">O <em class="accent">Mano.</em></span></h2>
+          <p class="about__lead">Há 6 anos transformando ideia em desenho e desenho em pele.</p>
+          <p>O Mano Deyvid é tatuador e artista premiado. Trabalha com projetos de estilos diferentes — do anime ao realismo, do blackwork ao ornamental — sempre procurando a solução que funciona pra ideia e pro corpo de quem vai carregar a tattoo.</p>
+          <p>Cada projeto começa numa conversa. Sem fórmula, sem linha de produção: o desenho nasce pro seu corpo, e só pro seu.</p>
+          <p class="about__extra micro">Também é CEO da PlataformaSete.</p>
+          <div class="about__facts" aria-label="Dados">
+            <p><span class="font-display accent">6</span><span class="micro">anos de tattoo</span></p>
+            <p><span class="font-display accent">★</span><span class="micro">artista premiado</span></p>
+            <p><span class="font-display accent">∞</span><span class="micro">estilos, um traço</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== 07 · FAQ INTERATIVO ============================== -->
+    <section class="faq section--dark" id="faq" aria-label="Perguntas frequentes">
+      <div class="section-head">
+        <p class="section-label section-label--light">[ 05 — FAQ ]</p>
+        <h2 class="section-title section-title--light"><span class="font-display">Sem <em class="accent">mistério.</em></span></h2>
+        <p class="section-sub section-sub--light">O que todo mundo pergunta antes de marcar.</p>
+      </div>
+      <div class="faq__grid">
+        <div class="faq__list" id="faqList">
+
+          <div class="faq__item" data-faq-img="mano">
+            <h3><button type="button" class="faq__q" aria-expanded="false" aria-controls="faq-a1" id="faq-q1"><span class="faq__num">01</span><span class="faq__question">Quem é o Mano Deyvid?</span></button></h3>
+            <div class="faq__a" id="faq-a1" role="region" aria-labelledby="faq-q1"><p>Tatuador há 6 anos, artista premiado e CEO da PlataformaSete. Mas aqui dentro do estúdio, é simples: um artista trabalhando na sua ideia.</p></div>
+          </div>
+
+          <div class="faq__item" data-faq-img="processo">
+            <h3><button type="button" class="faq__q" aria-expanded="false" aria-controls="faq-a2" id="faq-q2"><span class="faq__num">02</span><span class="faq__question">Como funciona o orçamento?</span></button></h3>
+            <div class="faq__a" id="faq-a2" role="region" aria-labelledby="faq-q2"><p>Me manda sua ideia e suas referências. A gente conversa, entende o projeto e eu te passo o orçamento certinho.</p></div>
+          </div>
+
+          <div class="faq__item" data-faq-img="anime">
+            <h3><button type="button" class="faq__q" aria-expanded="false" aria-controls="faq-a3" id="faq-q3"><span class="faq__num">03</span><span class="faq__question">Posso levar uma referência?</span></button></h3>
+            <div class="faq__a" id="faq-a3" role="region" aria-labelledby="faq-q3"><p>Claro. Pode mandar referência tranquilo. Ela ajuda a entender o caminho que você quer seguir e a partir daí a gente trabalha a ideia.</p></div>
+          </div>
+
+          <div class="faq__item" data-faq-img="processo">
+            <h3><button type="button" class="faq__q" aria-expanded="false" aria-controls="faq-a4" id="faq-q4"><span class="faq__num">04</span><span class="faq__question">Você cria a arte?</span></button></h3>
+            <div class="faq__a" id="faq-a4" role="region" aria-labelledby="faq-q4"><p>Sim. Depois de alinhar sua ideia, o desenho é desenvolvido pensando no projeto e em como ele vai funcionar no seu corpo.</p></div>
+          </div>
+
+          <div class="faq__item" data-faq-img="cruz">
+            <h3><button type="button" class="faq__q" aria-expanded="false" aria-controls="faq-a5" id="faq-q5"><span class="faq__num">05</span><span class="faq__question">Quais estilos você tatua?</span></button></h3>
+            <div class="faq__a" id="faq-a5" role="region" aria-labelledby="faq-q5"><p>Anime, realismo, black &amp; grey, blackwork, gothic, ornamental e projetos autorais. Se a sua ideia pede outro caminho, a gente conversa e encontra a melhor forma de fazer.</p></div>
+          </div>
+
+          <div class="faq__item" data-faq-img="mano">
+            <h3><button type="button" class="faq__q" aria-expanded="false" aria-controls="faq-a6" id="faq-q6"><span class="faq__num">06</span><span class="faq__question">Como funciona o agendamento?</span></button></h3>
+            <div class="faq__a" id="faq-a6" role="region" aria-labelledby="faq-q6"><p>Depois que a ideia e o orçamento estão alinhados, você paga metade do valor para seguirmos com o desenho e reservarmos o projeto. No dia da tattoo, depois da sessão, é pago o restante.</p></div>
+          </div>
+
+          <div class="faq__item" data-faq-img="chicana">
+            <h3><button type="button" class="faq__q" aria-expanded="false" aria-controls="faq-a7" id="faq-q7"><span class="faq__num">07</span><span class="faq__question">Como funciona o pagamento?</span></button></h3>
+            <div class="faq__a" id="faq-a7" role="region" aria-labelledby="faq-q7"><p>Metade na hora de reservar o projeto e desenvolver o desenho, e o restante no dia, depois da sessão. Os detalhes a gente combina direto na conversa.</p></div>
+          </div>
+
+          <div class="faq__item" data-faq-img="dragao">
+            <h3><button type="button" class="faq__q" aria-expanded="false" aria-controls="faq-a8" id="faq-q8"><span class="faq__num">08</span><span class="faq__question">Faz projeto fechado?</span></button></h3>
+            <div class="faq__a" id="faq-a8" role="region" aria-labelledby="faq-q8"><p>Faço. Fechamento de braço, projetos grandes, continuação de trabalho que já existe — me manda o que você tem em mente e a gente planeja por etapas.</p></div>
+          </div>
+
+          <div class="faq__item" data-faq-img="anjo">
+            <h3><button type="button" class="faq__q" aria-expanded="false" aria-controls="faq-a9" id="faq-q9"><span class="faq__num">09</span><span class="faq__question">Como cuidar da tattoo?</span></button></h3>
+            <div class="faq__a" id="faq-a9" role="region" aria-labelledby="faq-q9"><p>No dia da sessão você sai com todas as orientações de cuidado explicadas, e qualquer dúvida depois é só chamar. Não fica na mão.</p></div>
+          </div>
+
+          <div class="faq__item" data-faq-img="processo">
+            <h3><button type="button" class="faq__q" aria-expanded="false" aria-controls="faq-a10" id="faq-q10"><span class="faq__num">10</span><span class="faq__question">Ainda não sei exatamente o que quero. E agora?</span></button></h3>
+            <div class="faq__a" id="faq-a10" role="region" aria-labelledby="faq-q10"><p>Tranquilo, meu fiel. Me manda o que você já tem na cabeça, mesmo que ainda esteja meio solto. A gente conversa e encontra um caminho juntos.</p></div>
+          </div>
+
+        </div>
+        <div class="faq__media" aria-hidden="true">
+          <figure class="faq__img is-active" data-img="mano"><img src="assets/images/mano-trabalhando.jpg" alt="" loading="lazy" width="638" height="803"></figure>
+          <figure class="faq__img" data-img="processo"><img src="assets/images/processo-freehand.jpg" alt="" loading="lazy" width="416" height="397"></figure>
+          <figure class="faq__img" data-img="anime"><img src="assets/images/tattoo-anime.jpg" alt="" loading="lazy" width="484" height="704"></figure>
+          <figure class="faq__img" data-img="cruz"><img src="assets/images/tattoo-cruz-gotica.jpg" alt="" loading="lazy" width="586" height="730"></figure>
+          <figure class="faq__img" data-img="chicana"><img src="assets/images/tattoo-chicana.jpg" alt="" loading="lazy" width="479" height="666"></figure>
+          <figure class="faq__img" data-img="dragao"><img src="assets/images/tattoo-dragao-fechamento.jpg" alt="" loading="lazy" width="441" height="708"></figure>
+          <figure class="faq__img" data-img="anjo"><img src="assets/images/tattoo-anjo-braco.jpg" alt="" loading="lazy" width="466" height="755"></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== 08 · MOTIVOS ============================== -->
+    <section class="reasons section--light" id="reasons" aria-label="Por que tatuar com o Mano Deyvid">
+      <div class="section-head">
+        <p class="section-label">[ — Por quê ]</p>
+        <h2 class="section-title"><span class="font-display">Por que tatuar</span><br><span class="font-display">com o <em class="accent">Mano?</em></span></h2>
+      </div>
+      <ol class="reasons__list">
+        <li class="reason">
+          <span class="reason__num font-display" aria-hidden="true">01</span>
+          <div class="reason__body"><h3>Arte feita para o projeto</h3><p>Nada de catálogo pronto. O desenho nasce da sua ideia e do lugar do corpo onde ele vai viver.</p></div>
+        </li>
+        <li class="reason">
+          <span class="reason__num font-display" aria-hidden="true">02</span>
+          <div class="reason__body"><h3>6 anos vivendo tattoo</h3><p>Seis anos de máquina na mão, estudando traço, pele e composição todos os dias.</p></div>
+        </li>
+        <li class="reason">
+          <span class="reason__num font-display" aria-hidden="true">03</span>
+          <div class="reason__body"><h3>Versatilidade de estilos</h3><p>Anime, realismo, blackwork, gothic, ornamental. O estilo serve à ideia — nunca o contrário.</p></div>
+        </li>
+        <li class="reason">
+          <span class="reason__num font-display" aria-hidden="true">04</span>
+          <div class="reason__body"><h3>Do desenho à pele</h3><p>O mesmo artista que cria a arte é quem tatua. Sem intermediário, sem telefone sem fio.</p></div>
+        </li>
+        <li class="reason">
+          <span class="reason__num font-display" aria-hidden="true">05</span>
+          <div class="reason__body"><h3>Atendimento sem complicação</h3><p>Conversa direta, orçamento claro, agendamento simples. Você fala com o Mano, não com um robô.</p></div>
+        </li>
+        <li class="reason">
+          <span class="reason__num font-display" aria-hidden="true">06</span>
+          <div class="reason__body"><h3>Acompanhamento do projeto</h3><p>Da primeira mensagem até depois da sessão, o projeto é acompanhado de perto. Não fica na mão.</p></div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ============================== 09 · PROCESSO ============================== -->
+    <section class="process section--dark" id="process" aria-label="Processo">
+      <div class="section-head">
+        <p class="section-label section-label--light">[ 06 — Process ]</p>
+        <h2 class="section-title section-title--light"><span class="font-display">Da ideia</span><br><span class="font-display">à <em class="accent">pele.</em></span></h2>
+      </div>
+      <div class="process__grid">
+        <ol class="process__steps">
+          <li class="pstep"><span class="pstep__num font-display">01</span><div><h3>Ideia</h3><p>Você me manda sua ideia e suas referências.</p></div></li>
+          <li class="pstep"><span class="pstep__num font-display">02</span><div><h3>Orçamento</h3><p>O projeto é analisado e o orçamento definido.</p></div></li>
+          <li class="pstep"><span class="pstep__num font-display">03</span><div><h3>Desenho + sinal</h3><p>Depois do alinhamento, é pago metade do valor e o desenho é desenvolvido.</p></div></li>
+          <li class="pstep"><span class="pstep__num font-display">04</span><div><h3>Sessão</h3><p>Dia de tatuar. A arte sai do papel e entra na pele.</p></div></li>
+          <li class="pstep"><span class="pstep__num font-display">05</span><div><h3>Finalização</h3><p>Depois da sessão, é pago o restante — e você sai com as orientações de cuidado.</p></div></li>
+        </ol>
+        <figure class="process__media reveal-mask">
+          <img src="assets/images/processo-freehand.jpg" alt="Desenho freehand traçado direto no ombro do cliente: o projeto sendo construído no corpo" loading="lazy" width="416" height="397">
+          <figcaption class="micro">Freehand — o desenho nasce no corpo</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============================== 10 · BOOKING / TELEFONE ============================== -->
+    <section class="booking section--rose" id="contact" aria-label="Agendamento">
+      <div class="booking__inner">
+        <a class="booking__phone-wrap" href="https://api.whatsapp.com/message/VNUKTYS4BCTCB1?autoload=1&amp;app_absent=0&amp;utm_source=ig" target="_blank" rel="noopener noreferrer" aria-label="Chamar o Mano Deyvid no WhatsApp" data-cursor="OPEN">
+          <span class="booking__ring micro" aria-hidden="true">Ring ring…</span>
+          <!-- Telefone old school desenhado em SVG, estética tattoo flash -->
+          <svg class="booking__phone" viewBox="0 0 220 200" aria-hidden="true">
+            <g fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+              <!-- monofone -->
+              <path d="M38 44c10-16 134-16 144 0l-8 22c-4 8-16 4-24 0-10-5-70-5-80 0-8 4-20 8-24 0Z"/>
+              <!-- corpo -->
+              <path d="M62 78h96l22 68c3 10-4 20-14 20H54c-10 0-17-10-14-20Z"/>
+              <!-- disco -->
+              <circle cx="110" cy="124" r="30"/>
+              <circle cx="110" cy="124" r="10"/>
+              <circle cx="110" cy="99" r="4" fill="currentColor" stroke="none"/>
+              <circle cx="131" cy="107" r="4" fill="currentColor" stroke="none"/>
+              <circle cx="136" cy="126" r="4" fill="currentColor" stroke="none"/>
+              <circle cx="89" cy="107" r="4" fill="currentColor" stroke="none"/>
+              <circle cx="84" cy="126" r="4" fill="currentColor" stroke="none"/>
+              <!-- fio -->
+              <path d="M178 150c14 6 16 20 6 26s-24 0-20 12" stroke-width="4"/>
+            </g>
+            <!-- brilhos flash -->
+            <path d="M22 96l4 10 10 4-10 4-4 10-4-10-10-4 10-4Z" fill="currentColor"/>
+            <path d="M198 60l3 7 7 3-7 3-3 7-3-7-7-3 7-3Z" fill="currentColor"/>
+          </svg>
+        </a>
+        <div class="booking__text">
+          <p class="section-label">[ 07 — Contact ]</p>
+          <h2 class="booking__title">
+            <span class="font-display">Bora marcar</span><br>
+            <span class="font-display">essa <em class="accent">tattoo?</em></span>
+          </h2>
+          <p class="booking__sub">Manda sua ideia. Fica tranquilo — a gente resolve junto.</p>
+          <a class="btn-editorial" href="https://api.whatsapp.com/message/VNUKTYS4BCTCB1?autoload=1&amp;app_absent=0&amp;utm_source=ig" target="_blank" rel="noopener noreferrer" data-cursor="OPEN">Chamar o Mano</a>
+          <p class="micro booking__alt">ou pelo direct: <a href="https://www.instagram.com/manodeyvid_tattoo/" target="_blank" rel="noopener noreferrer">@manodeyvid_tattoo</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== 11 · CTA PERSONAGEM ============================== -->
+    <section class="finale section--black" id="finale" aria-label="Bora tatuar">
+      <svg class="flash flash--rose-el" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 6c-6 0-10 4-10 9 0 6 5 9 10 9s10-3 10-9c0-5-4-9-10-9Zm0 5c3 0 5 2 5 4 0 3-2 4-5 4s-5-1-5-4c0-2 2-4 5-4ZM24 24v16M24 30c-4-2-8-2-11 1M24 34c4-2 8-2 11 1" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+      <div class="finale__grid">
+        <figure class="finale__media reveal-mask">
+          <img src="assets/images/mano-personagem.jpg" alt="Ilustração do Mano Deyvid em estilo tattoo flash segurando a máquina, com o balão: Fala, meus fiéis!" loading="lazy" width="1122" height="1402">
+        </figure>
+        <div class="finale__text">
+          <h2 class="finale__title">
+            <span class="font-display reveal-word">Fala,</span><br>
+            <span class="font-display reveal-word">meus fiéis!</span><br>
+            <span class="font-display accent reveal-word">Bora tatuar?</span>
+          </h2>
+          <a class="btn-editorial btn-editorial--light" href="https://api.whatsapp.com/message/VNUKTYS4BCTCB1?autoload=1&amp;app_absent=0&amp;utm_source=ig" target="_blank" rel="noopener noreferrer" data-cursor="OPEN">Bora tatuar</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== 12 · FOOTER ============================== -->
+    <footer class="footer section--black" aria-label="Rodapé">
+      <div class="footer__inner">
+        <p class="footer__brand"><span class="font-display">Mano Deyvid</span><span class="micro">Tattoo Artist</span></p>
+        <nav class="footer__links" aria-label="Redes">
+          <a href="https://www.instagram.com/manodeyvid_tattoo/" target="_blank" rel="noopener noreferrer" data-cursor="OPEN">Instagram</a>
+          <a href="https://api.whatsapp.com/message/VNUKTYS4BCTCB1?autoload=1&amp;app_absent=0&amp;utm_source=ig" target="_blank" rel="noopener noreferrer" data-cursor="OPEN">WhatsApp</a>
+        </nav>
+        <p class="micro">© Mano Deyvid</p>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- ============================== NAV INFERIOR ============================== -->
+  <nav class="nav" id="nav" aria-label="Navegação principal">
+    <ul class="nav__list">
+      <li><a href="#hero" class="nav__link is-active" data-section="hero">Home</a></li>
+      <li><a href="#work" class="nav__link" data-section="work">Work</a></li>
+      <li><a href="#styles" class="nav__link" data-section="styles">Styles</a></li>
+      <li><a href="#about" class="nav__link" data-section="about">About</a></li>
+      <li><a href="#faq" class="nav__link" data-section="faq">FAQ</a></li>
+      <li><a href="#contact" class="nav__link" data-section="contact">Contact</a></li>
+    </ul>
+    <a class="nav__cta" href="https://api.whatsapp.com/message/VNUKTYS4BCTCB1?autoload=1&amp;app_absent=0&amp;utm_source=ig" target="_blank" rel="noopener noreferrer">Bora tatuar</a>
+  </nav>
+
+  <!-- Nav mobile compacta -->
+  <nav class="mnav" id="mnav" aria-label="Navegação">
+    <button type="button" class="mnav__toggle" id="mnavToggle" aria-expanded="false" aria-controls="mnavMenu">
+      <span class="mnav__toggle-label">Menu</span>
+    </button>
+    <a class="mnav__cta" href="https://api.whatsapp.com/message/VNUKTYS4BCTCB1?autoload=1&amp;app_absent=0&amp;utm_source=ig" target="_blank" rel="noopener noreferrer">Bora tatuar</a>
+  </nav>
+  <div class="mnav__menu" id="mnavMenu" hidden>
+    <ul>
+      <li><a href="#hero"><span class="micro">01</span><span class="font-display">Home</span></a></li>
+      <li><a href="#work"><span class="micro">02</span><span class="font-display">Work</span></a></li>
+      <li><a href="#styles"><span class="micro">03</span><span class="font-display">Styles</span></a></li>
+      <li><a href="#about"><span class="micro">04</span><span class="font-display">About</span></a></li>
+      <li><a href="#faq"><span class="micro">05</span><span class="font-display">FAQ</span></a></li>
+      <li><a href="#contact"><span class="micro">06</span><span class="font-display">Contact</span></a></li>
+    </ul>
+  </div>
+
+  <!-- GSAP + ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

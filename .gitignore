@@ -1,4 +1,9 @@
 .vscode/
-{css,js,assets/
 Thumbs.db
 .DS_Store
+
+# material de QA (scripts, capturas, vídeos, cópia do site original): o GitHub Pages publicaria tudo
+verification/
+
+# cópia local do site anterior às animações (o commit 573c656 também guarda essa versão)
+backup/

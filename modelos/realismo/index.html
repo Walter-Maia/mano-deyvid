@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Íris Valença — Realismo colorido</title>
+  <meta name="description" content="Íris Valença, tatuadora de realismo colorido. Retratos, animais, natureza e fechamentos em projetos estudados da referência à última camada de luz.">
+  <meta name="theme-color" content="#0f0f11">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Íris Valença — Realismo colorido">
+  <meta property="og:description" content="Retratos, animais e natureza em realismo colorido. Projetos grandes, pensados em camadas de cor e luz.">
+  <meta property="og:type" content="website">
+  <!-- [PREENCHER] trocar pela foto real com URL absoluta (https://…/assets/images/obra-tigre.jpg) quando o domínio estiver definido -->
+  <meta property="og:image" content="assets/images/obra-tigre.svg">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <!-- Tipografia: Anton (títulos, caixa alta condensada) + Manrope (texto); carrega sem travar a primeira pintura -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
+
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Intro "camadas de cor": decidida aqui, antes da primeira pintura, para cobrir a página sem piscar. Não toca com movimento
+       reduzido, com âncora na URL, com a página já rolada ou se já foi vista nesta sessão. ?intro=1 força (revisão) e ?intro=0 desliga. -->
+  <script>(function(){var d=document.documentElement;d.classList.add("js");try{var q=location.search;if(/[?&]intro=0\b/.test(q)||matchMedia("(prefers-reduced-motion: reduce)").matches)return;if(!/[?&]intro=1\b/.test(q)&&(location.hash||document.hidden||window.pageYOffset>4||sessionStorage.getItem("modelo-realismo-intro")==="1"))return;d.classList.add("intro-ativa")}catch(e){}})();</script>
+  <link rel="preload" as="image" href="assets/images/obra-tigre.svg">
+  <script src="js/intro.js" defer onerror="document.documentElement.classList.remove('intro-ativa')"></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body data-theme="dark">
+  <!-- [PREENCHER] Site modelo. Antes de publicar, trocar:
+       · o nome da artista, os textos e o título da página;
+       · o número do WhatsApp em todos os links https://wa.me/ (formato https://wa.me/55DDDNUMERO);
+       · o perfil do Instagram em todos os links https://www.instagram.com/ (https://www.instagram.com/perfil/);
+       · as molduras de assets/images/*.svg pelas fotos reais (lista, tamanhos e descrições em imagens.json);
+       · o og:image por uma URL absoluta. -->
+
+  <!-- Traço sob as palavras em destaque, em espectro de cor (ciano → magenta → amarelo) -->
+  <svg class="svg-lib" aria-hidden="true" focusable="false">
+    <defs>
+      <linearGradient id="espectro" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#18b6c9"/><stop offset="0.5" stop-color="#d6337a"/><stop offset="1" stop-color="#f2c230"/></linearGradient>
+    </defs>
+    <symbol id="risco" viewBox="0 0 300 24" preserveAspectRatio="none"><path pathLength="1" d="M5 15C60 10 118 7 170 8c42 1 82 3 125 8"/></symbol>
+  </svg>
+
+  <!-- Cursor contextual (somente desktop / fine pointer) -->
+  <div class="cursor" id="cursor" aria-hidden="true"><span class="cursor__label" id="cursorLabel"></span></div>
+
+  <a class="skip-link" href="#hero">Pular para o conteúdo</a>
+
+  <header class="site-head">
+    <a href="#hero" class="site-head__brand" aria-label="IV — Íris Valença, voltar ao topo">
+      <span class="font-display">IV</span>
+    </a>
+    <p class="site-head__meta">Íris Valença — Realismo colorido</p>
+  </header>
+
+  <main id="main">
+
+    <!-- ============================== 01 · HERO ==============================
+         A entrada é só CSS (existe sem JavaScript) e, com a intro, espera a cortina subir (--rise-start). -->
+    <section class="hero section--dark" id="hero" aria-label="Apresentação">
+      <div class="hero__grid">
+        <figure class="hero__media">
+          <div class="foto hero__foto">
+            <img src="assets/images/obra-tigre.svg" alt="Tatuagem em realismo colorido de um rosto de tigre-de-bengala na coxa, pelagem laranja com listras pretas e olhos verde-dourados" width="1200" height="1600" fetchpriority="high" data-parallax="foto">
+          </div>
+          <figcaption class="hero__caption"><span class="hero__caption-titulo">Tigre-de-bengala</span><span class="hero__caption-meta">Coxa · realismo colorido</span></figcaption>
+        </figure>
+        <div class="hero__text">
+          <p class="hero__eyebrow"><span>Íris Valença, tatuadora de realismo colorido</span></p>
+          <h1 class="hero__title">
+            <span class="hero__title-row"><span class="font-display">Cor viva</span></span>
+            <span class="hero__title-row"><span class="font-display">na <em class="accent tem-risco">pele.<svg class="risco" aria-hidden="true" focusable="false"><use href="#risco"/></svg></em></span></span>
+          </h1>
+          <p class="hero__sub">Retratos, animais e natureza em peças grandes, estudadas da referência à última camada de luz.</p>
+          <a class="cta-line hero__cta" href="https://wa.me/" target="_blank" rel="noopener noreferrer" data-cursor="ABRIR">
+            <span class="cta-line__text">Conversar sobre um projeto</span>
+            <span class="cta-line__arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+      <div class="hero__footer">
+        <p class="micro">Role para ver as obras</p>
+        <span class="hero__scrollline" aria-hidden="true"></span>
+        <p class="micro">Retrato · Natureza · Animais</p>
+      </div>
+    </section>
+
+    <!-- ============================== 02 · OBRAS (cabeçalho) ============================== -->
+    <section class="work section--light" id="work" aria-label="Obras">
+      <div class="section-head">
+        <p class="section-label reveal">01 — Obras</p>
+        <h2 class="section-title" data-titulo>
+          <span class="font-display">Obras</span><br>
+          <span class="font-display">em <em class="accent tem-risco">destaque.<svg class="risco" aria-hidden="true" focusable="false"><use href="#risco"/></svg></em></span>
+        </h2>
+        <p class="section-sub reveal">Uma seleção de peças cicatrizadas e recém-terminadas. Cada uma começou numa boa referência.</p>
+      </div>
+    </section>
+
+    <!-- ============================== 03 · GALERIA HORIZONTAL ==============================
+         Parede de galeria: cartões grandes com passe-partout e etiqueta de museu (nome da peça, região do corpo).
+         Desktop com JS: a faixa anda para o lado enquanto a página desce (presa na tela). Celular, sem JS ou com
+         movimento reduzido: rolagem lateral nativa. -->
+    <section class="gallery section--light" id="gallery" aria-label="Galeria de obras" data-galeria>
+      <div class="gallery__pin">
+        <div class="gallery__track revela-grupo" id="galleryTrack" data-cursor="ARRASTE" tabindex="0" role="region" aria-label="Galeria horizontal — use as setas ou arraste">
+          <figure class="gcard gcard--tall">
+            <div class="gcard__foto"><img src="assets/images/obra-tigre.svg" alt="Tatuagem em realismo colorido de um rosto de tigre-de-bengala na coxa, pelagem laranja com listras pretas e olhos verde-dourados" loading="lazy" width="1200" height="1600"></div>
+            <figcaption><span class="gcard__num">01</span><span class="gcard__titulo">Tigre-de-bengala</span><span class="gcard__meta">Coxa · recém-terminada</span></figcaption>
+          </figure>
+          <figure class="gcard gcard--mid">
+            <div class="gcard__foto"><img src="assets/images/obra-retrato-pet.svg" alt="Tatuagem cicatrizada em realismo colorido de um cachorro caramelo de olhos cor de âmbar, na parte interna do antebraço" loading="lazy" width="1280" height="1600"></div>
+            <figcaption><span class="gcard__num">02</span><span class="gcard__titulo">Retrato de cachorro</span><span class="gcard__meta">Antebraço · cicatrizada</span></figcaption>
+          </figure>
+          <figure class="gcard gcard--tall">
+            <div class="gcard__foto"><img src="assets/images/obra-koi.svg" alt="Fechamento de braço cicatrizado em realismo colorido com carpas laranja e brancas, flores de lótus rosa e água em tons de verde-azulado" loading="lazy" width="1200" height="1800"></div>
+            <figcaption><span class="gcard__num">03</span><span class="gcard__titulo">Carpas e lótus</span><span class="gcard__meta">Fechamento de braço · cicatrizada</span></figcaption>
+          </figure>
+          <figure class="gcard gcard--small">
+            <div class="gcard__foto"><img src="assets/images/obra-olho.svg" alt="Tatuagem recém-feita em realismo colorido de um olho humano em macro, íris verde-avelã com reflexos, na panturrilha" loading="lazy" width="1600" height="1600"></div>
+            <figcaption><span class="gcard__num">04</span><span class="gcard__titulo">Olho em macro</span><span class="gcard__meta">Panturrilha · recém-terminada</span></figcaption>
+          </figure>
+          <figure class="gcard gcard--mid">
+            <div class="gcard__foto"><img src="assets/images/obra-beija-flor.svg" alt="Tatuagem cicatrizada em realismo colorido de um beija-flor verde e violeta junto a flores de ipê-amarelo, no antebraço" loading="lazy" width="1200" height="1600"></div>
+            <figcaption><span class="gcard__num">05</span><span class="gcard__titulo">Beija-flor e ipê-amarelo</span><span class="gcard__meta">Antebraço · cicatrizada</span></figcaption>
+          </figure>
+          <figure class="gcard gcard--tall">
+            <div class="gcard__foto"><img src="assets/images/obra-arara.svg" alt="Tatuagem cicatrizada em realismo colorido de uma arara-azul, penas azul-cobalto e anel amarelo nos olhos, no ombro e braço" loading="lazy" width="1280" height="1600"></div>
+            <figcaption><span class="gcard__num">06</span><span class="gcard__titulo">Arara-azul</span><span class="gcard__meta">Ombro e braço · cicatrizada</span></figcaption>
+          </figure>
+          <figure class="gcard gcard--mid">
+            <div class="gcard__foto"><img src="assets/images/obra-retrato.svg" alt="Tatuagem cicatrizada em realismo colorido do retrato de uma senhora de cabelos prateados e sorriso tranquilo, no braço" loading="lazy" width="1200" height="1600"></div>
+            <figcaption><span class="gcard__num">07</span><span class="gcard__titulo">Retrato em cor</span><span class="gcard__meta">Braço · cicatrizada</span></figcaption>
+          </figure>
+          <figure class="gcard gcard--small">
+            <div class="gcard__foto"><img src="assets/images/obra-rosa.svg" alt="Tatuagem recém-feita em realismo colorido de uma rosa vermelha com gotas de orvalho nas pétalas e duas folhas verdes, no braço" loading="lazy" width="1600" height="1600"></div>
+            <figcaption><span class="gcard__num">08</span><span class="gcard__titulo">Rosa com orvalho</span><span class="gcard__meta">Braço · recém-terminada</span></figcaption>
+          </figure>
+          <div class="gcard gcard--text">
+            <p class="font-display gcard__end">Mais obras<br>no <em class="accent">Instagram.</em></p>
+            <a class="cta-line" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" data-cursor="ABRIR">
+              <span class="cta-line__text">Ver no Instagram</span>
+              <span class="cta-line__arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== FAIXA ==============================
+         Duas linhas que andam só com a rolagem, em sentidos opostos; os separadores giram entre ciano, magenta e amarelo. -->
+    <div class="marquee section--black" aria-hidden="true" data-faixa>
+      <div class="marquee__row" data-faixa-linha="-1">
+        <span class="marquee__chunk font-display">Realismo <i>×</i> Cor <i>×</i> Retrato <i>×</i> Natureza <i>×</i> Animais <i>×</i> Fechamento <i>×</i>&nbsp;</span>
+        <span class="marquee__chunk font-display">Realismo <i>×</i> Cor <i>×</i> Retrato <i>×</i> Natureza <i>×</i> Animais <i>×</i> Fechamento <i>×</i>&nbsp;</span>
+        <span class="marquee__chunk font-display">Realismo <i>×</i> Cor <i>×</i> Retrato <i>×</i> Natureza <i>×</i> Animais <i>×</i> Fechamento <i>×</i>&nbsp;</span>
+      </div>
+      <div class="marquee__row marquee__row--stencil" data-faixa-linha="1">
+        <span class="marquee__chunk font-display">Realismo <i>×</i> Cor <i>×</i> Retrato <i>×</i> Natureza <i>×</i> Animais <i>×</i> Fechamento <i>×</i>&nbsp;</span>
+        <span class="marquee__chunk font-display">Realismo <i>×</i> Cor <i>×</i> Retrato <i>×</i> Natureza <i>×</i> Animais <i>×</i> Fechamento <i>×</i>&nbsp;</span>
+        <span class="marquee__chunk font-display">Realismo <i>×</i> Cor <i>×</i> Retrato <i>×</i> Natureza <i>×</i> Animais <i>×</i> Fechamento <i>×</i>&nbsp;</span>
+      </div>
+    </div>
+
+    <!-- ============================== 04 · TEMAS ============================== -->
+    <section class="styles section--dark" id="styles" aria-label="Temas">
+      <div class="section-head">
+        <p class="section-label section-label--light reveal">02 — Temas</p>
+        <h2 class="section-title section-title--light" data-titulo>
+          <span class="font-display">Temas que</span><br>
+          <span class="font-display">pedem <em class="accent">cor.</em></span>
+        </h2>
+        <p class="section-sub section-sub--light reveal">Cada tema tem a sua luz. A referência e o lugar do corpo decidem o resto.</p>
+      </div>
+      <div class="styles__grid">
+        <ul class="styles__list revela-grupo" id="stylesList">
+          <li><button type="button" class="styles__item is-active" data-style="retratos" aria-pressed="true"><span class="styles__num">01</span><span class="styles__name font-display">Retratos</span></button></li>
+          <li><button type="button" class="styles__item" data-style="animais" aria-pressed="false"><span class="styles__num">02</span><span class="styles__name font-display">Animais e pets</span></button></li>
+          <li><button type="button" class="styles__item" data-style="natureza" aria-pressed="false"><span class="styles__num">03</span><span class="styles__name font-display">Natureza</span></button></li>
+          <li><button type="button" class="styles__item" data-style="flores" aria-pressed="false"><span class="styles__num">04</span><span class="styles__name font-display">Flores</span></button></li>
+          <li><button type="button" class="styles__item" data-style="fechamentos" aria-pressed="false"><span class="styles__num">05</span><span class="styles__name font-display">Fechamentos</span></button></li>
+          <li><button type="button" class="styles__item" data-style="releituras" aria-pressed="false"><span class="styles__num">06</span><span class="styles__name font-display">Releituras</span></button></li>
+        </ul>
+        <div class="styles__media" data-revela-foto>
+          <figure class="styles__img is-active" data-style-img="retratos">
+            <img src="assets/images/obra-retrato.svg" alt="Retrato em realismo colorido de uma senhora de cabelos prateados, no braço" loading="lazy" width="1200" height="1600">
+          </figure>
+          <figure class="styles__img" data-style-img="animais">
+            <img src="assets/images/obra-retrato-pet.svg" alt="Retrato colorido de um cachorro caramelo no antebraço" loading="lazy" width="1280" height="1600">
+          </figure>
+          <figure class="styles__img" data-style-img="natureza">
+            <img src="assets/images/obra-beija-flor.svg" alt="Beija-flor e ipê-amarelo em realismo colorido no antebraço" loading="lazy" width="1200" height="1600">
+          </figure>
+          <figure class="styles__img" data-style-img="flores">
+            <img src="assets/images/obra-rosa.svg" alt="Rosa vermelha com gotas de orvalho em realismo colorido no braço" loading="lazy" width="1600" height="1600">
+          </figure>
+          <figure class="styles__img" data-style-img="fechamentos">
+            <img src="assets/images/obra-koi.svg" alt="Fechamento de braço com carpas e flores de lótus em realismo colorido" loading="lazy" width="1200" height="1800">
+          </figure>
+          <figure class="styles__img" data-style-img="releituras">
+            <img src="assets/images/obra-releitura.svg" alt="Releitura em cor da pintura dos girassóis de Van Gogh na panturrilha" loading="lazy" width="1200" height="1600">
+          </figure>
+          <span class="styles__frame" aria-hidden="true" data-parallax="moldura"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== 05 · MANIFESTO ============================== -->
+    <section class="manifesto section--black" id="manifesto" aria-label="Manifesto">
+      <!-- olho, gota e pena em traço; a cor entra depois do desenho -->
+      <svg class="flash flash--olho" viewBox="0 0 64 40" aria-hidden="true" focusable="false" data-desenha data-parallax="flash" data-vel="1"><circle class="flash__tinta" cx="32" cy="20" r="9" fill="#18b6c9"/><circle class="flash__tinta" cx="32" cy="20" r="3.6" fill="#0f0f11"/><path pathLength="1" d="M3 20C13 6 51 6 61 20 51 34 13 34 3 20Z" fill="none" stroke="currentColor" stroke-width="2"/><circle pathLength="1" cx="32" cy="20" r="11" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="35.5" cy="16.5" r="1.8" fill="currentColor" class="flash__tinta"/></svg>
+      <svg class="flash flash--gota" viewBox="0 0 40 56" aria-hidden="true" focusable="false" data-desenha data-parallax="flash" data-vel="-1.4"><path class="flash__tinta" d="M20 13C16 20 10 28 10 35a10 10 0 0 0 20 0c0-7-6-15-10-22Z" fill="#d6337a"/><path pathLength="1" d="M20 3C20 3 5 23 5 35a15 15 0 0 0 30 0C35 23 20 3 20 3Z" fill="none" stroke="currentColor" stroke-width="2"/><path pathLength="1" d="M13 37c0 4 3 7 7 8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      <svg class="flash flash--pena" viewBox="0 0 40 72" aria-hidden="true" focusable="false" data-desenha data-parallax="flash" data-vel="1.8"><path class="flash__tinta" d="M29 10C35 22 30 38 16 50 11 38 16 22 29 10Z" fill="#f2c230"/><path pathLength="1" d="M31 4C42 20 35 42 13 58 5 40 13 18 31 4Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path pathLength="1" d="M31 4C21 24 14 46 7 70" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path pathLength="1" d="M27 18l-7 4M24 28l-8 4M21 38l-8 5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+      <div class="manifesto__inner">
+        <h2 class="manifesto__title" data-titulo>
+          <span class="font-display">A cor nasce</span><br>
+          <span class="font-display">da <em class="accent">luz.</em></span>
+        </h2>
+        <p class="manifesto__sub reveal">Todo realismo começa estudando de onde a luz vem.</p>
+      </div>
+    </section>
+
+    <!-- ============================== 06 · SOBRE ============================== -->
+    <section class="about section--light" id="about" aria-label="Sobre a Íris Valença">
+      <div class="about__grid">
+        <figure class="about__media" data-revela-foto>
+          <div class="foto about__foto">
+            <img src="assets/images/artista.svg" alt="Íris Valença concentrada, tatuando um realismo colorido no antebraço de um cliente, com potes de tinta ciano, magenta e amarela na bancada" loading="lazy" width="1280" height="1600" data-parallax="foto">
+          </div>
+          <figcaption class="about__caption"><span class="hero__caption-titulo">Íris Valença</span><span class="hero__caption-meta">No estúdio, em sessão</span></figcaption>
+        </figure>
+        <div class="about__text">
+          <p class="section-label reveal">03 — Sobre</p>
+          <h2 class="section-title" data-titulo><span class="font-display">Sobre a <em class="accent">Íris.</em></span></h2>
+          <p class="about__lead reveal">Tatuadora de realismo colorido. Estuda luz, pele e cor em cada projeto.</p>
+          <p class="reveal">A Íris veio da pintura e trouxe para a tatuagem o mesmo olhar: entender de onde vem a luz antes de escolher qualquer cor. Hoje se dedica ao realismo colorido — retratos, animais e natureza —, quase sempre em peças grandes, feitas em várias sessões.</p>
+          <p class="reveal">Cada projeto começa numa conversa e numa boa referência. O desenho é estudado e montado sobre a região do corpo antes da primeira sessão, para que a composição acompanhe o movimento da pele.</p>
+          <ul class="about__facts reveal" aria-label="Em resumo">
+            <li>Realismo colorido</li>
+            <li>Projetos em sessões</li>
+            <li>Paleta estudada para cada pele</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== 07 · PROCESSO (como nasce um realismo) ============================== -->
+    <section class="process section--dark" id="process" aria-label="Como nasce um realismo">
+      <div class="section-head">
+        <p class="section-label section-label--light reveal">04 — Processo</p>
+        <h2 class="section-title section-title--light" data-titulo><span class="font-display">Como nasce</span><br><span class="font-display">um <em class="accent">realismo.</em></span></h2>
+        <p class="section-sub section-sub--light reveal">Projeto grande se faz em camadas, com tempo para a pele descansar entre elas.</p>
+      </div>
+      <div class="process__grid">
+        <div class="process__trilho" data-passos>
+          <span class="process__linha" aria-hidden="true"></span>
+          <ol class="process__steps">
+            <li class="pstep"><span class="pstep__num font-display">01</span><div><h3>Consulta e referência</h3><p>Você me conta a ideia e manda as referências. Avaliamos juntos a foto, o tamanho e a região do corpo.</p></div></li>
+            <li class="pstep"><span class="pstep__num font-display">02</span><div><h3>Estudo e&nbsp;montagem</h3><p>Monto o desenho no computador sobre a foto da região e ajusto composição, luz e paleta para a sua pele.</p></div></li>
+            <li class="pstep"><span class="pstep__num font-display">03</span><div><h3>Base e sombras</h3><p>A primeira sessão constrói a estrutura: desenho, volumes e as sombras que vão sustentar a cor.</p></div></li>
+            <li class="pstep"><span class="pstep__num font-display">04</span><div><h3>Camadas de cor</h3><p>A cor entra em camadas, do fundo para a frente, sempre respeitando a luz definida no estudo.</p></div></li>
+            <li class="pstep"><span class="pstep__num font-display">05</span><div><h3>Intervalos de cicatrização</h3><p>Entre uma sessão e outra a pele cicatriza. A gente planeja o número de sessões pelo tamanho e pela região.</p></div></li>
+            <li class="pstep"><span class="pstep__num font-display">06</span><div><h3>Luz e finalização</h3><p>Por último entram os brilhos, os contrastes finais e os ajustes. Você sai com todas as orientações de cuidado.</p></div></li>
+          </ol>
+        </div>
+        <figure class="process__media" data-revela-foto>
+          <div class="foto process__foto">
+            <img src="assets/images/processo-sessao.svg" alt="Realismo colorido em andamento no antebraço: metade do beija-flor já em cor e a outra metade ainda na base em cinza, com a mão enluvada da artista segurando a máquina" loading="lazy" width="1600" height="1200">
+          </div>
+          <figcaption class="micro">Sessão em andamento — metade em cor, metade na base</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============================== 08 · PARA DURAR ============================== -->
+    <section class="reasons section--light" id="reasons" aria-label="O que faz um realismo durar">
+      <div class="section-head">
+        <p class="section-label reveal">05 — Para durar</p>
+        <h2 class="section-title" data-titulo><span class="font-display">O que faz</span><br><span class="font-display">a cor <em class="accent">durar.</em></span></h2>
+      </div>
+      <ol class="reasons__list">
+        <li class="reason reveal">
+          <span class="reason__num font-display" aria-hidden="true">01</span>
+          <div class="reason__body"><h3>Referência boa</h3><p>Foto nítida, com luz definida e boa resolução. O detalhe que não está na referência não aparece na pele.</p></div>
+        </li>
+        <li class="reason reveal">
+          <span class="reason__num font-display" aria-hidden="true">02</span>
+          <div class="reason__body"><h3>Tamanho certo</h3><p>Realismo precisa de espaço. Um rosto pequeno demais perde os olhos com o tempo; o tamanho é escolhido pela quantidade de detalhe.</p></div>
+        </li>
+        <li class="reason reveal">
+          <span class="reason__num font-display" aria-hidden="true">03</span>
+          <div class="reason__body"><h3>Contraste construído</h3><p>Cor sem sombra fica chapada. É o contraste entre luz e escuro que mantém a imagem legível com os anos.</p></div>
+        </li>
+        <li class="reason reveal">
+          <span class="reason__num font-display" aria-hidden="true">04</span>
+          <div class="reason__body"><h3>Cuidado com o sol</h3><p>Protetor solar sempre que a tatuagem ficar exposta. Sol é o que mais desbota a cor.</p></div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ============================== 09 · FAQ INTERATIVO ============================== -->
+    <section class="faq section--dark" id="faq" aria-label="Perguntas frequentes">
+      <div class="section-head">
+        <p class="section-label section-label--light reveal">06 — Dúvidas</p>
+        <h2 class="section-title section-title--light" data-titulo><span class="font-display">Dúvidas</span><br><span class="font-display">sobre <em class="accent">cor.</em></span></h2>
+        <p class="section-sub section-sub--light reveal">O que mais me perguntam antes de começar um realismo.</p>
+      </div>
+      <div class="faq__grid">
+        <div class="faq__list revela-grupo" id="faqList">
+
+          <div class="faq__item" data-faq-img="rosa">
+            <h3><button type="button" class="faq__q" aria-expanded="false" aria-controls="faq-a1" id="faq-q1"><span class="faq__num">01</span><span class="faq__question">A cor desbota com o tempo?</span></button></h3>
+            <div class="faq__a" id="faq-a1" role="region" aria-labelledby="faq-q1"><p>Toda tatuagem muda um pouco com os anos. O que segura a cor é contraste bem construído, tinta de qualidade e cuidado com o sol. Peça bem planejada envelhece bem.</p></div>
+          </div>
+
+          <div class="faq__item" data-faq-img="beija-flor">
+            <h3><button type="button" class="faq__q" aria-expanded="false" aria-controls="faq-a2" id="faq-q2"><span class="faq__num">02</span><span class="faq__question">Como cuidar da cor no sol?</span></button></h3>
+            <div class="faq__a" id="faq-a2" role="region" aria-labelledby="faq-q2"><p>Durante a cicatrização, nada de sol, piscina ou mar. Depois de cicatrizada, protetor solar alto sempre que a tatuagem ficar exposta. É o cuidado que mais preserva a cor.</p></div>
+          </div>
+
+          <div class="faq__item" data-faq-img="retrato">
+            <h3><button type="button" class="faq__q" aria-expanded="false" aria-controls="faq-a3" id="faq-q3"><span class="faq__num">03</span><span class="faq__question">Que referência eu mando?</span></button></h3>
+            <div class="faq__a" id="faq-a3" role="region" aria-labelledby="faq-q3"><p>Foto com boa resolução, boa luz e foco no que importa. Em retrato, a foto decide o resultado: olhos nítidos, sem filtro e com a luz vindo de um lado só ajudam muito.</p></div>
+          </div>
+
+          <div class="faq__item" data-faq-img="pet">
+            <h3><button type="button" class="faq__q" aria-expanded="false" aria-controls="faq-a4" id="faq-q4"><span class="faq__num">04</span><span class="faq__question">Faz retrato de pessoas e de pets?</span></button></h3>
+            <div class="faq__a" id="faq-a4" role="region" aria-labelledby="faq-q4"><p>Faço. Retrato pede uma referência muito boa e tamanho suficiente para os detalhes do rosto. A gente avalia a foto juntos antes de fechar o projeto.</p></div>
+          </div>
+
+          <div class="faq__item" data-faq-img="artista">
+            <h3><button type="button" class="faq__q" aria-expanded="false" aria-controls="faq-a5" id="faq-q5"><span class="faq__num">05</span><span class="faq__question">Realismo colorido fica bem em qualquer tom de pele?</span></button></h3>
+            <div class="faq__a" id="faq-a5" role="region" aria-labelledby="faq-q5"><p>Fica, e a paleta é pensada para a sua pele. Em peles mais escuras alguns tons se comportam de outro jeito; isso entra no estudo de cor antes da primeira sessão.</p></div>
+          </div>
+
+          <div class="faq__item" data-faq-img="koi">
+            <h3><button type="button" class="faq__q" aria-expanded="false" aria-controls="faq-a6" id="faq-q6"><span class="faq__num">06</span><span class="faq__question">Quantas sessões leva um projeto?</span></button></h3>
+            <div class="faq__a" id="faq-a6" role="region" aria-labelledby="faq-q6"><p>Depende do tamanho, da região e do nível de detalhe. A gente planeja o número de sessões pelo tamanho e pela região, sempre com intervalo de cicatrização entre elas.</p></div>
+          </div>
+
+          <div class="faq__item" data-faq-img="processo">
+            <h3><button type="button" class="faq__q" aria-expanded="false" aria-controls="faq-a7" id="faq-q7"><span class="faq__num">07</span><span class="faq__question">Como funciona o orçamento?</span></button></h3>
+            <div class="faq__a" id="faq-a7" role="region" aria-labelledby="faq-q7"><p>Me manda a ideia, a referência, o tamanho aproximado e a região do corpo. Com isso eu te explico o planejamento e passo o orçamento.</p></div>
+          </div>
+
+          <div class="faq__item" data-faq-img="olho">
+            <h3><button type="button" class="faq__q" aria-expanded="false" aria-controls="faq-a8" id="faq-q8"><span class="faq__num">08</span><span class="faq__question">Dá para cobrir uma tatuagem antiga?</span></button></h3>
+            <div class="faq__a" id="faq-a8" role="region" aria-labelledby="faq-q8"><p>Às vezes, sim. Depende do tamanho e de quão escura é a antiga. Manda uma foto que eu te digo com sinceridade o que dá para fazer.</p></div>
+          </div>
+
+        </div>
+        <div class="faq__media" aria-hidden="true">
+          <figure class="faq__img is-active" data-img="rosa"><img src="assets/images/obra-rosa.svg" alt="" loading="lazy" width="1600" height="1600"></figure>
+          <figure class="faq__img" data-img="beija-flor"><img src="assets/images/obra-beija-flor.svg" alt="" loading="lazy" width="1200" height="1600"></figure>
+          <figure class="faq__img" data-img="retrato"><img src="assets/images/obra-retrato.svg" alt="" loading="lazy" width="1200" height="1600"></figure>
+          <figure class="faq__img" data-img="pet"><img src="assets/images/obra-retrato-pet.svg" alt="" loading="lazy" width="1280" height="1600"></figure>
+          <figure class="faq__img" data-img="artista"><img src="assets/images/artista.svg" alt="" loading="lazy" width="1280" height="1600"></figure>
+          <figure class="faq__img" data-img="koi"><img src="assets/images/obra-koi.svg" alt="" loading="lazy" width="1200" height="1800"></figure>
+          <figure class="faq__img" data-img="processo"><img src="assets/images/processo-sessao.svg" alt="" loading="lazy" width="1600" height="1200"></figure>
+          <figure class="faq__img" data-img="olho"><img src="assets/images/obra-olho.svg" alt="" loading="lazy" width="1600" height="1600"></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== 10 · CONTATO / PALETA ============================== -->
+    <section class="booking section--rose" id="contact" aria-label="Contato">
+      <div class="booking__inner">
+        <a class="booking__phone-wrap" href="https://wa.me/" target="_blank" rel="noopener noreferrer" aria-label="Chamar a Íris Valença no WhatsApp" data-cursor="ABRIR">
+          <span class="booking__ring micro" aria-hidden="true">Vamos conversar</span>
+          <!-- Paleta de pintor em traço; as três cores (ciano, magenta, amarelo) e o pincel entram depois do desenho -->
+          <svg class="booking__phone" viewBox="0 0 220 200" aria-hidden="true" focusable="false" data-desenha>
+            <circle class="flash__tinta" cx="70" cy="82" r="10" fill="#18b6c9"/>
+            <circle class="flash__tinta" cx="112" cy="62" r="10" fill="#d6337a"/>
+            <circle class="flash__tinta" cx="154" cy="78" r="10" fill="#f2c230"/>
+            <path class="flash__tinta" d="M150 132c-7-6-17-8-25-5 1 9 5 17 13 21 5 2 9 0 12-3 3-3 4-9 0-13Z" fill="#ff6b4a"/>
+            <g fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+              <!-- paleta -->
+              <path pathLength="1" d="M108 28C58 28 20 60 20 102c0 42 34 70 78 70 18 0 24-10 24-22 0-12 9-20 22-20 32 0 58-14 58-46C202 56 160 28 108 28Z"/>
+              <!-- furo do polegar -->
+              <circle pathLength="1" cx="60" cy="128" r="13"/>
+              <!-- poços de tinta -->
+              <circle pathLength="1" cx="70" cy="82" r="15"/>
+              <circle pathLength="1" cx="112" cy="62" r="15"/>
+              <circle pathLength="1" cx="154" cy="78" r="15"/>
+              <!-- pincel -->
+              <path pathLength="1" d="M206 190 162 142" stroke-width="7"/>
+              <path pathLength="1" d="M162 142l-10-11"/>
+              <path pathLength="1" d="M150 132c-7-6-17-8-25-5 1 9 5 17 13 21 5 2 9 0 12-3 3-3 4-9 0-13Z" stroke-width="3.5"/>
+            </g>
+          </svg>
+        </a>
+        <div class="booking__text">
+          <p class="section-label reveal">07 — Contato</p>
+          <h2 class="booking__title" data-titulo>
+            <span class="font-display">Vamos planejar</span><br>
+            <span class="font-display">a sua <em class="accent tem-risco">peça?<svg class="risco" aria-hidden="true" focusable="false"><use href="#risco"/></svg></em></span>
+          </h2>
+          <p class="booking__sub reveal">Me conta a ideia, manda a referência e diz em que lugar do corpo. O resto a gente estuda junto.</p>
+          <div class="reveal">
+            <a class="btn-editorial" href="https://wa.me/" target="_blank" rel="noopener noreferrer" data-cursor="ABRIR">Chamar no WhatsApp</a>
+            <p class="micro booking__alt">ou pelo <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Direct no Instagram</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== 11 · CTA FINAL ============================== -->
+    <section class="finale section--black" id="finale" aria-label="Começar um projeto">
+      <!-- círculos de cor sobrepostos em traço; a cor entra depois -->
+      <svg class="flash flash--circulos" viewBox="0 0 64 64" aria-hidden="true" focusable="false" data-desenha data-parallax="flash" data-vel="-1.2"><g class="flash__tinta" opacity="0.75"><circle cx="24" cy="25" r="14" fill="#18b6c9"/><circle cx="40" cy="25" r="14" fill="#d6337a"/><circle cx="32" cy="39" r="14" fill="#f2c230"/></g><g fill="none" stroke="currentColor" stroke-width="1.8"><circle pathLength="1" cx="24" cy="25" r="17"/><circle pathLength="1" cx="40" cy="25" r="17"/><circle pathLength="1" cx="32" cy="39" r="17"/></g></svg>
+      <svg class="flash flash--pincel" viewBox="0 0 24 80" aria-hidden="true" focusable="false" data-desenha data-parallax="flash" data-vel="1.5"><path class="flash__tinta" d="M12 4c-4 6-5 12-4 18h8c1-6 0-12-4-18Z" fill="#ff6b4a"/><path pathLength="1" d="M12 2c-5 7-6 14-5 21h10c1-7 0-14-5-21Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path pathLength="1" d="M7 23h10v8H7Z" fill="none" stroke="currentColor" stroke-width="1.8"/><path pathLength="1" d="M9 31l-1 44c0 2 2 3 4 3s4-1 4-3l-1-44" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+      <div class="finale__grid">
+        <div class="finale__text">
+          <h2 class="finale__title" data-titulo>
+            <span class="font-display">Luz, sombra</span><br>
+            <span class="font-display accent tem-risco">e cor.<svg class="risco" aria-hidden="true" focusable="false"><use href="#risco"/></svg></span>
+          </h2>
+          <div class="reveal">
+            <a class="btn-editorial btn-editorial--light" href="https://wa.me/" target="_blank" rel="noopener noreferrer" data-cursor="ABRIR">Começar meu projeto</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== 12 · RODAPÉ ============================== -->
+    <footer class="footer section--black" aria-label="Rodapé">
+      <div class="footer__inner">
+        <p class="footer__brand"><span class="font-display">Íris Valença</span><span class="micro">Realismo colorido</span></p>
+        <nav class="footer__links" aria-label="Redes">
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" data-cursor="ABRIR">Instagram</a>
+          <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" data-cursor="ABRIR">WhatsApp</a>
+        </nav>
+        <p class="micro">© Íris Valença</p>
+      </div>
+      <p class="footer__modelo">Site modelo — nomes, contatos e imagens de exemplo.</p>
+    </footer>
+
+  </main>
+
+  <!-- ============================== NAV INFERIOR ============================== -->
+  <nav class="nav" id="nav" aria-label="Navegação principal">
+    <ul class="nav__list">
+      <li><a href="#hero" class="nav__link is-active" data-section="hero" aria-current="location">Início</a></li>
+      <li><a href="#work" class="nav__link" data-section="work">Obras</a></li>
+      <li><a href="#styles" class="nav__link" data-section="styles">Temas</a></li>
+      <li><a href="#about" class="nav__link" data-section="about">Sobre</a></li>
+      <li><a href="#process" class="nav__link" data-section="process">Processo</a></li>
+      <li><a href="#faq" class="nav__link" data-section="faq">Dúvidas</a></li>
+      <li><a href="#contact" class="nav__link" data-section="contact">Contato</a></li>
+    </ul>
+    <a class="nav__cta" href="https://wa.me/" target="_blank" rel="noopener noreferrer">Orçamento</a>
+  </nav>
+
+  <!-- Nav mobile compacta -->
+  <nav class="mnav" id="mnav" aria-label="Navegação">
+    <button type="button" class="mnav__toggle" id="mnavToggle" aria-expanded="false" aria-controls="mnavMenu">
+      <span class="mnav__toggle-label">Menu</span>
+    </button>
+    <a class="mnav__cta" href="https://wa.me/" target="_blank" rel="noopener noreferrer">Orçamento</a>
+  </nav>
+  <div class="mnav__menu" id="mnavMenu" hidden>
+    <ul>
+      <li><a href="#hero"><span class="micro">01</span><span class="font-display">Início</span></a></li>
+      <li><a href="#work"><span class="micro">02</span><span class="font-display">Obras</span></a></li>
+      <li><a href="#styles"><span class="micro">03</span><span class="font-display">Temas</span></a></li>
+      <li><a href="#about"><span class="micro">04</span><span class="font-display">Sobre</span></a></li>
+      <li><a href="#process"><span class="micro">05</span><span class="font-display">Processo</span></a></li>
+      <li><a href="#faq"><span class="micro">06</span><span class="font-display">Dúvidas</span></a></li>
+      <li><a href="#contact"><span class="micro">07</span><span class="font-display">Contato</span></a></li>
+    </ul>
+  </div>
+</body>
+</html>

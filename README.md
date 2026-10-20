@@ -21,7 +21,33 @@ A intro toca uma vez por sessão. **Para revê-la, abra a página com `?intro=1`
 - `assets/favicon.svg`: "MD" na Pirata One (a mesma marca de texto do cabeçalho).
 - `assets/images/`: as fotos do site. `mano-personagem.jpg` (a ilustração) saiu da página a pedido e não é mais carregada; o arquivo continua na pasta.
 - `backup/` (fora do git): cópia do `index.html`, `style.css` e `main.js` anteriores às animações. Para voltar, copie os três arquivos para o lugar original ou use `git checkout 573c656 -- index.html css js`.
+- `modelos/`: quatro modelos de site feitos a partir deste (ver "Modelos de site" abaixo), a página que mostra todos e as capturas dela (`modelos/capas/`).
 - `verification/` (fora do git): scripts de QA, capturas, vídeos e relatórios.
+
+## Modelos de site (`modelos/`)
+
+Quatro modelos de site para tatuadores e estúdios, feitos a partir deste site. A página `modelos/index.html` mostra todos (no GitHub Pages: `/modelos/`).
+
+| Modelo | Pasta | Para quem | Intro |
+|---|---|---|---|
+| Lia Monteiro — Fine Line | `modelos/fine-line/` | tatuadora de traço fino, floral e botânico; tema claro, fotos em arco | "o traço fino": o nome é contornado a lápis e um raminho se desenha |
+| Tito Ferraz — Blackwork & Old School | `modelos/blackwork/` | tatuador de preto sólido e tradicional; folha de flash, seção "Flash da semana" | "a folha de flash": contorno, preto sólido e sombra ocre deslocada |
+| Casa Nanquim — Estúdio de Tatuagem | `modelos/estudio/` | estúdio com vários artistas; equipe, biossegurança, como chegar | "a gota de nanquim": a gota se espalha pela tela e o nome aparece dentro dela |
+| Íris Valença — Realismo colorido | `modelos/realismo/` | tatuadora de realismo; galeria com etiquetas de museu, "Como nasce um realismo" | "camadas de cor": três chapas de cor convergem no nome |
+
+- **Base comum:**
+  - Cada pasta funciona sozinha, com caminhos relativos, e pode ser copiada para um cliente.
+  - Todas usam a mesma base deste site: intro uma vez por sessão (`?intro=1` força e `?intro=0` desliga), efeitos de rolagem que se repetem, movimento reduzido respeitado e layout de 280 a 2560 px.
+- **Conteúdo de exemplo:**
+  - Os nomes são fictícios.
+  - Os contatos são genéricos: `https://wa.me/` e `https://www.instagram.com/`, e também `https://maps.google.com/` no estúdio.
+  - Não há depoimentos, números, prêmios nem preços.
+  - O topo do `<body>` de cada `index.html` traz um comentário `[PREENCHER]` com o que trocar.
+  - O rodapé diz que é um site modelo.
+- **Fotos:**
+  - Por enquanto, cada espaço de foto mostra uma moldura "Sua foto aqui" (`assets/images/*.svg`) com a proporção e o tamanho mínimo.
+  - O `imagens.json` de cada modelo lista os espaços, com o texto alternativo e o prompt para gerar a foto. São 56 fotos ao todo (fine line 11, blackwork 18, estúdio 16, realismo 11), cerca de 14 créditos no GPT Image 2.5 do Higgsfield.
+  - Para trocar uma moldura, salve a foto como `.jpg` com o mesmo nome dela e rode `node verification/ferramentas/modelos/troca-fotos.js modelos/<modelo>` (ferramenta local, fora do git).
 
 ## Identidade e movimento
 

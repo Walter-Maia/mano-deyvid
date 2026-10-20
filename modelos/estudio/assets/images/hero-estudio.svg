@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="1600" viewBox="0 0 1280 1600" role="img" aria-label="Sala de atendimento">
+<rect width="1280" height="1600" fill="#e4dfd6"/>
+<rect x="92.80000000000001" y="92.80000000000001" width="1094.4" height="1414.4" fill="none" stroke="rgba(15,23,32,.2)" stroke-width="2.56"/>
+<path d="M58 148V58H148M1222 148V58H1132M58 1452V1542H148M1222 1452V1542H1132" fill="none" stroke="#a8441f" stroke-width="7.68" stroke-linecap="square"/>
+<g transform="translate(448.0 480.0) scale(3.8400)" fill="none" stroke="#a8441f" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d='M50 8C50 8 25 43 25 62a25 25 0 0 0 50 0C75 43 50 8 50 8Z'/><path d='M37 64a13 13 0 0 0 9 12'/><path d='M22 96h56'/></g>
+<g fill="#0f1720" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif">
+<text x="640" y="1005" font-size="79" font-family="Georgia, 'Times New Roman', serif">Sua foto aqui</text>
+<text x="640" y="1092" font-size="44" opacity="0.8">Sala de atendimento</text>
+<text x="640" y="1449" font-size="33" letter-spacing="8.3" opacity="0.55">4:5 · 1280 × 1600 PX OU MAIS</text>
+</g>
+</svg>

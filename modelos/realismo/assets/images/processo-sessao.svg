@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1200" viewBox="0 0 1600 1200" role="img" aria-label="Sessão em andamento · camadas de cor">
+<rect width="1600" height="1200" fill="#1b1b1f"/>
+<rect x="86.4" y="86.4" width="1427.2" height="1027.2" fill="none" stroke="rgba(244,242,238,0.2)" stroke-width="2.4"/>
+<path d="M54 138V54H138M1546 138V54H1462M54 1062V1146H138M1546 1062V1146H1462" fill="none" stroke="#ff6b4a" stroke-width="7.2" stroke-linecap="square"/>
+<g transform="translate(620.0 324.0) scale(3.6000)" fill="none" stroke="#ff6b4a" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><circle cx='38' cy='40' r='22'/><circle cx='62' cy='40' r='22'/><circle cx='50' cy='61' r='22'/></g>
+<g fill="#f4f2ee" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif">
+<text x="800" y="816" font-size="74" font-family="Impact, 'Arial Narrow', sans-serif">Sua foto aqui</text>
+<text x="800" y="897" font-size="41" opacity="0.8">Sessão em andamento · camadas de cor</text>
+<text x="800" y="1060" font-size="31" letter-spacing="7.8" opacity="0.55">4:3 · 1600 × 1200 PX OU MAIS</text>
+</g>
+</svg>

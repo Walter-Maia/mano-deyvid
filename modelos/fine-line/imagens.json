@@ -1,0 +1,113 @@
+{
+ "tema": {
+  "fundo": "#ebe3d8",
+  "tinta": "#22201e",
+  "linha": "rgba(34,32,30,.22)",
+  "acento": "#4f5b40",
+  "fonte": "Georgia, 'Times New Roman', serif",
+  "fonteTitulo": "Georgia, 'Times New Roman', serif",
+  "motivo": "<path d='M50 96C49 70 50 40 56 6'/><path d='M50 74C40 66 28 64 18 68c9 9 22 11 32 6Z'/><path d='M51 56c10-9 23-11 33-7-9 9-22 12-33 7Z'/><path d='M53 36C44 28 33 26 25 30c8 8 19 10 28 6Z'/><path d='M55 20c7-7 17-9 25-6-7 7-17 9-25 6Z'/>",
+  "motivoViewBox": "0 0 100 100"
+ },
+ "imagens": [
+  {
+   "arquivo": "lia-sessao.svg",
+   "largura": 1200,
+   "altura": 1600,
+   "proporcao": "3:4",
+   "rotulo": "Lia em sessão · ateliê",
+   "alt": "Lia Monteiro tatuando um ramo delicado no antebraço de uma cliente, com a luz natural do ateliê",
+   "prompt": "Photorealistic vertical photo, 3:4. A fine line tattoo artist at work in a calm, bright tattoo studio: a woman in her early 30s with light olive skin, wavy shoulder-length dark brown hair loosely tied back, small gold hoop earrings, a few tiny fine line tattoos on her forearms, wearing a cream linen apron over a plain black t-shirt and black nitrile gloves. She leans in with focus, holding a slim rotary tattoo pen, tattooing a thin olive branch on a client's inner forearm resting on a padded armrest covered with clear film. Soft natural window light from the left, warm off-white walls, a small plant and paper towels in soft focus. Shallow depth of field, real skin texture, no text, no watermark, no logo."
+  },
+  {
+   "arquivo": "lia-desenhando.svg",
+   "largura": 1280,
+   "altura": 1600,
+   "proporcao": "4:5",
+   "rotulo": "Lia desenhando · mesa do ateliê",
+   "alt": "Lia Monteiro desenhando ramos e flores a lápis na mesa do ateliê, cercada de esboços",
+   "prompt": "Photorealistic vertical photo, 4:5. The same fine line tattoo artist (woman in her early 30s, light olive skin, wavy shoulder-length dark brown hair loosely tied back, small gold hoop earrings, tiny fine line tattoos on her forearms, plain black t-shirt, no gloves) sitting at a light wooden table, drawing delicate botanical line sketches with a fine pencil on cream paper. Several finished sketches of thin flowers and leafy branches spread around, a glass of water and a small vase with a single dried flower. Soft morning window light, warm neutral tones, calm atmosphere, natural skin texture. No readable text, no watermark, no logo."
+  },
+  {
+   "arquivo": "galeria-01.svg",
+   "largura": 1200,
+   "altura": 1800,
+   "proporcao": "2:3",
+   "rotulo": "Ramo de oliveira · antebraço",
+   "alt": "Tatuagem fine line de um ramo de oliveira subindo pelo antebraço interno, já cicatrizada",
+   "prompt": "Photorealistic vertical close-up photo, 2:3. A healed fine line tattoo of a slender olive branch with small leaves running vertically along a woman's inner forearm, single-needle black lines with very light grey shading inside a few leaves. Arm resting on a cream linen cloth, soft natural daylight, real skin texture with fine hairs and pores, crisp focus on the tattoo. No text, no watermark, no logo."
+  },
+  {
+   "arquivo": "galeria-02.svg",
+   "largura": 1200,
+   "altura": 1600,
+   "proporcao": "3:4",
+   "rotulo": "Buquê floral · braço",
+   "alt": "Tatuagem fine line de um pequeno buquê de flores do campo na parte de fora do braço, cicatrizada",
+   "prompt": "Photorealistic vertical photo, 3:4. A healed fine line tattoo of a small bouquet of wildflowers (cosmos, chamomile and a sprig of lavender) tied with a thin ribbon, on the outer upper arm of a person with light skin. Delicate single-needle black linework with subtle grey dotwork shading. Soft natural light from a window, neutral warm background out of focus, realistic skin texture. No text, no watermark, no logo."
+  },
+  {
+   "arquivo": "galeria-03.svg",
+   "largura": 1280,
+   "altura": 1600,
+   "proporcao": "4:5",
+   "rotulo": "Lettering fino · clavícula",
+   "alt": "Tatuagem de lettering fino com a palavra calma escrita à mão, acompanhando a clavícula",
+   "prompt": "Photorealistic vertical photo, 4:5. A healed fine line script lettering tattoo following the line of a woman's collarbone, the single handwritten lowercase word 'calma' in a thin, elegant cursive, black single-needle line. Medium-brown skin, bare shoulder, simple cream top strap pushed aside, soft natural daylight, shallow depth of field, real skin texture. The only text in the image is the tattoo word. No watermark, no logo."
+  },
+  {
+   "arquivo": "galeria-04.svg",
+   "largura": 1600,
+   "altura": 1600,
+   "proporcao": "1:1",
+   "rotulo": "Lua e estrelas · tornozelo",
+   "alt": "Tatuagem pequena de lua crescente com três estrelas finas no tornozelo, cicatrizada",
+   "prompt": "Photorealistic square photo, 1:1. A small healed fine line tattoo of a crescent moon with three tiny four-pointed stars on the outer ankle of a person with light skin, thin black lines and a few dots. Foot resting on a light wooden floor next to a cream rug, soft natural daylight, realistic skin texture, close framing on the ankle. No text, no watermark, no logo."
+  },
+  {
+   "arquivo": "galeria-05.svg",
+   "largura": 1200,
+   "altura": 1800,
+   "proporcao": "2:3",
+   "rotulo": "Ornamental delicado · coluna",
+   "alt": "Tatuagem ornamental delicada descendo pela coluna, com filigranas finas e pontilhado",
+   "prompt": "Photorealistic vertical photo, 2:3. A healed delicate ornamental fine line tattoo running down the center of a woman's upper spine: symmetrical thin filigree scrolls, tiny dots and small teardrop shapes in black single-needle line with light dotwork. Back view, hair pinned up, open-back cream top, soft natural light, light olive skin with real texture, calm neutral background. No text, no watermark, no logo."
+  },
+  {
+   "arquivo": "galeria-06.svg",
+   "largura": 1200,
+   "altura": 1600,
+   "proporcao": "3:4",
+   "rotulo": "Flor em linha contínua · pulso",
+   "alt": "Tatuagem de uma flor desenhada em uma única linha contínua na parte interna do pulso",
+   "prompt": "Photorealistic vertical photo, 3:4. A small fresh fine line tattoo of a single flower drawn in one continuous unbroken line (tulip-like shape with one leaf) on the inner wrist of a person with medium skin tone, thin black line, very slight redness around it as a fresh tattoo, a thin clear protective film reflecting a little light. Hand relaxed on a cream towel, soft studio daylight, realistic skin texture. No text, no watermark, no logo."
+  },
+  {
+   "arquivo": "galeria-07.svg",
+   "largura": 1280,
+   "altura": 1600,
+   "proporcao": "4:5",
+   "rotulo": "Ramo de lavanda · costela",
+   "alt": "Tatuagem fine line de um ramo de lavanda na lateral da costela, cicatrizada",
+   "prompt": "Photorealistic vertical photo, 4:5. A healed fine line tattoo of two long lavender sprigs crossing slightly, placed vertically on the side of a woman's ribcage, thin black stems and small buds with very light grey shading. Side view, arm raised and resting on her head, simple neutral bra band visible at the edge, soft natural daylight, light skin with real texture, tasteful and non-sexualized framing. No text, no watermark, no logo."
+  },
+  {
+   "arquivo": "galeria-08.svg",
+   "largura": 1600,
+   "altura": 1600,
+   "proporcao": "1:1",
+   "rotulo": "Pequeno símbolo · atrás da orelha",
+   "alt": "Tatuagem mínima de um pequeno sol de linhas finas atrás da orelha",
+   "prompt": "Photorealistic square photo, 1:1. A tiny healed minimalist fine line tattoo of a small sun (a circle with short thin rays) behind the ear of a woman with dark hair tucked back, small gold stud earring. Close-up, soft natural daylight, real skin texture and fine baby hairs, warm neutral background out of focus. No text, no watermark, no logo."
+  },
+  {
+   "arquivo": "processo-stencil.svg",
+   "largura": 1600,
+   "altura": 1200,
+   "proporcao": "4:3",
+   "rotulo": "Stencil na pele · antes da agulha",
+   "alt": "Stencil roxo de um ramo floral aplicado no antebraço, com a mão da tatuadora de luva ajustando a posição",
+   "prompt": "Photorealistic horizontal photo, 4:3. A purple thermal stencil transfer of a delicate floral branch freshly applied on a client's inner forearm, before tattooing, no ink yet. The tattoo artist's hands in black nitrile gloves gently stretch the skin beside it; a slim rotary tattoo pen and small ink caps rest on a tray wrapped in clear film in the background, out of focus. Soft natural daylight, cream and light wood tones, realistic skin texture. No text, no watermark, no logo."
+  }
+ ]
+}

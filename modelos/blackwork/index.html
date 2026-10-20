@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tito Ferraz — Blackwork &amp; Old School</title>
+  <meta name="description" content="Tito Ferraz, tatuador de blackwork e old school. Preto sólido, contorno grosso, tradicional americano e flash da semana. Manda a ideia e marca a sessão.">
+  <meta name="theme-color" content="#0c0b09">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Tito Ferraz — Blackwork &amp; Old School">
+  <meta property="og:description" content="Linha firme, preto sólido. Tradicional, blackwork e flash da semana.">
+  <meta property="og:type" content="website">
+  <!-- [PREENCHER] trocar por uma foto real com URL absoluta (https://…/assets/images/tito-oficina.jpg) quando o domínio estiver definido -->
+  <meta property="og:image" content="assets/images/tito-oficina.svg">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <!-- Tipografia: slab pesada de letreiro + sans de oficina (carrega sem travar a primeira pintura) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
+
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Intro "a folha de flash": decidida aqui, antes da primeira pintura, para cobrir a página sem piscar. Não toca com
+       movimento reduzido, com âncora na URL, com a página já rolada, com a aba oculta ou se já foi vista nesta sessão.
+       ?intro=1 força (revisão) e ?intro=0 desliga. -->
+  <script>(function(){var d=document.documentElement;d.classList.add("js");try{var q=location.search;if(/[?&]intro=0\b/.test(q)||matchMedia("(prefers-reduced-motion: reduce)").matches)return;if(!/[?&]intro=1\b/.test(q)&&(location.hash||document.hidden||window.pageYOffset>4||sessionStorage.getItem("modelo-blackwork-intro")==="1"))return;d.classList.add("intro-ativa")}catch(e){}})();</script>
+  <script src="js/intro.js" defer onerror="document.documentElement.classList.remove('intro-ativa')"></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <!-- [PREENCHER] Site modelo. Antes de publicar, trocar:
+       · os links de WhatsApp (https://wa.me/ → https://wa.me/55DDDNUMERO) — 8 links;
+       · os links de Instagram (https://www.instagram.com/ → https://www.instagram.com/perfil/) — 3 links;
+       · o nome, os textos e as molduras de assets/images (.svg) pelas fotos reais (.jpg) — lista e prompts em imagens.json;
+       · o og:image por uma URL absoluta. -->
+
+  <!-- Sublinhado grosso sob as palavras em destaque, como a faixa de um letreiro old school -->
+  <svg class="svg-lib" aria-hidden="true" focusable="false"><symbol id="risco" viewBox="0 0 300 24" preserveAspectRatio="none"><path pathLength="1" d="M3 13L297 11"/></symbol></svg>
+
+  <!-- Cursor contextual (somente desktop / fine pointer) -->
+  <div class="cursor" id="cursor" aria-hidden="true"><span class="cursor__label" id="cursorLabel"></span></div>
+
+  <a class="skip-link" href="#hero">Pular para o conteúdo</a>
+
+  <header class="site-head">
+    <a href="#hero" class="site-head__brand" aria-label="TF — Tito Ferraz, voltar ao topo">
+      <span class="font-display">TF</span>
+    </a>
+    <p class="site-head__meta">Blackwork &amp; Old School</p>
+  </header>
+
+  <main id="main">
+
+    <!-- ============================== 01 · HERO ==============================
+         A entrada é só CSS (existe sem JavaScript) e, com a intro, espera a cortina subir (--rise-start).
+         À direita, uma folha de flash: cabeçalho, a foto e três desenhos numerados. -->
+    <section class="hero section--light" id="hero" aria-label="Apresentação">
+      <div class="hero__grid">
+        <div class="hero__text">
+          <p class="hero__eyebrow"><span>Tito Ferraz · tatuador de blackwork e old school</span></p>
+          <h1 class="hero__title">
+            <span class="hero__title-row"><span class="font-display">Linha firme,</span></span>
+            <span class="hero__title-row"><span class="font-display">preto <em class="accent tem-risco">sólido.<svg class="risco" aria-hidden="true" focusable="false"><use href="#risco"/></svg></em></span></span>
+          </h1>
+          <p class="hero__sub">Tradicional americano e blackwork, de contorno grosso e preto bem batido. Desenho que se lê de longe e aguenta o tempo na pele.</p>
+          <a class="cta-line hero__cta" href="https://wa.me/" target="_blank" rel="noopener noreferrer" data-cursor="ABRIR">
+            <span class="cta-line__text">Marcar sessão</span>
+            <span class="cta-line__arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+        <figure class="hero__media folha">
+          <p class="folha__topo" aria-hidden="true"><span>Folha Nº 01</span><span>Tito Ferraz</span></p>
+          <div class="foto hero__foto">
+            <img src="assets/images/tito-oficina.svg" alt="Tito Ferraz debruçado sobre o antebraço de um cliente, com a máquina na mão e folhas de flash na parede ao fundo" width="1280" height="1600" fetchpriority="high" data-parallax="foto">
+          </div>
+          <ol class="folha__flash" aria-hidden="true">
+            <li>
+              <svg class="desenho" viewBox="0 0 64 64" focusable="false"><path class="flash__tinta" d="M28 20C34 11 44 5 60 3C53 9 47 15 43 23Z" fill="currentColor"/><path class="flash__tinta" d="M24 30C22 39 16 47 6 54C16 51 24 45 31 35Z" fill="currentColor"/><g fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><path pathLength="1" d="M6 22L14 19C19 15 25 16 29 20C36 27 44 33 52 38L62 41L54 41L59 52L49 43C41 40 33 36 26 31C20 28 16 25 14 24Z"/><path pathLength="1" d="M28 20C34 11 44 5 60 3C53 9 47 15 43 23"/><path pathLength="1" d="M24 30C22 39 16 47 6 54C16 51 24 45 31 35"/></g></svg>
+              <span>Nº 01</span>
+            </li>
+            <li>
+              <svg class="desenho" viewBox="0 0 40 72" focusable="false"><path class="flash__tinta" d="M16 10H24V24H16Z" fill="currentColor"/><g fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><circle pathLength="1" cx="20" cy="6" r="4"/><path pathLength="1" d="M16 10H24V24H16Z"/><path pathLength="1" d="M4 28C6 24 10 24 20 24S34 24 36 28"/><path pathLength="1" d="M14 28L20 68L26 28Z"/></g></svg>
+              <span>Nº 02</span>
+            </li>
+            <li>
+              <svg class="desenho" viewBox="0 0 64 64" focusable="false"><path class="flash__tinta" d="M32 32L32 4L38.5 23.1ZM32 32L58.6 23.3L42.5 35.4ZM32 32L48.5 54.7L32 43ZM32 32L15.5 54.7L21.5 35.4ZM32 32L5.4 23.3L25.5 23.1Z" fill="currentColor"/><path pathLength="1" d="M32 4L38.5 23.1L58.6 23.3L42.5 35.4L48.5 54.7L32 43L15.5 54.7L21.5 35.4L5.4 23.3L25.5 23.1Z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/></svg>
+              <span>Nº 03</span>
+            </li>
+          </ol>
+          <figcaption class="hero__caption">Tito Ferraz — na oficina</figcaption>
+        </figure>
+      </div>
+      <div class="hero__footer">
+        <p class="micro">Role pra ver</p>
+        <span class="hero__scrollline" aria-hidden="true"></span>
+        <p class="micro">Blackwork × Old School × Flash</p>
+      </div>
+    </section>
+
+    <!-- ============================== 02 · TRABALHOS ============================== -->
+    <section class="work section--dark" id="work" aria-label="Trabalhos">
+      <div class="section-head">
+        <p class="section-label reveal">Nº 02 · Trabalhos</p>
+        <h2 class="section-title" data-titulo>
+          <span class="font-display">Saiu da folha,</span><br>
+          <span class="font-display">foi pra <em class="accent tem-risco">pele.<svg class="risco" aria-hidden="true" focusable="false"><use href="#risco"/></svg></em></span>
+        </h2>
+        <p class="section-sub reveal">Uma parte do que já saiu daqui. Cicatrizado, de preferência: é aí que a tattoo mostra o que é.</p>
+      </div>
+    </section>
+
+    <!-- ============================== 03 · GALERIA HORIZONTAL ==============================
+         Desktop com JS: a faixa anda para o lado enquanto a página desce (presa na tela). Celular, sem JS ou com
+         movimento reduzido: rolagem lateral nativa. -->
+    <section class="gallery section--dark" id="gallery" aria-label="Galeria de trabalhos" data-galeria>
+      <div class="gallery__pin">
+        <div class="gallery__track revela-grupo" id="galleryTrack" data-cursor="ARRASTE" tabindex="0" role="region" aria-label="Galeria horizontal — use as setas ou arraste">
+          <figure class="gcard gcard--tall">
+            <div class="gcard__foto"><img src="assets/images/trabalho-01-blackwork.svg" alt="Blackwork de preto sólido no antebraço: faixas largas e áreas fechadas em preto, com linhas finas de pele aparente" loading="lazy" width="1200" height="1600"></div>
+            <figcaption><span class="gcard__num">Nº 01</span> Blackwork · Antebraço</figcaption>
+          </figure>
+          <figure class="gcard gcard--mid gcard--down">
+            <div class="gcard__foto"><img src="assets/images/trabalho-02-aguia.svg" alt="Águia tradicional americana de asas abertas no peito, contorno grosso e cores chapadas em vermelho, amarelo e verde" loading="lazy" width="1280" height="1600"></div>
+            <figcaption><span class="gcard__num">Nº 02</span> Old School · Peito</figcaption>
+          </figure>
+          <figure class="gcard gcard--tall">
+            <div class="gcard__foto"><img src="assets/images/trabalho-03-adaga.svg" alt="Adaga atravessando uma rosa vermelha no antebraço, em estilo tradicional, com folhas verdes e cabo amarelo" loading="lazy" width="1200" height="1800"></div>
+            <figcaption><span class="gcard__num">Nº 03</span> Old School · Adaga e rosa</figcaption>
+          </figure>
+          <figure class="gcard gcard--small gcard--up">
+            <div class="gcard__foto"><img src="assets/images/trabalho-05-pantera.svg" alt="Pantera tradicional subindo pelo braço, com as garras de fora, corpo em preto sólido e boca vermelha" loading="lazy" width="1600" height="1600"></div>
+            <figcaption><span class="gcard__num">Nº 04</span> Flash · Pantera</figcaption>
+          </figure>
+          <figure class="gcard gcard--mid">
+            <div class="gcard__foto"><img src="assets/images/trabalho-04-ornamental.svg" alt="Ornamental escuro na canela: desenho simétrico com áreas de preto sólido, pontilhado e filigrana grossa" loading="lazy" width="1200" height="1600"></div>
+            <figcaption><span class="gcard__num">Nº 05</span> Ornamental · Canela</figcaption>
+          </figure>
+          <figure class="gcard gcard--tall gcard--down">
+            <div class="gcard__foto"><img src="assets/images/trabalho-06-cobertura.svg" alt="Cobertura em blackwork no ombro: uma forma ornamental grande em preto sólido que esconde uma tatuagem antiga" loading="lazy" width="1280" height="1600"></div>
+            <figcaption><span class="gcard__num">Nº 06</span> Cobertura · Ombro</figcaption>
+          </figure>
+          <figure class="gcard gcard--mid gcard--up">
+            <div class="gcard__foto"><img src="assets/images/trabalho-07-navio.svg" alt="Navio tradicional de velas cheias sobre ondas, na panturrilha, com contorno grosso e cores chapadas" loading="lazy" width="1200" height="1600"></div>
+            <figcaption><span class="gcard__num">Nº 07</span> Old School · Panturrilha</figcaption>
+          </figure>
+          <figure class="gcard gcard--small">
+            <div class="gcard__foto"><img src="assets/images/trabalho-08-detalhe.svg" alt="Close de um contorno grosso já cicatrizado, ao lado de uma área de preto sólido e outra de amarelo chapado" loading="lazy" width="1600" height="1600"></div>
+            <figcaption><span class="gcard__num">Nº 08</span> Detalhe · Cicatrizado</figcaption>
+          </figure>
+          <div class="gcard gcard--text">
+            <p class="font-display gcard__end">O resto<br>anda<br>por <em class="accent">aí.</em></p>
+            <a class="cta-line" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" data-cursor="ABRIR">
+              <span class="cta-line__text">Ver no Instagram</span>
+              <span class="cta-line__arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== FAIXA ==============================
+         Duas linhas que andam só com a rolagem, em sentidos opostos (sem loop automático). -->
+    <div class="marquee section--ocre" aria-hidden="true" data-faixa>
+      <div class="marquee__row" data-faixa-linha="-1">
+        <span class="marquee__chunk font-display">Blackwork <i>×</i> Old School <i>×</i> Flash <i>×</i> Ornamental <i>×</i> Preto sólido <i>×</i> Tradicional <i>×</i>&nbsp;</span>
+        <span class="marquee__chunk font-display">Blackwork <i>×</i> Old School <i>×</i> Flash <i>×</i> Ornamental <i>×</i> Preto sólido <i>×</i> Tradicional <i>×</i>&nbsp;</span>
+        <span class="marquee__chunk font-display">Blackwork <i>×</i> Old School <i>×</i> Flash <i>×</i> Ornamental <i>×</i> Preto sólido <i>×</i> Tradicional <i>×</i>&nbsp;</span>
+      </div>
+      <div class="marquee__row marquee__row--stencil" data-faixa-linha="1">
+        <span class="marquee__chunk font-display">Blackwork <i>×</i> Old School <i>×</i> Flash <i>×</i> Ornamental <i>×</i> Preto sólido <i>×</i> Tradicional <i>×</i>&nbsp;</span>
+        <span class="marquee__chunk font-display">Blackwork <i>×</i> Old School <i>×</i> Flash <i>×</i> Ornamental <i>×</i> Preto sólido <i>×</i> Tradicional <i>×</i>&nbsp;</span>
+        <span class="marquee__chunk font-display">Blackwork <i>×</i> Old School <i>×</i> Flash <i>×</i> Ornamental <i>×</i> Preto sólido <i>×</i> Tradicional <i>×</i>&nbsp;</span>
+      </div>
+    </div>
+
+    <!-- ============================== 04 · ESTILOS ============================== -->
+    <section class="styles section--light" id="styles" aria-label="Estilos">
+      <div class="section-head">
+        <p class="section-label reveal">Nº 03 · Estilos</p>
+        <h2 class="section-title" data-titulo>
+          <span class="font-display">Faço pouco,</span><br>
+          <span class="font-display">faço <em class="accent">bem.</em></span>
+        </h2>
+        <p class="section-sub reveal">Não faço de tudo. Faço o que sei fazer direito, com o mesmo princípio: preto que segura e desenho que se lê.</p>
+      </div>
+      <div class="styles__grid">
+        <ul class="styles__list revela-grupo" id="stylesList">
+          <li><button type="button" class="styles__item is-active" data-style="blackwork" aria-pressed="true"><span class="styles__num">Nº 01</span><span class="styles__name font-display">Blackwork</span></button></li>
+          <li><button type="button" class="styles__item" data-style="oldschool" aria-pressed="false"><span class="styles__num">Nº 02</span><span class="styles__name font-display">Old School</span></button></li>
+          <li><button type="button" class="styles__item" data-style="flash" aria-pressed="false"><span class="styles__num">Nº 03</span><span class="styles__name font-display">Flash</span></button></li>
+          <li><button type="button" class="styles__item" data-style="ornamental" aria-pressed="false"><span class="styles__num">Nº 04</span><span class="styles__name font-display">Ornamental</span></button></li>
+          <li><button type="button" class="styles__item" data-style="geometrico" aria-pressed="false"><span class="styles__num">Nº 05</span><span class="styles__name font-display">Geométrico</span></button></li>
+          <li><button type="button" class="styles__item" data-style="cobertura" aria-pressed="false"><span class="styles__num">Nº 06</span><span class="styles__name font-display">Cobertura</span></button></li>
+        </ul>
+        <div class="styles__media" data-revela-foto>
+          <figure class="styles__img is-active" data-style-img="blackwork">
+            <img src="assets/images/trabalho-01-blackwork.svg" alt="Blackwork de preto sólido no antebraço" loading="lazy" width="1200" height="1600">
+          </figure>
+          <figure class="styles__img" data-style-img="oldschool">
+            <img src="assets/images/trabalho-02-aguia.svg" alt="Águia tradicional americana no peito" loading="lazy" width="1280" height="1600">
+          </figure>
+          <figure class="styles__img" data-style-img="flash">
+            <img src="assets/images/trabalho-05-pantera.svg" alt="Pantera tradicional tirada da folha de flash, tatuada no braço" loading="lazy" width="1600" height="1600">
+          </figure>
+          <figure class="styles__img" data-style-img="ornamental">
+            <img src="assets/images/trabalho-04-ornamental.svg" alt="Ornamental escuro na canela" loading="lazy" width="1200" height="1600">
+          </figure>
+          <figure class="styles__img" data-style-img="geometrico">
+            <img src="assets/images/estilo-geometrico.svg" alt="Blackwork geométrico no braço: hexágonos e triângulos encaixados em preto sólido, com linhas grossas e limpas" loading="lazy" width="1200" height="1600">
+          </figure>
+          <figure class="styles__img" data-style-img="cobertura">
+            <img src="assets/images/trabalho-06-cobertura.svg" alt="Cobertura em blackwork no ombro, escondendo uma tatuagem antiga" loading="lazy" width="1280" height="1600">
+          </figure>
+          <span class="styles__frame" aria-hidden="true" data-parallax="moldura"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== 05 · FLASH DA SEMANA ==============================
+         Uma folha de flash de verdade: cabeçalho, grade, números. Cada desenho é tatuado uma vez só. -->
+    <section class="flash-semana section--kraft" id="flash" aria-label="Flash da semana">
+      <div class="section-head">
+        <p class="section-label reveal">Nº 04 · Flash da semana</p>
+        <h2 class="section-title" data-titulo>
+          <span class="font-display">Escolheu,</span><br>
+          <span class="font-display"><em class="accent tem-risco">é seu.<svg class="risco" aria-hidden="true" focusable="false"><use href="#risco"/></svg></em></span>
+        </h2>
+        <p class="section-sub reveal">Desenhos prontos, feitos uma vez só. Escolheu, é seu. Depois de tatuado, o desenho sai da folha.</p>
+      </div>
+      <div class="folha-flash">
+        <p class="folha-flash__topo" aria-hidden="true"><span>Folha Nº 04</span><span>Flash · Tito Ferraz</span></p>
+        <ol class="folha-flash__grade revela-grupo">
+          <li class="fcard">
+            <div class="fcard__foto"><img src="assets/images/flash-01-andorinha.svg" alt="Desenho de flash pintado à mão: andorinha em voo, de asas abertas, em aquarela sobre papel creme" loading="lazy" width="1280" height="1600"></div>
+            <p class="fcard__rotulo"><span class="fcard__num">Nº 01</span> Andorinha</p>
+          </li>
+          <li class="fcard">
+            <div class="fcard__foto"><img src="assets/images/flash-02-adaga.svg" alt="Desenho de flash pintado à mão: adaga atravessando uma rosa vermelha com duas folhas" loading="lazy" width="1280" height="1600"></div>
+            <p class="fcard__rotulo"><span class="fcard__num">Nº 02</span> Adaga e rosa</p>
+          </li>
+          <li class="fcard">
+            <div class="fcard__foto"><img src="assets/images/flash-03-pantera.svg" alt="Desenho de flash pintado à mão: pantera preta rastejando com as garras de fora" loading="lazy" width="1280" height="1600"></div>
+            <p class="fcard__rotulo"><span class="fcard__num">Nº 03</span> Pantera</p>
+          </li>
+          <li class="fcard">
+            <div class="fcard__foto"><img src="assets/images/flash-04-caveira.svg" alt="Desenho de flash pintado à mão: caveira com uma cobra verde passando pelo olho" loading="lazy" width="1280" height="1600"></div>
+            <p class="fcard__rotulo"><span class="fcard__num">Nº 04</span> Caveira e cobra</p>
+          </li>
+          <li class="fcard">
+            <div class="fcard__foto"><img src="assets/images/flash-05-coracao.svg" alt="Desenho de flash pintado à mão: coração vermelho envolto por uma faixa em branco" loading="lazy" width="1280" height="1600"></div>
+            <p class="fcard__rotulo"><span class="fcard__num">Nº 05</span> Coração com faixa</p>
+          </li>
+          <li class="fcard">
+            <div class="fcard__foto"><img src="assets/images/flash-06-ancora.svg" alt="Desenho de flash pintado à mão: âncora envolta por uma corda" loading="lazy" width="1280" height="1600"></div>
+            <p class="fcard__rotulo"><span class="fcard__num">Nº 06</span> Âncora</p>
+          </li>
+        </ol>
+      </div>
+      <div class="flash-semana__cta reveal">
+        <a class="btn-editorial" href="https://wa.me/" target="_blank" rel="noopener noreferrer" data-cursor="ABRIR">Quero um desses</a>
+        <p class="flash-semana__nota">Manda o número do desenho no WhatsApp.</p>
+      </div>
+    </section>
+
+    <!-- ============================== 06 · MANIFESTO ============================== -->
+    <section class="manifesto section--black" id="manifesto" aria-label="Manifesto">
+      <svg class="flash flash--andorinha" viewBox="0 0 64 64" aria-hidden="true" focusable="false" data-desenha data-parallax="flash" data-vel="1"><path class="flash__tinta" d="M28 20C34 11 44 5 60 3C53 9 47 15 43 23Z" fill="currentColor"/><path class="flash__tinta" d="M24 30C22 39 16 47 6 54C16 51 24 45 31 35Z" fill="currentColor"/><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"><path pathLength="1" d="M6 22L14 19C19 15 25 16 29 20C36 27 44 33 52 38L62 41L54 41L59 52L49 43C41 40 33 36 26 31C20 28 16 25 14 24Z"/><path pathLength="1" d="M28 20C34 11 44 5 60 3C53 9 47 15 43 23"/><path pathLength="1" d="M24 30C22 39 16 47 6 54C16 51 24 45 31 35"/></g><circle class="flash__tinta" cx="13.5" cy="20.5" r="1.4" fill="currentColor"/></svg>
+      <svg class="flash flash--estrela" viewBox="0 0 64 64" aria-hidden="true" focusable="false" data-desenha data-parallax="flash" data-vel="-1.4"><path class="flash__tinta" d="M32 32L32 4L38.5 23.1ZM32 32L58.6 23.3L42.5 35.4ZM32 32L48.5 54.7L32 43ZM32 32L15.5 54.7L21.5 35.4ZM32 32L5.4 23.3L25.5 23.1Z" fill="currentColor"/><path pathLength="1" d="M32 4L38.5 23.1L58.6 23.3L42.5 35.4L48.5 54.7L32 43L15.5 54.7L21.5 35.4L5.4 23.3L25.5 23.1Z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/></svg>
+      <svg class="flash flash--adaga" viewBox="0 0 40 72" aria-hidden="true" focusable="false" data-desenha data-parallax="flash" data-vel="1.8"><path class="flash__tinta" d="M16 10H24V24H16Z" fill="currentColor"/><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><circle pathLength="1" cx="20" cy="6" r="4"/><path pathLength="1" d="M16 10H24V24H16Z"/><path pathLength="1" d="M4 28C6 24 10 24 20 24S34 24 36 28"/><path pathLength="1" d="M14 28L20 68L26 28Z"/><path pathLength="1" d="M20 31V58"/></g></svg>
+      <div class="manifesto__inner">
+        <h2 class="manifesto__title" data-titulo>
+          <span class="font-display">Moda passa.</span><br>
+          <span class="font-display"><em class="accent">Preto fica.</em></span>
+        </h2>
+        <p class="manifesto__sub reveal">Tatuagem tradicional não segue tendência. Por isso continua de pé.</p>
+      </div>
+    </section>
+
+    <!-- ============================== 07 · SOBRE ============================== -->
+    <section class="about section--light" id="about" aria-label="Sobre o Tito Ferraz">
+      <div class="about__grid">
+        <figure class="about__media" data-revela-foto>
+          <div class="foto about__foto">
+            <img src="assets/images/tito-retrato.svg" alt="Tito Ferraz de braços cruzados diante da bancada, com os antebraços tatuados à mostra e máquinas e tintas ao fundo" loading="lazy" width="1200" height="1600" data-parallax="foto">
+          </div>
+          <figcaption class="about__caption micro">A bancada · Folha Nº 05</figcaption>
+        </figure>
+        <div class="about__text">
+          <p class="section-label reveal">Nº 05 · Quem tatua</p>
+          <h2 class="section-title" data-titulo><span class="font-display">O <em class="accent">Tito.</em></span></h2>
+          <p class="about__lead reveal">Aprendi olhando folha de flash antiga e redesenhando até a mão acertar.</p>
+          <p class="reveal">Hoje o trabalho anda por dois caminhos. O tradicional americano, com contorno grosso, cor chapada e desenho que se lê do outro lado da rua. E o blackwork, com preto sólido, geometria e ornamento pesado.</p>
+          <p class="reveal">Na cadeira, a conversa é reta: o que funciona, o que não funciona e por quê. Se a ideia não vai envelhecer bem, eu falo antes de começar.</p>
+          <ul class="about__facts reveal" aria-label="Em resumo">
+            <li>Blackwork</li>
+            <li>Old School</li>
+            <li>Flash e projeto próprio</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== 08 · PERGUNTAS ============================== -->
+    <section class="faq section--dark" id="faq" aria-label="Perguntas frequentes">
+      <div class="section-head">
+        <p class="section-label reveal">Nº 06 · Perguntas</p>
+        <h2 class="section-title" data-titulo><span class="font-display">Pergunta</span><br><span class="font-display">sem <em class="accent">rodeio.</em></span></h2>
+        <p class="section-sub reveal">O que todo mundo quer saber antes de sentar na cadeira.</p>
+      </div>
+      <div class="faq__grid">
+        <div class="faq__list revela-grupo" id="faqList">
+
+          <div class="faq__item" data-faq-img="flash">
+            <h3><button type="button" class="faq__q" aria-expanded="false" aria-controls="faq-a1" id="faq-q1"><span class="faq__num">01</span><span class="faq__question">Você faz desenho exclusivo ou só flash?</span></button></h3>
+            <div class="faq__a" id="faq-a1" role="region" aria-labelledby="faq-q1"><p>Os dois. O flash é desenho pronto e sai uma vez só. Projeto próprio a gente desenha junto, a partir da sua ideia e do lugar do corpo.</p></div>
+          </div>
+
+          <div class="faq__item" data-faq-img="flash">
+            <h3><button type="button" class="faq__q" aria-expanded="false" aria-controls="faq-a2" id="faq-q2"><span class="faq__num">02</span><span class="faq__question">Como funciona o flash da semana?</span></button></h3>
+            <div class="faq__a" id="faq-a2" role="region" aria-labelledby="faq-q2"><p>Os desenhos ficam na folha até alguém escolher. Escolheu, a gente marca a data e o desenho sai da folha. Não repito flash.</p></div>
+          </div>
+
+          <div class="faq__item" data-faq-img="cobertura">
+            <h3><button type="button" class="faq__q" aria-expanded="false" aria-controls="faq-a3" id="faq-q3"><span class="faq__num">03</span><span class="faq__question">Dá pra cobrir uma tatuagem antiga com blackwork?</span></button></h3>
+            <div class="faq__a" id="faq-a3" role="region" aria-labelledby="faq-q3"><p>Muitas vezes dá. Depende do tamanho, da cor e de quão escura a antiga está. Manda uma foto com boa luz que eu te digo o que dá pra fazer, e o que não dá.</p></div>
+          </div>
+
+          <div class="faq__item" data-faq-img="cobertura">
+            <h3><button type="button" class="faq__q" aria-expanded="false" aria-controls="faq-a4" id="faq-q4"><span class="faq__num">04</span><span class="faq__question">A cobertura fica do mesmo tamanho?</span></button></h3>
+            <div class="faq__a" id="faq-a4" role="region" aria-labelledby="faq-q4"><p>Quase nunca. Pra esconder direito, o desenho novo costuma ser maior e mais escuro que o antigo. Isso a gente acerta na conversa, antes de marcar.</p></div>
+          </div>
+
+          <div class="faq__item" data-faq-img="aguia">
+            <h3><button type="button" class="faq__q" aria-expanded="false" aria-controls="faq-a5" id="faq-q5"><span class="faq__num">05</span><span class="faq__question">Faz tattoo colorida?</span></button></h3>
+            <div class="faq__a" id="faq-a5" role="region" aria-labelledby="faq-q5"><p>No tradicional, sim: paleta clássica, poucas cores, bem chapadas. Realismo colorido não é a minha, e se for o caso eu te indico quem faz.</p></div>
+          </div>
+
+          <div class="faq__item" data-faq-img="tito">
+            <h3><button type="button" class="faq__q" aria-expanded="false" aria-controls="faq-a6" id="faq-q6"><span class="faq__num">06</span><span class="faq__question">Como funciona o orçamento?</span></button></h3>
+            <div class="faq__a" id="faq-a6" role="region" aria-labelledby="faq-q6"><p>Manda a ideia (ou o número do flash), o lugar do corpo e o tamanho aproximado. Com isso eu te passo o valor e as datas livres.</p></div>
+          </div>
+
+          <div class="faq__item" data-faq-img="stencil">
+            <h3><button type="button" class="faq__q" aria-expanded="false" aria-controls="faq-a7" id="faq-q7"><span class="faq__num">07</span><span class="faq__question">Precisa de sinal pra marcar?</span></button></h3>
+            <div class="faq__a" id="faq-a7" role="region" aria-labelledby="faq-q7"><p>Pra reservar a data, sim. O valor e a forma de pagamento a gente combina direto na conversa.</p></div>
+          </div>
+
+          <div class="faq__item" data-faq-img="blackwork">
+            <h3><button type="button" class="faq__q" aria-expanded="false" aria-controls="faq-a8" id="faq-q8"><span class="faq__num">08</span><span class="faq__question">Como cuido da tattoo depois?</span></button></h3>
+            <div class="faq__a" id="faq-a8" role="region" aria-labelledby="faq-q8"><p>Você sai daqui com as orientações explicadas. Ficou com dúvida depois, é só chamar.</p></div>
+          </div>
+
+        </div>
+        <div class="faq__media" aria-hidden="true">
+          <figure class="faq__img is-active" data-img="flash"><img src="assets/images/flash-01-andorinha.svg" alt="" loading="lazy" width="1280" height="1600"></figure>
+          <figure class="faq__img" data-img="cobertura"><img src="assets/images/trabalho-06-cobertura.svg" alt="" loading="lazy" width="1280" height="1600"></figure>
+          <figure class="faq__img" data-img="aguia"><img src="assets/images/trabalho-02-aguia.svg" alt="" loading="lazy" width="1280" height="1600"></figure>
+          <figure class="faq__img" data-img="tito"><img src="assets/images/tito-oficina.svg" alt="" loading="lazy" width="1280" height="1600"></figure>
+          <figure class="faq__img" data-img="stencil"><img src="assets/images/processo-stencil.svg" alt="" loading="lazy" width="1280" height="1600"></figure>
+          <figure class="faq__img" data-img="blackwork"><img src="assets/images/trabalho-01-blackwork.svg" alt="" loading="lazy" width="1200" height="1600"></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== 09 · REGRAS DA OFICINA ============================== -->
+    <section class="reasons section--light" id="reasons" aria-label="Regras da oficina">
+      <div class="section-head">
+        <p class="section-label reveal">Nº 07 · Regras da oficina</p>
+        <h2 class="section-title" data-titulo><span class="font-display">Regras da</span><br><span class="font-display"><em class="accent">oficina.</em></span></h2>
+      </div>
+      <ol class="reasons__list">
+        <li class="reason reveal">
+          <span class="reason__num font-display" aria-hidden="true"><small>Nº</small>01</span>
+          <div class="reason__body"><h3>Linha que segura</h3><p>Contorno grosso e preto bem aplicado. É o que mantém o desenho legível quando a pele muda com o tempo.</p></div>
+        </li>
+        <li class="reason reveal">
+          <span class="reason__num font-display" aria-hidden="true"><small>Nº</small>02</span>
+          <div class="reason__body"><h3>Desenho que se lê de longe</h3><p>Pouca firula, muita leitura. Se não dá pra entender a tattoo a dois passos de distância, tem coisa sobrando.</p></div>
+        </li>
+        <li class="reason reveal">
+          <span class="reason__num font-display" aria-hidden="true"><small>Nº</small>03</span>
+          <div class="reason__body"><h3>Papo reto</h3><p>Se o lugar, o tamanho ou a ideia não vão funcionar, você fica sabendo antes da agulha encostar na pele.</p></div>
+        </li>
+        <li class="reason reveal">
+          <span class="reason__num font-display" aria-hidden="true"><small>Nº</small>04</span>
+          <div class="reason__body"><h3>Quem desenha, tatua</h3><p>Do papel à pele, é a mesma mão. Sem intermediário no meio do caminho.</p></div>
+        </li>
+        <li class="reason reveal">
+          <span class="reason__num font-display" aria-hidden="true"><small>Nº</small>05</span>
+          <div class="reason__body"><h3>Flash é uma vez só</h3><p>Desenho da folha não se repete. O seu não vai aparecer igualzinho no braço de outra pessoa.</p></div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ============================== 10 · COMO FUNCIONA ============================== -->
+    <section class="process section--dark" id="process" aria-label="Como funciona">
+      <div class="section-head">
+        <p class="section-label reveal">Nº 08 · Como funciona</p>
+        <h2 class="section-title" data-titulo><span class="font-display">Do papo</span><br><span class="font-display">à <em class="accent">agulha.</em></span></h2>
+      </div>
+      <div class="process__grid">
+        <div class="process__trilho" data-passos>
+          <span class="process__linha" aria-hidden="true"></span>
+          <ol class="process__steps">
+            <li class="pstep"><span class="pstep__num font-display">01</span><div><h3>Ideia</h3><p>Escolhe um flash da folha ou manda a sua ideia, com referência, lugar do corpo e tamanho.</p></div></li>
+            <li class="pstep"><span class="pstep__num font-display">02</span><div><h3>Orçamento</h3><p>Eu te passo o valor e as datas livres.</p></div></li>
+            <li class="pstep"><span class="pstep__num font-display">03</span><div><h3>Reserva</h3><p>Com a data reservada e o sinal pago, o desenho é fechado. Se for flash, ele sai da folha.</p></div></li>
+            <li class="pstep"><span class="pstep__num font-display">04</span><div><h3>Sessão</h3><p>Stencil, ajuste no corpo e máquina. Sem pressa.</p></div></li>
+            <li class="pstep"><span class="pstep__num font-display">05</span><div><h3>Cuidados</h3><p>Você sai com as orientações de cuidado e com o canal aberto pra qualquer dúvida.</p></div></li>
+          </ol>
+        </div>
+        <figure class="process__media" data-revela-foto>
+          <div class="foto process__foto">
+            <img src="assets/images/processo-stencil.svg" alt="Stencil roxo de uma andorinha recém-transferido para o antebraço, com as mãos de luva preta esticando a pele" loading="lazy" width="1280" height="1600">
+          </div>
+          <figcaption class="micro">Stencil na pele — antes da máquina</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============================== 11 · CONTATO ============================== -->
+    <section class="booking section--ocre" id="contact" aria-label="Contato">
+      <div class="booking__inner">
+        <a class="booking__phone-wrap" href="https://wa.me/" target="_blank" rel="noopener noreferrer" aria-label="Chamar o Tito Ferraz no WhatsApp" data-cursor="ABRIR">
+          <!-- Andorinha de flash carregando a faixa "Bora?"; o traço se desenha quando entra na tela -->
+          <svg class="booking__ave booking__phone" viewBox="0 0 240 232" aria-hidden="true" focusable="false" data-desenha>
+            <g transform="translate(16 2) scale(3.3)">
+              <g class="booking__voo">
+                <path class="flash__tinta" d="M28 20C34 11 44 5 60 3C53 9 47 15 43 23Z" fill="currentColor"/>
+                <path class="flash__tinta" d="M24 30C22 39 16 47 6 54C16 51 24 45 31 35Z" fill="currentColor"/>
+                <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round">
+                  <path pathLength="1" d="M6 22L14 19C19 15 25 16 29 20C36 27 44 33 52 38L62 41L54 41L59 52L49 43C41 40 33 36 26 31C20 28 16 25 14 24Z"/>
+                  <path pathLength="1" d="M28 20C34 11 44 5 60 3C53 9 47 15 43 23"/>
+                  <path pathLength="1" d="M24 30C22 39 16 47 6 54C16 51 24 45 31 35"/>
+                </g>
+                <circle class="flash__tinta" cx="13.5" cy="20.5" r="1.3" fill="currentColor"/>
+              </g>
+            </g>
+            <g class="booking__faixa" stroke="currentColor" stroke-width="5" stroke-linejoin="round">
+              <path class="flash__tinta" d="M8 190L32 184V220L8 226L18 207Z" fill="currentColor" stroke="none"/>
+              <path class="flash__tinta" d="M232 190L208 184V220L232 226L222 207Z" fill="currentColor" stroke="none"/>
+              <path class="booking__faixa-fundo" pathLength="1" d="M32 184H208V220H32Z"/>
+              <text class="flash__tinta" x="120" y="213" text-anchor="middle" stroke="none" fill="currentColor">Bora?</text>
+            </g>
+          </svg>
+        </a>
+        <div class="booking__text">
+          <p class="section-label reveal">Nº 09 · Contato</p>
+          <h2 class="booking__title" data-titulo>
+            <span class="font-display">Tem ideia?</span><br>
+            <span class="font-display"><em class="accent tem-risco">Manda.<svg class="risco" aria-hidden="true" focusable="false"><use href="#risco"/></svg></em></span>
+          </h2>
+          <p class="booking__sub reveal">Flash ou projeto próprio: me chama com a ideia, o lugar do corpo e o tamanho que você imagina.</p>
+          <div class="reveal">
+            <a class="btn-editorial" href="https://wa.me/" target="_blank" rel="noopener noreferrer" data-cursor="ABRIR">Chamar no WhatsApp</a>
+            <p class="micro booking__alt">ou pelo <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Direct no Instagram</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== 12 · CTA FINAL ============================== -->
+    <section class="finale section--black" id="finale" aria-label="Marcar sessão">
+      <svg class="flash flash--coracao" viewBox="0 0 64 64" aria-hidden="true" focusable="false" data-desenha data-parallax="flash" data-vel="-1.2"><path class="flash__tinta" d="M32 56C14 44 6 31 12 20C17 11 28 12 32 21C36 12 47 11 52 20C58 31 50 44 32 56Z" fill="currentColor"/><path pathLength="1" d="M32 56C14 44 6 31 12 20C17 11 28 12 32 21C36 12 47 11 52 20C58 31 50 44 32 56Z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path class="flash__faixa" pathLength="1" d="M6 29H58V40H6ZM6 29L1 34.5L6 40M58 29L63 34.5L58 40" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/></svg>
+      <svg class="flash flash--ancora" viewBox="0 0 64 72" aria-hidden="true" focusable="false" data-desenha data-parallax="flash" data-vel="1.5"><path class="flash__tinta" d="M5 50L10 43L15 49ZM59 50L54 43L49 49Z" fill="currentColor"/><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><circle pathLength="1" cx="32" cy="8" r="5"/><path pathLength="1" d="M32 13V64"/><path pathLength="1" d="M20 20H44"/><path pathLength="1" d="M10 46C12 58 22 64 32 64C42 64 52 58 54 46"/><path pathLength="1" d="M5 50L10 43L15 49M59 50L54 43L49 49"/></g></svg>
+      <div class="finale__grid">
+        <div class="finale__text">
+          <h2 class="finale__title" data-titulo>
+            <span class="font-display">Folha aberta,</span><br>
+            <span class="font-display"><em class="accent tem-risco">agulha pronta.<svg class="risco" aria-hidden="true" focusable="false"><use href="#risco"/></svg></em></span>
+          </h2>
+          <div class="reveal">
+            <a class="btn-editorial btn-editorial--light" href="https://wa.me/" target="_blank" rel="noopener noreferrer" data-cursor="ABRIR">Marcar sessão</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== 13 · RODAPÉ ============================== -->
+    <footer class="footer section--black" aria-label="Rodapé">
+      <div class="footer__inner">
+        <p class="footer__brand"><span class="font-display">Tito Ferraz</span><span class="micro">Blackwork &amp; Old School</span></p>
+        <nav class="footer__links" aria-label="Redes">
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" data-cursor="ABRIR">Instagram</a>
+          <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" data-cursor="ABRIR">WhatsApp</a>
+        </nav>
+        <p class="micro">© Tito Ferraz</p>
+      </div>
+      <p class="footer__modelo">Site modelo — nomes, contatos e imagens de exemplo.</p>
+    </footer>
+
+  </main>
+
+  <!-- ============================== NAV INFERIOR ============================== -->
+  <nav class="nav" id="nav" aria-label="Navegação principal">
+    <ul class="nav__list">
+      <li><a href="#hero" class="nav__link is-active" data-section="hero" aria-current="location">Início</a></li>
+      <li><a href="#work" class="nav__link" data-section="work">Trabalhos</a></li>
+      <li><a href="#styles" class="nav__link" data-section="styles">Estilos</a></li>
+      <li><a href="#flash" class="nav__link" data-section="flash">Flash</a></li>
+      <li><a href="#about" class="nav__link" data-section="about">Sobre</a></li>
+      <li><a href="#faq" class="nav__link" data-section="faq">Perguntas</a></li>
+      <li><a href="#contact" class="nav__link" data-section="contact">Contato</a></li>
+    </ul>
+    <a class="nav__cta" href="https://wa.me/" target="_blank" rel="noopener noreferrer">Marcar sessão</a>
+  </nav>
+
+  <!-- Nav mobile compacta -->
+  <nav class="mnav" id="mnav" aria-label="Navegação">
+    <button type="button" class="mnav__toggle" id="mnavToggle" aria-expanded="false" aria-controls="mnavMenu">
+      <span class="mnav__toggle-label">Menu</span>
+    </button>
+    <a class="mnav__cta" href="https://wa.me/" target="_blank" rel="noopener noreferrer">Marcar sessão</a>
+  </nav>
+  <div class="mnav__menu" id="mnavMenu" hidden>
+    <ul>
+      <li><a href="#hero"><span class="micro">Nº 01</span><span class="font-display">Início</span></a></li>
+      <li><a href="#work"><span class="micro">Nº 02</span><span class="font-display">Trabalhos</span></a></li>
+      <li><a href="#styles"><span class="micro">Nº 03</span><span class="font-display">Estilos</span></a></li>
+      <li><a href="#flash"><span class="micro">Nº 04</span><span class="font-display">Flash</span></a></li>
+      <li><a href="#about"><span class="micro">Nº 05</span><span class="font-display">Sobre</span></a></li>
+      <li><a href="#faq"><span class="micro">Nº 06</span><span class="font-display">Perguntas</span></a></li>
+      <li><a href="#contact"><span class="micro">Nº 07</span><span class="font-display">Contato</span></a></li>
+    </ul>
+  </div>
+</body>
+</html>

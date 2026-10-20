@@ -1,0 +1,123 @@
+{
+ "tema": {
+  "fundo": "#efe6d2",
+  "tinta": "#0c0b09",
+  "linha": "rgba(12,11,9,0.28)",
+  "acento": "#7d5a12",
+  "fonte": "Arial, Helvetica, sans-serif",
+  "fonteTitulo": "Rockwell, 'Arial Black', Georgia, serif",
+  "motivo": "<path d='M6 22L14 19C19 15 25 16 29 20C36 27 44 33 52 38L62 41L54 41L59 52L49 43C41 40 33 36 26 31C20 28 16 25 14 24Z'/><path d='M28 20C34 11 44 5 60 3C53 9 47 15 43 23'/><path d='M24 30C22 39 16 47 6 54C16 51 24 45 31 35'/>",
+  "motivoViewBox": "0 0 64 64"
+ },
+ "pessoa": "Tito, a Brazilian tattoo artist in his mid-30s with light-brown skin, short black hair cut close on the sides, a short full dark beard, traditional American tattoos covering both forearms and the backs of his hands, wearing a plain black t-shirt",
+ "imagens": [
+  {
+   "arquivo": "tito-oficina.svg", "largura": 1280, "altura": 1600, "proporcao": "4:5",
+   "rotulo": "Tito tatuando na oficina",
+   "alt": "Tito Ferraz debruçado sobre o antebraço de um cliente, com a máquina na mão e folhas de flash na parede ao fundo",
+   "prompt": "Photorealistic documentary photo of Tito, a Brazilian tattoo artist in his mid-30s with light-brown skin, short black hair cut close on the sides, a short full dark beard, traditional American tattoos covering both forearms and the backs of his hands, wearing a plain black t-shirt and black nitrile gloves, tattooing a client's forearm in a small traditional tattoo shop. He leans in with full concentration, rotary tattoo machine in his right hand, paper towel in the left. Behind him a wall of hand-painted traditional flash drawings pinned up, softly out of focus, drawings only with no readable lettering. Warm window light mixed with a work lamp, shallow depth of field, 35mm lens, realistic skin texture, candid moment. No text, no logos, no watermark. Vertical 4:5."
+  },
+  {
+   "arquivo": "tito-retrato.svg", "largura": 1200, "altura": 1600, "proporcao": "3:4",
+   "rotulo": "Retrato do Tito na bancada",
+   "alt": "Tito Ferraz de braços cruzados diante da bancada, com os antebraços tatuados à mostra e máquinas e tintas ao fundo",
+   "prompt": "Photorealistic portrait of Tito, a Brazilian tattoo artist in his mid-30s with light-brown skin, short black hair cut close on the sides, a short full dark beard, traditional American tattoos covering both forearms and the backs of his hands, wearing a plain black t-shirt, standing with arms crossed in front of his workstation in a traditional tattoo shop, looking at the camera with a calm, serious expression, tattooed forearms clearly visible. Background: pegboard with tattoo machines, black ink bottles and pinned flash drawings, softly blurred, no readable lettering. Natural daylight from a side window, muted warm tones, 50mm lens, realistic skin texture. No text, no logos, no watermark. Vertical 3:4."
+  },
+  {
+   "arquivo": "trabalho-01-blackwork.svg", "largura": 1200, "altura": 1600, "proporcao": "3:4",
+   "rotulo": "Blackwork · antebraço",
+   "alt": "Blackwork de preto sólido no antebraço: faixas largas e áreas fechadas em preto, com linhas finas de pele aparente",
+   "prompt": "Photorealistic close-up photo of a healed bold blackwork tattoo wrapping a man's forearm: thick solid black bands and large blocked-out black areas, broken by a few crisp negative-space lines, deep saturated even black. Real skin texture with fine hair, arm resting on a black leather tattoo bench, soft natural daylight, sharp focus on the tattoo, neutral background. No text, no watermark. Vertical 3:4."
+  },
+  {
+   "arquivo": "trabalho-02-aguia.svg", "largura": 1280, "altura": 1600, "proporcao": "4:5",
+   "rotulo": "Old school · águia no peito",
+   "alt": "Águia tradicional americana de asas abertas no peito, contorno grosso e cores chapadas em vermelho, amarelo e verde",
+   "prompt": "Photorealistic photo of a healed traditional American old school eagle tattoo across a man's upper chest, wings spread wide, bold thick black outlines, limited classic palette of flat red, mustard yellow, green and brown with solid black shading, slightly settled ink of a healed tattoo. Real skin with natural texture and some chest hair, framed from collarbones to sternum, soft window light, neutral studio background. No text, no banner lettering, no watermark. Vertical 4:5."
+  },
+  {
+   "arquivo": "trabalho-03-adaga.svg", "largura": 1200, "altura": 1800, "proporcao": "2:3",
+   "rotulo": "Old school · adaga e rosa",
+   "alt": "Adaga atravessando uma rosa vermelha no antebraço, em estilo tradicional, com folhas verdes e cabo amarelo",
+   "prompt": "Photorealistic photo of a healed traditional American tattoo of a dagger piercing a red rose on the inner forearm, bold black outline, flat red petals, two green leaves, mustard yellow handle, solid black shading on the blade. Arm extended on a wooden table, soft daylight, sharp focus, realistic skin texture. No text, no watermark. Vertical 2:3."
+  },
+  {
+   "arquivo": "trabalho-04-ornamental.svg", "largura": 1200, "altura": 1600, "proporcao": "3:4",
+   "rotulo": "Ornamental · canela",
+   "alt": "Ornamental escuro na canela: desenho simétrico com áreas de preto sólido, pontilhado e filigrana grossa",
+   "prompt": "Photorealistic photo of a healed dark ornamental blackwork tattoo on a woman's shin: a symmetrical ornament with heavy solid black areas, bold dotwork gradients and thick filigree lines with crisp edges. Leg photographed standing, from knee to ankle, real skin texture, soft natural light, plain warm grey background. No text, no watermark. Vertical 3:4."
+  },
+  {
+   "arquivo": "trabalho-05-pantera.svg", "largura": 1600, "altura": 1600, "proporcao": "1:1",
+   "rotulo": "Flash · pantera no braço",
+   "alt": "Pantera tradicional subindo pelo braço, com as garras de fora, corpo em preto sólido e boca vermelha",
+   "prompt": "Photorealistic photo of a healed traditional American crawling panther tattoo on a man's upper arm, the panther climbing upward with claws out and a few small red drops, bold black outlines, solid black body with simple highlights, red mouth, yellow eyes, settled healed ink. Real skin texture, arm held at a slight angle, soft studio daylight, neutral background. No text, no watermark. Square 1:1."
+  },
+  {
+   "arquivo": "trabalho-06-cobertura.svg", "largura": 1280, "altura": 1600, "proporcao": "4:5",
+   "rotulo": "Cobertura · ombro",
+   "alt": "Cobertura em blackwork no ombro: uma forma ornamental grande em preto sólido que esconde uma tatuagem antiga",
+   "prompt": "Photorealistic photo of a finished blackwork cover-up tattoo on a man's shoulder and upper arm: a large solid black ornamental shape with thick bold lines and a few clean negative-space details, deep even black that fully hides an older tattoo underneath with no trace visible, healed. Real skin texture, three-quarter back view, soft natural light, neutral background. No text, no watermark. Vertical 4:5."
+  },
+  {
+   "arquivo": "trabalho-07-navio.svg", "largura": 1200, "altura": 1600, "proporcao": "3:4",
+   "rotulo": "Old school · navio na panturrilha",
+   "alt": "Navio tradicional de velas cheias sobre ondas, na panturrilha, com contorno grosso e cores chapadas",
+   "prompt": "Photorealistic photo of a healed traditional American sailing ship tattoo on a man's calf: a ship with full sails on stylized waves, bold black outline, flat blue, red and mustard yellow color, solid black shading, slightly settled ink. Leg from knee to ankle, real skin texture and hair, soft natural light, plain background. No text, no banner lettering, no watermark. Vertical 3:4."
+  },
+  {
+   "arquivo": "trabalho-08-detalhe.svg", "largura": 1600, "altura": 1600, "proporcao": "1:1",
+   "rotulo": "Detalhe · contorno cicatrizado",
+   "alt": "Close de um contorno grosso já cicatrizado, ao lado de uma área de preto sólido e outra de amarelo chapado",
+   "prompt": "Macro photograph of a healed traditional tattoo detail: a thick, clean black outline curving across the skin next to a solid black fill and a flat mustard yellow area, showing smooth healed ink, real skin pores and fine hairs, sharp focus, soft raking daylight, shallow depth of field. No text, no watermark. Square 1:1."
+  },
+  {
+   "arquivo": "estilo-geometrico.svg", "largura": 1200, "altura": 1600, "proporcao": "3:4",
+   "rotulo": "Geométrico · braço",
+   "alt": "Blackwork geométrico no braço: hexágonos e triângulos encaixados em preto sólido, com linhas grossas e limpas",
+   "prompt": "Photorealistic photo of a healed geometric blackwork tattoo on a man's upper arm: interlocking hexagons and triangles in solid black with thick clean lines and precise negative space, deep even black. Real skin texture, arm slightly turned to show the wrap, soft natural daylight, neutral background. No text, no watermark. Vertical 3:4."
+  },
+  {
+   "arquivo": "flash-01-andorinha.svg", "largura": 1280, "altura": 1600, "proporcao": "4:5",
+   "rotulo": "Flash Nº 01 · andorinha",
+   "alt": "Desenho de flash pintado à mão: andorinha em voo, de asas abertas, em aquarela sobre papel creme",
+   "prompt": "Photorealistic overhead photo of a single hand-painted traditional American tattoo flash design on aged cream watercolor paper: a swallow in flight with wings spread. Bold confident black ink outlines, flat watercolor fills in the classic palette of red, mustard yellow, green and black, visible pencil guidelines and paper grain, slightly uneven painted edges, paper lying flat on a dark wooden table, soft even daylight. No lettering, no text, no signature, no watermark. Vertical 4:5."
+  },
+  {
+   "arquivo": "flash-02-adaga.svg", "largura": 1280, "altura": 1600, "proporcao": "4:5",
+   "rotulo": "Flash Nº 02 · adaga e rosa",
+   "alt": "Desenho de flash pintado à mão: adaga atravessando uma rosa vermelha com duas folhas",
+   "prompt": "Photorealistic overhead photo of a single hand-painted traditional American tattoo flash design on aged cream watercolor paper: a dagger piercing a red rose with two green leaves. Bold confident black ink outlines, flat watercolor fills in the classic palette of red, mustard yellow, green and black, visible pencil guidelines and paper grain, slightly uneven painted edges, paper lying flat on a dark wooden table, soft even daylight. No lettering, no text, no signature, no watermark. Vertical 4:5."
+  },
+  {
+   "arquivo": "flash-03-pantera.svg", "largura": 1280, "altura": 1600, "proporcao": "4:5",
+   "rotulo": "Flash Nº 03 · pantera",
+   "alt": "Desenho de flash pintado à mão: pantera preta rastejando com as garras de fora",
+   "prompt": "Photorealistic overhead photo of a single hand-painted traditional American tattoo flash design on aged cream watercolor paper: a crawling black panther with claws out. Bold confident black ink outlines, flat watercolor fills in the classic palette of red, mustard yellow, green and black, visible pencil guidelines and paper grain, slightly uneven painted edges, paper lying flat on a dark wooden table, soft even daylight. No lettering, no text, no signature, no watermark. Vertical 4:5."
+  },
+  {
+   "arquivo": "flash-04-caveira.svg", "largura": 1280, "altura": 1600, "proporcao": "4:5",
+   "rotulo": "Flash Nº 04 · caveira e cobra",
+   "alt": "Desenho de flash pintado à mão: caveira com uma cobra verde passando pelo olho",
+   "prompt": "Photorealistic overhead photo of a single hand-painted traditional American tattoo flash design on aged cream watercolor paper: a skull with a green snake coiling through one eye socket. Bold confident black ink outlines, flat watercolor fills in the classic palette of red, mustard yellow, green and black, visible pencil guidelines and paper grain, slightly uneven painted edges, paper lying flat on a dark wooden table, soft even daylight. No lettering, no text, no signature, no watermark. Vertical 4:5."
+  },
+  {
+   "arquivo": "flash-05-coracao.svg", "largura": 1280, "altura": 1600, "proporcao": "4:5",
+   "rotulo": "Flash Nº 05 · coração com faixa",
+   "alt": "Desenho de flash pintado à mão: coração vermelho envolto por uma faixa em branco",
+   "prompt": "Photorealistic overhead photo of a single hand-painted traditional American tattoo flash design on aged cream watercolor paper: a red heart wrapped by a ribbon banner, the banner left completely empty with no letters. Bold confident black ink outlines, flat watercolor fills in the classic palette of red, mustard yellow, green and black, visible pencil guidelines and paper grain, slightly uneven painted edges, paper lying flat on a dark wooden table, soft even daylight. No lettering, no text, no signature, no watermark. Vertical 4:5."
+  },
+  {
+   "arquivo": "flash-06-ancora.svg", "largura": 1280, "altura": 1600, "proporcao": "4:5",
+   "rotulo": "Flash Nº 06 · âncora",
+   "alt": "Desenho de flash pintado à mão: âncora envolta por uma corda",
+   "prompt": "Photorealistic overhead photo of a single hand-painted traditional American tattoo flash design on aged cream watercolor paper: a ship's anchor wrapped with a rope. Bold confident black ink outlines, flat watercolor fills in the classic palette of red, mustard yellow, green and black, visible pencil guidelines and paper grain, slightly uneven painted edges, paper lying flat on a dark wooden table, soft even daylight. No lettering, no text, no signature, no watermark. Vertical 4:5."
+  },
+  {
+   "arquivo": "processo-stencil.svg", "largura": 1280, "altura": 1600, "proporcao": "4:5",
+   "rotulo": "Stencil aplicado na pele",
+   "alt": "Stencil roxo de uma andorinha recém-transferido para o antebraço, com as mãos de luva preta esticando a pele",
+   "prompt": "Photorealistic close-up of a purple tattoo stencil of a traditional swallow freshly transferred onto a client's forearm before tattooing, the artist's hands in black nitrile gloves gently stretching the skin, a rotary tattoo machine and small caps of black ink on the tray nearby, natural daylight, shallow depth of field, real skin texture. No text, no watermark. Vertical 4:5."
+  }
+ ]
+}

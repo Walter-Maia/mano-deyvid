@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modelos de site para tatuadores</title>
+  <meta name="description" content="Quatro modelos de site para tatuadores e estúdios, feitos a partir do site do Mano Deyvid: fine line, blackwork e old school, estúdio e realismo colorido.">
+  <meta name="theme-color" content="#f2f0ec">
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+
+  <!-- Archivo para a página; os nomes de cada modelo vêm na fonte dele, só com as letras usadas (text=) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Pirata+One&family=Cormorant+Garamond:ital,wght@1,500&family=Alfa+Slab+One&family=Instrument+Serif:ital@0;1&family=Anton&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Pirata+One&family=Cormorant+Garamond:ital,wght@1,500&family=Alfa+Slab+One&family=Instrument+Serif:ital@0;1&family=Anton&display=swap" rel="stylesheet"></noscript>
+
+  <style>
+    :root {
+      --papel: #f2f0ec;
+      --tinta: #141414;
+      --cinza: #5c5955;
+      --linha: rgba(20, 20, 20, 0.14);
+      --gutter: clamp(1rem, 4vw, 4rem);
+      --ease: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--papel);
+      color: var(--tinta);
+      font: 400 clamp(0.95rem, 0.88rem + 0.25vw, 1.05rem)/1.6 "Archivo", "Helvetica Neue", Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: clip;
+    }
+    h1, h2, p, ul, figure { margin: 0; }
+    ul { padding: 0; list-style: none; }
+    a { color: inherit; }
+    img { display: block; max-width: 100%; height: auto; }
+    :focus-visible { outline: 2px solid var(--tinta); outline-offset: 3px; }
+
+    .topo {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: clamp(3rem, 9vw, 7.5rem) var(--gutter) clamp(2.5rem, 6vw, 5rem);
+      display: grid;
+      gap: 1.6rem;
+    }
+    .topo__rotulo { font-size: 0.8rem; font-weight: 500; color: var(--cinza); }
+    .topo h1 {
+      font-weight: 600;
+      font-size: clamp(2.3rem, 1.2rem + 5vw, 5.6rem);
+      line-height: 0.98;
+      letter-spacing: -0.025em;
+      max-width: 14ch;
+      text-wrap: balance;
+    }
+    .topo__sub { max-width: 58ch; color: var(--cinza); text-wrap: pretty; }
+    .topo__nota {
+      max-width: 58ch;
+      padding-top: 1.2rem;
+      border-top: 1px solid var(--linha);
+      font-size: 0.85rem;
+      color: var(--cinza);
+    }
+
+    .lista { max-width: 1320px; margin: 0 auto; padding: 0 var(--gutter) clamp(3rem, 8vw, 6rem); }
+    .modelo {
+      display: grid;
+      grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr);
+      gap: clamp(1.5rem, 4vw, 4.5rem);
+      align-items: center;
+      padding: clamp(2.5rem, 6vw, 5rem) 0;
+      border-top: 1px solid var(--linha);
+    }
+    .modelo:nth-child(even) .modelo__telas { order: 2; }
+
+    /* captura do desktop com a do celular por cima, no canto */
+    .modelo__telas { position: relative; padding: 0 clamp(2.5rem, 7vw, 5.5rem) clamp(2rem, 5vw, 4rem) 0; }
+    .tela {
+      border-radius: 6px;
+      overflow: hidden;
+      background: #ddd9d3;
+      box-shadow: 0 1px 0 rgba(20, 20, 20, 0.08), 0 18px 40px -22px rgba(20, 20, 20, 0.45);
+    }
+    .tela--desktop { aspect-ratio: 16 / 10; }
+    .tela--desktop img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+    .tela--celular {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: clamp(84px, 22%, 190px);
+      aspect-ratio: 390 / 844;
+      border: 4px solid var(--tinta);
+      border-radius: 14px;
+    }
+    .tela--celular img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+    @media (hover: hover) and (prefers-reduced-motion: no-preference) {
+      .tela--desktop img { transition: transform 0.9s var(--ease); }
+      .modelo:hover .tela--desktop img { transform: scale(1.025); }
+    }
+
+    .modelo__estilo { font-size: 0.8rem; font-weight: 500; color: var(--cinza); }
+    .modelo h2 { margin-top: 0.5rem; font-weight: 400; line-height: 1; font-size: clamp(2rem, 1.2rem + 2.8vw, 3.4rem); text-wrap: balance; }
+    .modelo__desc { margin-top: 1rem; max-width: 46ch; text-wrap: pretty; }
+    .modelo__pontos { margin-top: 1rem; display: grid; gap: 0.35rem; font-size: 0.9rem; color: var(--cinza); }
+    .modelo__pontos li { padding-left: 1.1rem; position: relative; }
+    .modelo__pontos li::before { content: "—"; position: absolute; left: 0; }
+    .paleta { display: flex; gap: 0.4rem; margin-top: 1.3rem; }
+    .paleta span { width: 1.6rem; height: 1.6rem; border-radius: 50%; border: 1px solid var(--linha); }
+    .modelo__links { display: flex; flex-wrap: wrap; gap: 0.6rem 1.4rem; margin-top: 1.5rem; }
+    .botao {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      min-height: 44px;
+      padding: 0.7rem 1.3rem;
+      background: var(--tinta);
+      color: var(--papel);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.9rem;
+      border-radius: 3px;
+      transition: background-color 0.25s;
+    }
+    .botao:hover { background: #333; }
+    .link {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-underline-offset: 0.25em;
+    }
+
+    /* nome de cada modelo na fonte dele */
+    .n-mano { font-family: "Pirata One", serif; text-transform: uppercase; }
+    .n-fine { font-family: "Cormorant Garamond", serif; font-style: italic; font-weight: 500; }
+    .n-black { font-family: "Alfa Slab One", serif; text-transform: uppercase; font-size: 0.82em; }
+    .n-estudio { font-family: "Instrument Serif", serif; }
+    .n-estudio em { font-style: italic; }
+    .n-real { font-family: "Anton", sans-serif; text-transform: uppercase; letter-spacing: 0.01em; }
+
+    .rodape {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 2rem var(--gutter) 3rem;
+      border-top: 1px solid var(--linha);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1rem;
+      font-size: 0.85rem;
+      color: var(--cinza);
+    }
+
+    @media (max-width: 860px) {
+      .modelo { grid-template-columns: 1fr; }
+      .modelo:nth-child(even) .modelo__telas { order: 0; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topo">
+    <p class="topo__rotulo">Modelos de site · tatuagem</p>
+    <h1>Um site com a cara de quem tatua.</h1>
+    <p class="topo__sub">Quatro modelos feitos a partir do site do Mano Deyvid. Todos têm a mesma base: intro animada, efeitos que acompanham a rolagem e layout de 280 a 2560 px. Cada um tem identidade, textos e estrutura próprios para o estilo.</p>
+    <p class="topo__nota">Nos modelos, as fotos ainda são molduras "Sua foto aqui" com o tamanho certo de cada espaço, e os nomes e contatos são de exemplo. Para rever a intro de um modelo, abra com <code>?intro=1</code>.</p>
+  </header>
+
+  <main class="lista">
+
+    <article class="modelo">
+      <div class="modelo__telas">
+        <figure class="tela tela--desktop"><img src="capas/mano-desktop.jpg" alt="Site do Mano Deyvid no desktop: título Fala, meus fiéis em letra gótica sobre fundo preto, com a foto dele tatuando" width="1200" height="750" loading="lazy"></figure>
+        <figure class="tela tela--celular"><img src="capas/mano-celular.jpg" alt="O mesmo site no celular" width="390" height="844" loading="lazy"></figure>
+      </div>
+      <div class="modelo__texto">
+        <p class="modelo__estilo">O site base · no ar</p>
+        <h2 class="n-mano">Mano Deyvid</h2>
+        <p class="modelo__desc">Anime, realismo, blackwork e gothic. Preto, osso e carmim, letra gótica e a intro "o stencil": o nome é decalcado em traço vermelho e recebe a tinta.</p>
+        <div class="paleta" aria-hidden="true"><span style="background:#090909"></span><span style="background:#efe6e2"></span><span style="background:#a51440"></span></div>
+        <div class="modelo__links">
+          <a class="botao" href="../">Abrir o site <span aria-hidden="true">→</span></a>
+          <a class="link" href="../?intro=1">Ver a intro</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="modelo">
+      <div class="modelo__telas">
+        <figure class="tela tela--desktop"><img src="capas/fine-line-desktop.jpg" alt="Modelo fine line no desktop: fundo papel, título em serifa itálica e moldura em arco" width="1200" height="750" loading="lazy"></figure>
+        <figure class="tela tela--celular"><img src="capas/fine-line-celular.jpg" alt="O modelo fine line no celular" width="390" height="844" loading="lazy"></figure>
+      </div>
+      <div class="modelo__texto">
+        <p class="modelo__estilo">Tatuadora · fine line, floral e botânico</p>
+        <h2 class="n-fine">Lia Monteiro</h2>
+        <p class="modelo__desc">Claro e delicado: papel, grafite e sálvia, serifa itálica e fotos em arco. Na intro "o traço fino", o nome é contornado a lápis e um raminho se desenha ao lado.</p>
+        <ul class="modelo__pontos">
+          <li>Desenhos de ramo, lua e estrela que se desenham na rolagem</li>
+          <li>Perguntas típicas de traço fino: envelhecimento, tamanho, retoque</li>
+        </ul>
+        <div class="paleta" aria-hidden="true"><span style="background:#f3eee7"></span><span style="background:#22201e"></span><span style="background:#4f5b40"></span></div>
+        <div class="modelo__links">
+          <a class="botao" href="fine-line/">Abrir o modelo <span aria-hidden="true">→</span></a>
+          <a class="link" href="fine-line/?intro=1">Ver a intro</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="modelo">
+      <div class="modelo__telas">
+        <figure class="tela tela--desktop"><img src="capas/blackwork-desktop.jpg" alt="Modelo blackwork e old school no desktop: fundo creme, título em letra slab preta com sombra ocre e folha de flash" width="1200" height="750" loading="lazy"></figure>
+        <figure class="tela tela--celular"><img src="capas/blackwork-celular.jpg" alt="O modelo blackwork no celular" width="390" height="844" loading="lazy"></figure>
+      </div>
+      <div class="modelo__texto">
+        <p class="modelo__estilo">Tatuador · blackwork e old school</p>
+        <h2 class="n-black">Tito Ferraz</h2>
+        <p class="modelo__desc">Folha de flash: creme, preto sólido e ocre, letra slab com sombra deslocada e bordas grossas. Na intro "a folha de flash", o nome é contornado, recebe o preto e ganha a sombra.</p>
+        <ul class="modelo__pontos">
+          <li>Seção "Flash da semana" com desenhos prontos</li>
+          <li>Andorinha, adaga, âncora e estrela náutica que se desenham</li>
+        </ul>
+        <div class="paleta" aria-hidden="true"><span style="background:#efe6d2"></span><span style="background:#0c0b09"></span><span style="background:#c99a2e"></span></div>
+        <div class="modelo__links">
+          <a class="botao" href="blackwork/">Abrir o modelo <span aria-hidden="true">→</span></a>
+          <a class="link" href="blackwork/?intro=1">Ver a intro</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="modelo">
+      <div class="modelo__telas">
+        <figure class="tela tela--desktop"><img src="capas/estudio-desktop.jpg" alt="Modelo de estúdio no desktop: fundo off-white, título em serifa com a palavra calma em tijolo e barra de navegação azul-nanquim" width="1200" height="750" loading="lazy"></figure>
+        <figure class="tela tela--celular"><img src="capas/estudio-celular.jpg" alt="O modelo de estúdio no celular" width="390" height="844" loading="lazy"></figure>
+      </div>
+      <div class="modelo__texto">
+        <p class="modelo__estilo">Estúdio · vários artistas</p>
+        <h2 class="n-estudio">Casa <em>Nanquim</em></h2>
+        <p class="modelo__desc">Institucional: azul-nanquim, off-white e tijolo, com serifa editorial. Na intro "a gota de nanquim", a gota cai, se espalha pela tela e o nome do estúdio aparece dentro dela.</p>
+        <ul class="modelo__pontos">
+          <li>Equipe de artistas, biossegurança e como chegar</li>
+          <li>Estilos com quem da casa faz cada um</li>
+        </ul>
+        <div class="paleta" aria-hidden="true"><span style="background:#0f1720"></span><span style="background:#f1eee8"></span><span style="background:#c4562e"></span></div>
+        <div class="modelo__links">
+          <a class="botao" href="estudio/">Abrir o modelo <span aria-hidden="true">→</span></a>
+          <a class="link" href="estudio/?intro=1">Ver a intro</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="modelo">
+      <div class="modelo__telas">
+        <figure class="tela tela--desktop"><img src="capas/realismo-desktop.jpg" alt="Modelo realismo colorido no desktop: fundo carvão, título condensado em caixa alta e acento coral" width="1200" height="750" loading="lazy"></figure>
+        <figure class="tela tela--celular"><img src="capas/realismo-celular.jpg" alt="O modelo realismo no celular" width="390" height="844" loading="lazy"></figure>
+      </div>
+      <div class="modelo__texto">
+        <p class="modelo__estilo">Tatuadora · realismo colorido</p>
+        <h2 class="n-real">Íris Valença</h2>
+        <p class="modelo__desc">Galeria: carvão, branco gelo e coral, com filetes em ciano, magenta e amarelo e etiquetas de museu nas obras. Na intro "camadas de cor", três chapas de cor convergem no nome.</p>
+        <ul class="modelo__pontos">
+          <li>"Como nasce um realismo", da referência à última camada de luz</li>
+          <li>Cuidados para a cor durar</li>
+        </ul>
+        <div class="paleta" aria-hidden="true"><span style="background:#0f0f11"></span><span style="background:#f4f2ee"></span><span style="background:#ff6b4a"></span></div>
+        <div class="modelo__links">
+          <a class="botao" href="realismo/">Abrir o modelo <span aria-hidden="true">→</span></a>
+          <a class="link" href="realismo/?intro=1">Ver a intro</a>
+        </div>
+      </div>
+    </article>
+
+  </main>
+
+  <footer class="rodape">
+    <p>Modelos com nomes, contatos e imagens de exemplo.</p>
+    <a class="link" href="../">Site do Mano Deyvid</a>
+  </footer>
+</body>
+</html>

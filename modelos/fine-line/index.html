@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lia Monteiro — Fine Line Tattoo</title>
+  <meta name="description" content="Lia Monteiro, tatuadora de traço fino: floral, botânico, ornamental delicado, lettering e minimal. Desenhos feitos para você, no tamanho e no lugar certos do corpo.">
+  <meta name="theme-color" content="#f3eee7">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Lia Monteiro — Fine Line Tattoo">
+  <meta property="og:description" content="Pouca tinta, muito cuidado. Floral, botânico, lettering e pequenos símbolos em traço fino.">
+  <meta property="og:type" content="website">
+  <!-- [PREENCHER] trocar por URL absoluta de uma foto .jpg (https://…/assets/images/lia-sessao.jpg) quando a foto e o domínio existirem -->
+  <meta property="og:image" content="assets/images/lia-sessao.svg">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <!-- Tipografia: serifa clássica nos títulos + sans geométrica leve no texto (carrega sem travar a primeira pintura) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"></noscript>
+
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Intro "o traço fino": decidida aqui, antes da primeira pintura, para cobrir a página sem piscar. Não toca com movimento
+       reduzido, com âncora na URL, com a página já rolada ou se já foi vista nesta sessão. ?intro=1 força (revisão) e ?intro=0 desliga. -->
+  <script>(function(){var d=document.documentElement;d.classList.add("js");try{var q=location.search;if(/[?&]intro=0\b/.test(q)||matchMedia("(prefers-reduced-motion: reduce)").matches)return;if(!/[?&]intro=1\b/.test(q)&&(location.hash||document.hidden||window.pageYOffset>4||sessionStorage.getItem("modelo-fine-line-intro")==="1"))return;d.classList.add("intro-ativa")}catch(e){}})();</script>
+  <link rel="preload" as="image" href="assets/images/lia-sessao.svg">
+  <script src="js/intro.js" defer onerror="document.documentElement.classList.remove('intro-ativa')"></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <!-- [PREENCHER] Site modelo. Antes de publicar, trocar:
+       · o nome da artista (Lia Monteiro) e as iniciais (LM) no cabeçalho, no rodapé, no favicon e na intro (js/intro.js);
+       · o link do WhatsApp (https://wa.me/ → https://wa.me/55DDDNÚMERO) em todos os botões;
+       · o link do Instagram (https://www.instagram.com/ → o perfil real);
+       · as molduras de assets/images/*.svg pelas fotos reais (lista e prompts em imagens.json);
+       · o og:image por uma URL absoluta;
+       · a linha "Site modelo" do rodapé. -->
+
+  <!-- Traço fino desenhado à mão sob as palavras em destaque -->
+  <svg class="svg-lib" aria-hidden="true" focusable="false"><symbol id="risco" viewBox="0 0 300 24" preserveAspectRatio="none"><path pathLength="1" d="M3 16c28-3 60-6 95-7 38-1 70 0 104 2 32 2 62 4 95 9"/></symbol></svg>
+
+  <!-- Cursor contextual (somente desktop / fine pointer) -->
+  <div class="cursor" id="cursor" aria-hidden="true"><span class="cursor__label" id="cursorLabel"></span></div>
+
+  <a class="skip-link" href="#hero">Pular para o conteúdo</a>
+
+  <header class="site-head">
+    <a href="#hero" class="site-head__brand" aria-label="LM — Lia Monteiro, voltar ao topo">
+      <span class="font-display">LM</span>
+    </a>
+    <p class="site-head__meta">Lia Monteiro · fine line</p>
+  </header>
+
+  <main id="main">
+
+    <!-- ============================== 01 · HERO ==============================
+         A entrada é só CSS (existe sem JavaScript) e, com a intro, espera a cortina subir (--rise-start). No desktop a foto
+         em arco fica à esquerda; no celular o texto vem antes, com o botão na primeira tela. -->
+    <section class="hero section--light" id="hero" aria-label="Apresentação">
+      <div class="hero__grid">
+        <div class="hero__text">
+          <p class="hero__eyebrow"><span>Lia Monteiro · tatuadora de traço fino</span></p>
+          <h1 class="hero__title">
+            <span class="hero__title-row"><span class="font-display">Pouca tinta,</span></span>
+            <span class="hero__title-row"><span class="font-display">muito <em class="accent tem-risco">cuidado.<svg class="risco" aria-hidden="true" focusable="false"><use href="#risco"/></svg></em></span></span>
+          </h1>
+          <p class="hero__sub">Flores, ramos, letras e pequenos símbolos desenhados pra você, no tamanho e no lugar certos do seu corpo.</p>
+          <a class="cta-line hero__cta" href="https://wa.me/" target="_blank" rel="noopener noreferrer" data-cursor="abrir">
+            <span class="cta-line__text">Conversar sobre a sua ideia</span>
+            <span class="cta-line__arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+        <figure class="hero__media">
+          <div class="foto hero__foto">
+            <img src="assets/images/lia-sessao.svg" alt="Lia Monteiro tatuando um ramo delicado no antebraço de uma cliente, com a luz natural do ateliê" width="1200" height="1600" fetchpriority="high" data-parallax="foto">
+          </div>
+          <figcaption class="hero__caption">Lia Monteiro, no ateliê</figcaption>
+        </figure>
+      </div>
+      <div class="hero__footer">
+        <p class="micro">Role para ver os trabalhos</p>
+        <span class="hero__scrollline" aria-hidden="true"></span>
+        <p class="micro">Floral · Botânico · Lettering</p>
+      </div>
+    </section>
+
+    <!-- ============================== 02 · TRABALHOS ============================== -->
+    <section class="work section--light" id="work" aria-label="Trabalhos">
+      <div class="section-head">
+        <p class="section-label reveal">nº 02 — trabalhos</p>
+        <h2 class="section-title" data-titulo>
+          <span class="font-display">Desenhos que já</span><br>
+          <span class="font-display">moram <span class="nw">em <em class="accent tem-risco">alguém.<svg class="risco" aria-hidden="true" focusable="false"><use href="#risco"/></svg></em></span></span>
+        </h2>
+        <p class="section-sub reveal">Uma seleção recente. Cada um foi desenhado para uma pessoa e um lugar do corpo.</p>
+      </div>
+    </section>
+
+    <!-- ============================== 03 · GALERIA HORIZONTAL ==============================
+         Desktop com JS: a faixa anda para o lado enquanto a página desce (presa na tela). Celular, sem JS ou com
+         movimento reduzido: rolagem lateral nativa. Os cartões ímpares têm o topo em arco. -->
+    <section class="gallery section--light" id="gallery" aria-label="Galeria de trabalhos" data-galeria>
+      <div class="gallery__pin">
+        <div class="gallery__track revela-grupo" id="galleryTrack" data-cursor="arraste" tabindex="0" role="region" aria-label="Galeria horizontal — use as setas ou arraste">
+          <figure class="gcard gcard--tall gcard--arco">
+            <div class="gcard__foto"><img src="assets/images/galeria-01.svg" alt="Tatuagem fine line de um ramo de oliveira subindo pelo antebraço interno, já cicatrizada" loading="lazy" width="1200" height="1800"></div>
+            <figcaption><span class="gcard__num">01</span> Ramo de oliveira · antebraço</figcaption>
+          </figure>
+          <figure class="gcard gcard--mid gcard--down">
+            <div class="gcard__foto"><img src="assets/images/galeria-02.svg" alt="Tatuagem fine line de um pequeno buquê de flores do campo na parte de fora do braço, cicatrizada" loading="lazy" width="1200" height="1600"></div>
+            <figcaption><span class="gcard__num">02</span> Buquê floral · braço</figcaption>
+          </figure>
+          <figure class="gcard gcard--mid gcard--arco">
+            <div class="gcard__foto"><img src="assets/images/galeria-03.svg" alt="Tatuagem de lettering fino com a palavra calma escrita à mão, acompanhando a clavícula" loading="lazy" width="1280" height="1600"></div>
+            <figcaption><span class="gcard__num">03</span> Lettering fino · clavícula</figcaption>
+          </figure>
+          <figure class="gcard gcard--small gcard--up">
+            <div class="gcard__foto"><img src="assets/images/galeria-04.svg" alt="Tatuagem pequena de lua crescente com três estrelas finas no tornozelo, cicatrizada" loading="lazy" width="1600" height="1600"></div>
+            <figcaption><span class="gcard__num">04</span> Lua e estrelas · tornozelo</figcaption>
+          </figure>
+          <figure class="gcard gcard--tall gcard--arco">
+            <div class="gcard__foto"><img src="assets/images/galeria-05.svg" alt="Tatuagem ornamental delicada descendo pela coluna, com filigranas finas e pontilhado" loading="lazy" width="1200" height="1800"></div>
+            <figcaption><span class="gcard__num">05</span> Ornamental delicado · coluna</figcaption>
+          </figure>
+          <figure class="gcard gcard--mid gcard--down">
+            <div class="gcard__foto"><img src="assets/images/galeria-06.svg" alt="Tatuagem de uma flor desenhada em uma única linha contínua na parte interna do pulso" loading="lazy" width="1200" height="1600"></div>
+            <figcaption><span class="gcard__num">06</span> Flor em linha contínua · pulso</figcaption>
+          </figure>
+          <figure class="gcard gcard--mid gcard--up gcard--arco">
+            <div class="gcard__foto"><img src="assets/images/galeria-07.svg" alt="Tatuagem fine line de um ramo de lavanda na lateral da costela, cicatrizada" loading="lazy" width="1280" height="1600"></div>
+            <figcaption><span class="gcard__num">07</span> Ramo de lavanda · costela</figcaption>
+          </figure>
+          <figure class="gcard gcard--small">
+            <div class="gcard__foto"><img src="assets/images/galeria-08.svg" alt="Tatuagem mínima de um pequeno sol de linhas finas atrás da orelha" loading="lazy" width="1600" height="1600"></div>
+            <figcaption><span class="gcard__num">08</span> Pequeno símbolo · atrás da orelha</figcaption>
+          </figure>
+          <div class="gcard gcard--text">
+            <p class="font-display gcard__end">O resto está<br>na pele de<br>quem <em class="accent">levou.</em></p>
+            <a class="cta-line" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" data-cursor="abrir">
+              <span class="cta-line__text">Ver mais no Instagram</span>
+              <span class="cta-line__arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== FAIXA ==============================
+         Duas linhas que andam só com a rolagem, em sentidos opostos: uma em tinta, outra só no contorno. -->
+    <div class="marquee section--light" aria-hidden="true" data-faixa>
+      <div class="marquee__row" data-faixa-linha="-1">
+        <span class="marquee__chunk font-display">Fine line <i>·</i> Floral <i>·</i> Botânico <i>·</i> Ornamental <i>·</i> Lettering <i>·</i> Minimal <i>·</i>&nbsp;</span>
+        <span class="marquee__chunk font-display">Fine line <i>·</i> Floral <i>·</i> Botânico <i>·</i> Ornamental <i>·</i> Lettering <i>·</i> Minimal <i>·</i>&nbsp;</span>
+        <span class="marquee__chunk font-display">Fine line <i>·</i> Floral <i>·</i> Botânico <i>·</i> Ornamental <i>·</i> Lettering <i>·</i> Minimal <i>·</i>&nbsp;</span>
+      </div>
+      <div class="marquee__row marquee__row--stencil" data-faixa-linha="1">
+        <span class="marquee__chunk font-display">Fine line <i>·</i> Floral <i>·</i> Botânico <i>·</i> Ornamental <i>·</i> Lettering <i>·</i> Minimal <i>·</i>&nbsp;</span>
+        <span class="marquee__chunk font-display">Fine line <i>·</i> Floral <i>·</i> Botânico <i>·</i> Ornamental <i>·</i> Lettering <i>·</i> Minimal <i>·</i>&nbsp;</span>
+        <span class="marquee__chunk font-display">Fine line <i>·</i> Floral <i>·</i> Botânico <i>·</i> Ornamental <i>·</i> Lettering <i>·</i> Minimal <i>·</i>&nbsp;</span>
+      </div>
+    </div>
+
+    <!-- ============================== 04 · ESTILOS ============================== -->
+    <section class="styles section--rose" id="styles" aria-label="Estilos">
+      <div class="section-head">
+        <p class="section-label reveal">nº 03 — estilos</p>
+        <h2 class="section-title" data-titulo>
+          <span class="font-display">Cada ideia pede</span><br>
+          <span class="font-display">um <em class="accent">traço.</em></span>
+        </h2>
+        <p class="section-sub reveal">Todos em linha fina, cada um com o seu jeito de ocupar a pele.</p>
+      </div>
+      <div class="styles__grid">
+        <ul class="styles__list revela-grupo" id="stylesList">
+          <li><button type="button" class="styles__item is-active" data-style="floral" aria-pressed="true"><span class="styles__num">01</span><span class="styles__name font-display">Floral</span></button></li>
+          <li><button type="button" class="styles__item" data-style="botanico" aria-pressed="false"><span class="styles__num">02</span><span class="styles__name font-display">Botânico</span></button></li>
+          <li><button type="button" class="styles__item" data-style="ornamental" aria-pressed="false"><span class="styles__num">03</span><span class="styles__name font-display">Ornamental</span></button></li>
+          <li><button type="button" class="styles__item" data-style="lettering" aria-pressed="false"><span class="styles__num">04</span><span class="styles__name font-display">Lettering</span></button></li>
+          <li><button type="button" class="styles__item" data-style="minimal" aria-pressed="false"><span class="styles__num">05</span><span class="styles__name font-display">Minimal</span></button></li>
+          <li><button type="button" class="styles__item" data-style="linha" aria-pressed="false"><span class="styles__num">06</span><span class="styles__name font-display">Linha contínua</span></button></li>
+        </ul>
+        <div class="styles__media" data-revela-foto>
+          <figure class="styles__img is-active" data-style-img="floral">
+            <img src="assets/images/galeria-02.svg" alt="Buquê de flores do campo em fine line no braço" loading="lazy" width="1200" height="1600">
+          </figure>
+          <figure class="styles__img" data-style-img="botanico">
+            <img src="assets/images/galeria-01.svg" alt="Ramo de oliveira em fine line no antebraço" loading="lazy" width="1200" height="1800">
+          </figure>
+          <figure class="styles__img" data-style-img="ornamental">
+            <img src="assets/images/galeria-05.svg" alt="Ornamental delicado com filigranas na coluna" loading="lazy" width="1200" height="1800">
+          </figure>
+          <figure class="styles__img" data-style-img="lettering">
+            <img src="assets/images/galeria-03.svg" alt="Lettering fino escrito à mão na clavícula" loading="lazy" width="1280" height="1600">
+          </figure>
+          <figure class="styles__img" data-style-img="minimal">
+            <img src="assets/images/galeria-08.svg" alt="Pequeno sol minimalista atrás da orelha" loading="lazy" width="1600" height="1600">
+          </figure>
+          <figure class="styles__img" data-style-img="linha">
+            <img src="assets/images/galeria-06.svg" alt="Flor em linha contínua no pulso" loading="lazy" width="1200" height="1600">
+          </figure>
+          <span class="styles__frame" aria-hidden="true" data-parallax="moldura"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== 05 · MANIFESTO ============================== -->
+    <section class="manifesto section--dark" id="manifesto" aria-label="Manifesto">
+      <svg class="flash flash--ramo" viewBox="0 0 64 64" aria-hidden="true" focusable="false" data-desenha data-parallax="flash" data-vel="1"><g fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"><path pathLength="1" d="M18 60C22 44 30 26 46 6"/><path pathLength="1" d="M24 46c-8-2-14-8-15-15 8 1 14 7 15 15Z"/><path pathLength="1" d="M27 40c7-4 15-4 20 0-6 5-14 5-20 0Z"/><path pathLength="1" d="M33 28c-6-4-9-11-8-17 7 3 10 10 8 17Z"/><path pathLength="1" d="M38 21c6-3 13-2 17 2-6 4-13 3-17-2Z"/></g><circle class="flash__tinta" cx="47" cy="5" r="1.6" fill="currentColor"/></svg>
+      <svg class="flash flash--lua" viewBox="0 0 48 48" aria-hidden="true" focusable="false" data-desenha data-parallax="flash" data-vel="-1.4"><path pathLength="1" d="M30 5C20 7 13 15 13 25s8 19 19 19c4 0 8-1 11-4-3 1-6 1-8 1-10 0-17-8-17-17 0-7 4-14 12-19Z" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/><circle class="flash__tinta" cx="38" cy="14" r="1.4" fill="currentColor"/></svg>
+      <svg class="flash flash--estrela" viewBox="0 0 48 48" aria-hidden="true" focusable="false" data-desenha data-parallax="flash" data-vel="1.8"><path pathLength="1" d="M24 3c1 13 7 19 20 21-13 2-19 8-20 21-1-13-7-19-20-21 13-2 19-8 20-21Z" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg>
+      <div class="manifesto__inner">
+        <h2 class="manifesto__title" data-titulo>
+          <span class="font-display">Uma linha</span><br>
+          <span class="font-display">já <em class="accent">basta.</em></span>
+        </h2>
+        <p class="manifesto__sub reveal">Quando o desenho é pensado com calma, cada traço tem motivo para estar ali.</p>
+      </div>
+    </section>
+
+    <!-- ============================== 06 · SOBRE ============================== -->
+    <section class="about section--light" id="about" aria-label="Sobre a Lia Monteiro">
+      <div class="about__grid">
+        <figure class="about__media" data-revela-foto>
+          <div class="foto about__foto">
+            <img src="assets/images/lia-desenhando.svg" alt="Lia Monteiro desenhando ramos e flores a lápis na mesa do ateliê, cercada de esboços" loading="lazy" width="1280" height="1600" data-parallax="foto">
+          </div>
+          <figcaption class="about__caption micro">Ateliê · a mesa de desenho</figcaption>
+        </figure>
+        <div class="about__text">
+          <p class="section-label reveal">nº 04 — sobre</p>
+          <h2 class="section-title" data-titulo><span class="font-display">Oi, eu sou <span class="nw">a <em class="accent">Lia.</em></span></span></h2>
+          <p class="about__lead reveal">Desenho flores e ramos desde antes de tatuar. Hoje eles vão para a pele.</p>
+          <p class="reveal">Meu trabalho é o traço fino: floral, botânico, lettering, ornamentos delicados e pequenos símbolos, sempre em escala pequena ou média. Gosto de começar pela sua história e de olhar com calma onde a tattoo vai ficar, porque no fine line o lugar do corpo muda tudo.</p>
+          <p class="reveal">Atendo com hora marcada, uma pessoa por vez, num ateliê tranquilo. Você pode trazer quem quiser e pedir pausa sempre que precisar.</p>
+          <ul class="about__facts reveal" aria-label="Sobre o trabalho">
+            <li>Desenho autoral</li>
+            <li>Peças pequenas e médias</li>
+            <li>Com hora marcada</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== 07 · DÚVIDAS ============================== -->
+    <section class="faq section--linho" id="faq" aria-label="Perguntas frequentes">
+      <div class="section-head">
+        <p class="section-label reveal">nº 05 — dúvidas</p>
+        <h2 class="section-title" data-titulo><span class="font-display">Antes <span class="nw">de <em class="accent">marcar.</em></span></span></h2>
+        <p class="section-sub reveal">O que quase todo mundo me pergunta sobre o traço fino.</p>
+      </div>
+      <div class="faq__grid">
+        <div class="faq__list revela-grupo" id="faqList">
+
+          <div class="faq__item" data-faq-img="oliveira">
+            <h3><button type="button" class="faq__q" aria-expanded="false" aria-controls="faq-a1" id="faq-q1"><span class="faq__num">01</span><span class="faq__question">Fine line envelhece bem?</span></button></h3>
+            <div class="faq__a" id="faq-a1" role="region" aria-labelledby="faq-q1"><p>O traço fino muda com o tempo, como toda tatuagem: com os anos a linha pode abrir um pouco. Por isso eu ajusto o tamanho e o espaço entre as linhas pensando em como o desenho vai estar lá na frente, e não só no dia.</p></div>
+          </div>
+
+          <div class="faq__item" data-faq-img="lua">
+            <h3><button type="button" class="faq__q" aria-expanded="false" aria-controls="faq-a2" id="faq-q2"><span class="faq__num">02</span><span class="faq__question">Qual o tamanho mínimo?</span></button></h3>
+            <div class="faq__a" id="faq-a2" role="region" aria-labelledby="faq-q2"><p>Depende do desenho. Detalhes muito pequenos e linhas muito próximas tendem a se juntar com o tempo, então às vezes eu sugiro aumentar um pouco ou simplificar. A gente decide junto, olhando a ideia.</p></div>
+          </div>
+
+          <div class="faq__item" data-faq-img="lavanda">
+            <h3><button type="button" class="faq__q" aria-expanded="false" aria-controls="faq-a3" id="faq-q3"><span class="faq__num">03</span><span class="faq__question">Em que lugar do corpo fica melhor?</span></button></h3>
+            <div class="faq__a" id="faq-a3" role="region" aria-labelledby="faq-q3"><p>Antebraço, braço, costela, clavícula, tornozelo e costas costumam receber bem o traço fino. Mãos, dedos e pés renovam a pele mais rápido, e a linha tende a durar menos ali. Eu te conto o que esperar antes de você decidir.</p></div>
+          </div>
+
+          <div class="faq__item" data-faq-img="linha">
+            <h3><button type="button" class="faq__q" aria-expanded="false" aria-controls="faq-a4" id="faq-q4"><span class="faq__num">04</span><span class="faq__question">E se alguma linha falhar?</span></button></h3>
+            <div class="faq__a" id="faq-a4" role="region" aria-labelledby="faq-q4"><p>Depois da cicatrização, se alguma linha ficou falhada, a gente marca um retoque. As condições eu combino com você já na primeira conversa.</p></div>
+          </div>
+
+          <div class="faq__item" data-faq-img="stencil">
+            <h3><button type="button" class="faq__q" aria-expanded="false" aria-controls="faq-a5" id="faq-q5"><span class="faq__num">05</span><span class="faq__question">Como funciona o orçamento?</span></button></h3>
+            <div class="faq__a" id="faq-a5" role="region" aria-labelledby="faq-q5"><p>Me manda a ideia, as referências, o tamanho que você imagina e o lugar do corpo. Com isso eu te passo o orçamento e a gente conversa sobre o desenho.</p></div>
+          </div>
+
+          <div class="faq__item" data-faq-img="lettering">
+            <h3><button type="button" class="faq__q" aria-expanded="false" aria-controls="faq-a6" id="faq-q6"><span class="faq__num">06</span><span class="faq__question">Posso levar uma referência?</span></button></h3>
+            <div class="faq__a" id="faq-a6" role="region" aria-labelledby="faq-q6"><p>Pode, e ajuda muito. Ela me mostra o que você gosta. O desenho final é feito pra você, a partir dela, e não uma cópia.</p></div>
+          </div>
+
+          <div class="faq__item" data-faq-img="lia">
+            <h3><button type="button" class="faq__q" aria-expanded="false" aria-controls="faq-a7" id="faq-q7"><span class="faq__num">07</span><span class="faq__question">Dói muito?</span></button></h3>
+            <div class="faq__a" id="faq-a7" role="region" aria-labelledby="faq-q7"><p>Cada pessoa sente de um jeito, e cada região do corpo também. A sessão é sem pressa: a gente para sempre que você precisar.</p></div>
+          </div>
+
+          <div class="faq__item" data-faq-img="buque">
+            <h3><button type="button" class="faq__q" aria-expanded="false" aria-controls="faq-a8" id="faq-q8"><span class="faq__num">08</span><span class="faq__question">Como cuidar depois?</span></button></h3>
+            <div class="faq__a" id="faq-a8" role="region" aria-labelledby="faq-q8"><p>Você sai da sessão com as orientações explicadas e por escrito. Se surgir qualquer dúvida durante a cicatrização, é só me chamar.</p></div>
+          </div>
+
+        </div>
+        <div class="faq__media" aria-hidden="true">
+          <figure class="faq__img is-active" data-img="oliveira"><img src="assets/images/galeria-01.svg" alt="" loading="lazy" width="1200" height="1800"></figure>
+          <figure class="faq__img" data-img="lua"><img src="assets/images/galeria-04.svg" alt="" loading="lazy" width="1600" height="1600"></figure>
+          <figure class="faq__img" data-img="lavanda"><img src="assets/images/galeria-07.svg" alt="" loading="lazy" width="1280" height="1600"></figure>
+          <figure class="faq__img" data-img="linha"><img src="assets/images/galeria-06.svg" alt="" loading="lazy" width="1200" height="1600"></figure>
+          <figure class="faq__img" data-img="stencil"><img src="assets/images/processo-stencil.svg" alt="" loading="lazy" width="1600" height="1200"></figure>
+          <figure class="faq__img" data-img="lettering"><img src="assets/images/galeria-03.svg" alt="" loading="lazy" width="1280" height="1600"></figure>
+          <figure class="faq__img" data-img="lia"><img src="assets/images/lia-sessao.svg" alt="" loading="lazy" width="1200" height="1600"></figure>
+          <figure class="faq__img" data-img="buque"><img src="assets/images/galeria-02.svg" alt="" loading="lazy" width="1200" height="1600"></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== 08 · POR QUÊ ============================== -->
+    <section class="reasons section--light" id="reasons" aria-label="Por que tatuar com a Lia">
+      <div class="section-head">
+        <p class="section-label reveal">nº 06 — por quê</p>
+        <h2 class="section-title" data-titulo><span class="font-display">Por que tatuar</span><br><span class="font-display"><em class="accent">comigo?</em></span></h2>
+      </div>
+      <ol class="reasons__list">
+        <li class="reason reveal">
+          <span class="reason__num font-display" aria-hidden="true">01</span>
+          <div class="reason__body"><h3>Desenho feito pra você</h3><p>Nada sai de catálogo. O desenho nasce da sua ideia, das suas referências e do lugar onde ele vai ficar.</p></div>
+        </li>
+        <li class="reason reveal">
+          <span class="reason__num font-display" aria-hidden="true">02</span>
+          <div class="reason__body"><h3>Pensado para durar</h3><p>Linha bem colocada e tamanho certo fazem diferença com o tempo. Eu te explico o que funciona antes de tatuar.</p></div>
+        </li>
+        <li class="reason reveal">
+          <span class="reason__num font-display" aria-hidden="true">03</span>
+          <div class="reason__body"><h3>Prova antes da agulha</h3><p>O stencil vai na pele primeiro. Você olha no espelho, a gente ajusta a posição e só depois começa.</p></div>
+        </li>
+        <li class="reason reveal">
+          <span class="reason__num font-display" aria-hidden="true">04</span>
+          <div class="reason__body"><h3>Sem pressa</h3><p>Uma pessoa por vez, com tempo para conversar, ajustar e fazer pausas.</p></div>
+        </li>
+        <li class="reason reveal">
+          <span class="reason__num font-display" aria-hidden="true">05</span>
+          <div class="reason__body"><h3>Conversa direta</h3><p>Você fala comigo do primeiro rascunho às dúvidas da cicatrização, sem intermediário.</p></div>
+        </li>
+        <li class="reason reveal">
+          <span class="reason__num font-display" aria-hidden="true">06</span>
+          <div class="reason__body"><h3>Cuidado depois</h3><p>Você sai com as orientações explicadas e pode me chamar se algo parecer diferente do esperado.</p></div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ============================== 09 · PROCESSO ============================== -->
+    <section class="process section--rose" id="process" aria-label="Processo">
+      <div class="section-head">
+        <p class="section-label reveal">nº 07 — processo</p>
+        <h2 class="section-title" data-titulo><span class="font-display">Do rascunho</span><br><span class="font-display">à <em class="accent">pele.</em></span></h2>
+      </div>
+      <div class="process__grid">
+        <div class="process__trilho" data-passos>
+          <span class="process__linha" aria-hidden="true"></span>
+          <ol class="process__steps">
+            <li class="pstep"><span class="pstep__num font-display">01</span><div><h3>Conversa</h3><p>Você me conta a ideia e manda referências, se tiver.</p></div></li>
+            <li class="pstep"><span class="pstep__num font-display">02</span><div><h3>Desenho</h3><p>Eu preparo a proposta e a gente ajusta junto até ficar do seu jeito.</p></div></li>
+            <li class="pstep"><span class="pstep__num font-display">03</span><div><h3>Reserva</h3><p>Com o desenho alinhado, a data é reservada com um sinal combinado na conversa.</p></div></li>
+            <li class="pstep"><span class="pstep__num font-display">04</span><div><h3>Prova do desenho na pele</h3><p>No dia, o stencil vai na pele primeiro. Você confere no espelho antes de começar.</p></div></li>
+            <li class="pstep"><span class="pstep__num font-display">05</span><div><h3>Sessão e cuidados</h3><p>A tatuagem é feita com calma, e você leva as orientações de cuidado.</p></div></li>
+          </ol>
+        </div>
+        <figure class="process__media" data-revela-foto>
+          <div class="foto process__foto">
+            <img src="assets/images/processo-stencil.svg" alt="Stencil roxo de um ramo floral aplicado no antebraço, com a mão da tatuadora de luva ajustando a posição" loading="lazy" width="1600" height="1200">
+          </div>
+          <figcaption class="micro">O stencil: a prova antes da agulha</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============================== 10 · CONTATO ============================== -->
+    <section class="booking section--linho" id="contact" aria-label="Contato">
+      <div class="booking__inner">
+        <a class="booking__phone-wrap" href="https://wa.me/" target="_blank" rel="noopener noreferrer" aria-label="Chamar a Lia Monteiro no WhatsApp" data-cursor="abrir">
+          <span class="booking__ring micro" aria-hidden="true">me escreve</span>
+          <!-- Envelope com um ramo, em linha fina; o traço se desenha quando entra na tela -->
+          <svg class="booking__phone" viewBox="0 0 220 200" aria-hidden="true" focusable="false" data-desenha>
+            <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round">
+              <!-- envelope -->
+              <path pathLength="1" d="M28 84h164v98H28Z"/>
+              <path pathLength="1" d="M28 84l82 60 82-60"/>
+              <path pathLength="1" d="M28 182l62-50M192 182l-62-50"/>
+              <!-- ramo saindo do envelope -->
+              <path pathLength="1" d="M118 96C120 70 132 42 158 14"/>
+              <path pathLength="1" d="M122 76c-12-3-20-11-22-21 12 2 20 10 22 21Z"/>
+              <path pathLength="1" d="M127 62c10-6 21-6 29 0-9 7-20 7-29 0Z"/>
+              <path pathLength="1" d="M136 46c-9-5-13-14-12-23 9 4 14 13 12 23Z"/>
+              <path pathLength="1" d="M143 36c8-4 17-3 23 2-8 5-17 4-23-2Z"/>
+            </g>
+            <circle class="flash__tinta" cx="159" cy="13" r="2.6" fill="currentColor"/>
+            <circle class="flash__tinta" cx="60" cy="62" r="1.8" fill="currentColor"/>
+            <circle class="flash__tinta" cx="178" cy="60" r="1.8" fill="currentColor"/>
+          </svg>
+        </a>
+        <div class="booking__text">
+          <p class="section-label reveal">nº 08 — contato</p>
+          <h2 class="booking__title" data-titulo>
+            <span class="font-display">Vamos desenhar</span><br>
+            <span class="font-display">a <em class="accent tem-risco">sua?<svg class="risco" aria-hidden="true" focusable="false"><use href="#risco"/></svg></em></span>
+          </h2>
+          <p class="booking__sub reveal">Me manda a ideia, o tamanho que você imagina e o lugar do corpo. Eu respondo com calma.</p>
+          <div class="reveal">
+            <a class="btn-editorial" href="https://wa.me/" target="_blank" rel="noopener noreferrer" data-cursor="abrir">Chamar no WhatsApp</a>
+            <p class="micro booking__alt">ou pelo <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Direct do Instagram</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== 11 · FINAL ============================== -->
+    <section class="finale section--dark" id="finale" aria-label="Vamos começar">
+      <svg class="flash flash--flor" viewBox="0 0 48 48" aria-hidden="true" focusable="false" data-desenha data-parallax="flash" data-vel="-1.2"><path pathLength="1" d="M24 46V24c-6 0-10-4-10-9 0-4 3-7 6-7 0-3 2-5 4-5s4 2 4 5c3 0 6 3 6 7 0 5-4 9-10 9M24 36c-5-1-9-4-10-9 5 0 9 3 10 9Zm0 4c4-1 8-4 9-8-5 0-8 3-9 8Z" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"/></svg>
+      <div class="finale__grid">
+        <div class="finale__text">
+          <h2 class="finale__title" data-titulo>
+            <span class="font-display">Pouca tinta,</span><br>
+            <span class="font-display">muito cuidado.</span><br>
+            <span class="font-display accent tem-risco">Vamos começar?<svg class="risco" aria-hidden="true" focusable="false"><use href="#risco"/></svg></span>
+          </h2>
+          <div class="reveal">
+            <a class="btn-editorial btn-editorial--light" href="https://wa.me/" target="_blank" rel="noopener noreferrer" data-cursor="abrir">Conversar sobre a ideia</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== 12 · RODAPÉ ============================== -->
+    <footer class="footer section--dark" aria-label="Rodapé">
+      <div class="footer__inner">
+        <p class="footer__brand"><span class="font-display">Lia Monteiro</span><span class="micro">Fine line tattoo</span></p>
+        <nav class="footer__links" aria-label="Redes">
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" data-cursor="abrir">Instagram</a>
+          <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" data-cursor="abrir">WhatsApp</a>
+        </nav>
+        <div class="footer__fim">
+          <p class="micro">© Lia Monteiro</p>
+          <p class="footer__modelo">Site modelo — nomes, contatos e imagens de exemplo.</p>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- ============================== NAV INFERIOR ============================== -->
+  <nav class="nav" id="nav" aria-label="Navegação principal">
+    <ul class="nav__list">
+      <li><a href="#hero" class="nav__link is-active" data-section="hero" aria-current="location">Início</a></li>
+      <li><a href="#work" class="nav__link" data-section="work">Trabalhos</a></li>
+      <li><a href="#styles" class="nav__link" data-section="styles">Estilos</a></li>
+      <li><a href="#about" class="nav__link" data-section="about">Sobre</a></li>
+      <li><a href="#faq" class="nav__link" data-section="faq">Dúvidas</a></li>
+      <li><a href="#contact" class="nav__link" data-section="contact">Contato</a></li>
+    </ul>
+    <a class="nav__cta" href="https://wa.me/" target="_blank" rel="noopener noreferrer">Agendar</a>
+  </nav>
+
+  <!-- Nav mobile compacta -->
+  <nav class="mnav" id="mnav" aria-label="Navegação">
+    <button type="button" class="mnav__toggle" id="mnavToggle" aria-expanded="false" aria-controls="mnavMenu">
+      <span class="mnav__toggle-label">Menu</span>
+    </button>
+    <a class="mnav__cta" href="https://wa.me/" target="_blank" rel="noopener noreferrer">Agendar</a>
+  </nav>
+  <div class="mnav__menu" id="mnavMenu" hidden>
+    <ul>
+      <li><a href="#hero"><span class="micro">01</span><span class="font-display">Início</span></a></li>
+      <li><a href="#work"><span class="micro">02</span><span class="font-display">Trabalhos</span></a></li>
+      <li><a href="#styles"><span class="micro">03</span><span class="font-display">Estilos</span></a></li>
+      <li><a href="#about"><span class="micro">04</span><span class="font-display">Sobre</span></a></li>
+      <li><a href="#faq"><span class="micro">05</span><span class="font-display">Dúvidas</span></a></li>
+      <li><a href="#contact"><span class="micro">06</span><span class="font-display">Contato</span></a></li>
+    </ul>
+  </div>
+</body>
+</html>

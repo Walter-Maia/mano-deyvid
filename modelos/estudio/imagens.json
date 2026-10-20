@@ -1,0 +1,116 @@
+{
+  "tema": {
+    "fundo": "#e4dfd6",
+    "tinta": "#0f1720",
+    "linha": "rgba(15,23,32,.2)",
+    "acento": "#a8441f",
+    "fonte": "'Helvetica Neue', Arial, sans-serif",
+    "fonteTitulo": "Georgia, 'Times New Roman', serif",
+    "motivo": "<path d='M50 8C50 8 25 43 25 62a25 25 0 0 0 50 0C75 43 50 8 50 8Z'/><path d='M37 64a13 13 0 0 0 9 12'/><path d='M22 96h56'/>",
+    "motivoViewBox": "0 0 100 100"
+  },
+  "artistas": {
+    "helena": "Helena Duarte (fine line, botânico e floral): a Brazilian woman in her early 30s with shoulder-length wavy dark brown hair, warm light-tan skin, small gold hoop earrings, delicate fine line botanical tattoos on both forearms, wearing a cream linen shirt with rolled-up sleeves and a dark navy canvas apron",
+    "caio": "Caio Ventura (blackwork e tradicional): a Brazilian man in his mid 30s with a short dark beard, buzz-cut black hair, medium-brown skin, both arms covered in bold solid blackwork and American traditional tattoos, wearing a plain black t-shirt and a dark navy canvas apron",
+    "marina": "Marina Sato (realismo): a Japanese-Brazilian woman in her late 20s with straight black hair tied in a low bun, thin round metal glasses, fair skin, a black and grey realistic rose tattoo on her left forearm, wearing a charcoal grey t-shirt and a dark navy canvas apron",
+    "theo": "Theo Barros (anime e cartoon): a Brazilian man in his mid 20s with short curly brown hair, light-brown skin, a few small colorful cartoon-style tattoos on his hands and forearms, wearing a navy overshirt over a white t-shirt and a dark navy canvas apron"
+  },
+  "imagens": [
+    {
+      "arquivo": "hero-estudio.svg", "largura": 1280, "altura": 1600, "proporcao": "4:5",
+      "rotulo": "Sala de atendimento",
+      "alt": "Sala de atendimento da Casa Nanquim: maca coberta com filme protetor, bancada organizada e luz natural entrando pela janela",
+      "prompt": "Photorealistic interior photograph of a calm, upscale tattoo studio room with no people. Deep ink-blue (navy #0f1720) painted walls, warm off-white plaster ceiling, light oak wood floor, a black adjustable tattoo bed covered with clear protective film, a tidy stainless steel workstation with sealed disposable needle cartridges, small ink caps and a covered tattoo machine, one burnt-orange ceramic vase with a green plant, soft natural window light from the left, clean and quiet atmosphere, architectural editorial photography, 35mm lens, vertical 4:5 composition. No text, no signage, no watermark, no logo."
+    },
+    {
+      "arquivo": "estudio-bancada.svg", "largura": 1200, "altura": 1600, "proporcao": "3:4",
+      "rotulo": "Bancada preparada",
+      "alt": "Bancada de trabalho preparada para a sessão: cartuchos de agulha lacrados, batoques de tinta, luvas e filme protetor sobre a mesa",
+      "prompt": "Photorealistic close-up of a tattoo artist's workstation prepared for a session, seen from slightly above. Stainless steel tray covered with clear plastic barrier film, sealed sterile needle cartridges still in their packaging, a row of small empty ink caps, a bottle of black ink without label, black nitrile gloves folded, paper towels, a covered rotary tattoo machine with barrier sleeve. Deep ink-blue wall in the background, soft natural window light, shallow depth of field, calm and clinical but warm, vertical 3:4. No text, no brand names, no labels, no watermark, no logo."
+    },
+    {
+      "arquivo": "artista-helena.svg", "largura": 1200, "altura": 1600, "proporcao": "3:4",
+      "rotulo": "Helena Duarte · fine line",
+      "alt": "Helena Duarte sentada à bancada, segurando a máquina de tatuagem e sorrindo de leve",
+      "prompt": "Photorealistic editorial portrait of a tattoo artist: a Brazilian woman in her early 30s with shoulder-length wavy dark brown hair, warm light-tan skin, small gold hoop earrings, delicate fine line botanical tattoos on both forearms, wearing a cream linen shirt with rolled-up sleeves and a dark navy canvas apron. She sits at a tidy tattoo workstation holding a slim rotary tattoo machine, black nitrile gloves, looking at the camera with a calm slight smile. Deep ink-blue wall behind her, soft natural window light, shallow depth of field, 50mm lens, vertical 3:4. No text, no watermark, no logo."
+    },
+    {
+      "arquivo": "artista-caio.svg", "largura": 1200, "altura": 1600, "proporcao": "3:4",
+      "rotulo": "Caio Ventura · blackwork",
+      "alt": "Caio Ventura de braços cruzados ao lado da maca, com os braços fechados de tatuagens em preto",
+      "prompt": "Photorealistic editorial portrait of a tattoo artist: a Brazilian man in his mid 30s with a short dark beard, buzz-cut black hair, medium-brown skin, both arms covered in bold solid blackwork and American traditional tattoos, wearing a plain black t-shirt and a dark navy canvas apron. He stands next to a black tattoo bed with arms crossed, relaxed and confident expression, looking at the camera. Deep ink-blue wall behind him, soft natural window light, shallow depth of field, 50mm lens, vertical 3:4. No text, no watermark, no logo."
+    },
+    {
+      "arquivo": "artista-marina.svg", "largura": 1200, "altura": 1600, "proporcao": "3:4",
+      "rotulo": "Marina Sato · realismo",
+      "alt": "Marina Sato concentrada, tatuando um braço com luvas pretas e óculos redondos",
+      "prompt": "Photorealistic editorial photo of a tattoo artist at work: a Japanese-Brazilian woman in her late 20s with straight black hair tied in a low bun, thin round metal glasses, fair skin, a black and grey realistic rose tattoo on her left forearm, wearing a charcoal grey t-shirt and a dark navy canvas apron and black nitrile gloves. She is focused, tattooing shading on a client's forearm (client mostly out of frame), slight three-quarter angle. Deep ink-blue wall behind, soft natural window light, shallow depth of field, 50mm lens, vertical 3:4. No text, no watermark, no logo."
+    },
+    {
+      "arquivo": "artista-theo.svg", "largura": 1200, "altura": 1600, "proporcao": "3:4",
+      "rotulo": "Theo Barros · anime e cartoon",
+      "alt": "Theo Barros desenhando num tablet sobre a bancada, com pequenas tatuagens coloridas nas mãos",
+      "prompt": "Photorealistic editorial portrait of a tattoo artist: a Brazilian man in his mid 20s with short curly brown hair, light-brown skin, a few small colorful cartoon-style tattoos on his hands and forearms, wearing a navy overshirt over a white t-shirt and a dark navy canvas apron. He sits at a light oak desk sketching on a drawing tablet with a stylus, looking up at the camera with a friendly expression. Deep ink-blue wall behind him, soft natural window light, shallow depth of field, 50mm lens, vertical 3:4. No text on screen, no watermark, no logo."
+    },
+    {
+      "arquivo": "galeria-01.svg", "largura": 1200, "altura": 1600, "proporcao": "3:4",
+      "rotulo": "Fine line floral · antebraço",
+      "alt": "Tatuagem fine line de um ramo de flores silvestres no antebraço, traço fino e sombreado leve",
+      "prompt": "Photorealistic close-up photo of a healed fine line tattoo on the inner forearm: a delicate branch of wildflowers and small leaves drawn with very thin single-needle black lines and subtle soft grey shading. Real skin texture with natural pores and fine hair, arm resting on a clean off-white cloth, soft natural daylight from a studio window, sharp focus on the tattoo, vertical 3:4. No text, no watermark, no logo."
+    },
+    {
+      "arquivo": "galeria-02.svg", "largura": 1280, "altura": 1600, "proporcao": "4:5",
+      "rotulo": "Blackwork ornamental · ombro",
+      "alt": "Tatuagem blackwork ornamental no ombro, com mandala de preto sólido e pontilhismo",
+      "prompt": "Photorealistic photo of a healed ornamental blackwork tattoo on a man's shoulder and upper arm: symmetrical mandala-like pattern with bold solid black fills, crisp linework and dotwork gradients. Medium-brown skin with real texture, three-quarter back view, neutral dark navy background, soft natural studio light, sharp focus, vertical 4:5. No text, no watermark, no logo."
+    },
+    {
+      "arquivo": "galeria-03.svg", "largura": 1200, "altura": 1800, "proporcao": "2:3",
+      "rotulo": "Realismo black & grey · braço",
+      "alt": "Tatuagem realista em preto e cinza de um rosto de leão na parte de fora do braço",
+      "prompt": "Photorealistic photo of a healed black and grey realism tattoo on the outer upper arm: a highly detailed lion face with smooth grey gradients, deep blacks and soft highlights in the eyes and mane. Real skin texture, arm turned toward the camera, neutral dark navy background, soft natural studio light, sharp focus on the tattoo, vertical 2:3. No text, no watermark, no logo."
+    },
+    {
+      "arquivo": "galeria-04.svg", "largura": 1200, "altura": 1600, "proporcao": "3:4",
+      "rotulo": "Anime · panturrilha",
+      "alt": "Tatuagem em estilo anime na panturrilha: personagem original de cabelo ao vento com detalhes coloridos",
+      "prompt": "Photorealistic photo of a fresh anime-style tattoo on the back of a calf: an original anime girl character (not from any existing franchise) with wind-blown hair and a small crescent moon, clean bold black linework, cel-shaded soft grey shading and small accents of pastel pink and light blue color. Real skin with slight redness of a freshly finished tattoo, clean plastic wrap removed, soft natural studio light, vertical 3:4. No text, no watermark, no logo."
+    },
+    {
+      "arquivo": "galeria-05.svg", "largura": 1600, "altura": 1200, "proporcao": "4:3",
+      "rotulo": "Botânico · clavícula",
+      "alt": "Tatuagem botânica delicada acompanhando a clavícula, com folhas de oliveira em traço fino",
+      "prompt": "Photorealistic close-up photo of a healed delicate botanical tattoo following the collarbone: a thin olive branch with small leaves in fine black linework and light grey shading. Warm light-tan skin with real texture, woman's shoulder and collarbone only (no face), wearing an off-white top pulled aside, soft natural daylight, shallow depth of field, horizontal 4:3. No text, no watermark, no logo."
+    },
+    {
+      "arquivo": "galeria-06.svg", "largura": 1280, "altura": 1600, "proporcao": "4:5",
+      "rotulo": "Tradicional · antebraço",
+      "alt": "Tatuagem tradicional americana no antebraço: andorinha com rosa, contorno preto grosso e cores sólidas",
+      "prompt": "Photorealistic photo of a healed American traditional tattoo on the outer forearm: a swallow with a rose, bold thick black outlines, solid saturated red, yellow and green fills, classic old school flash style. Medium-brown skin with real texture, forearm resting on a black tattoo bed, soft natural studio light, sharp focus, vertical 4:5. No text, no banner lettering, no watermark, no logo."
+    },
+    {
+      "arquivo": "galeria-07.svg", "largura": 1200, "altura": 1600, "proporcao": "3:4",
+      "rotulo": "Realismo colorido · panturrilha",
+      "alt": "Tatuagem realista colorida na panturrilha: beija-flor em voo diante de uma flor de hibisco",
+      "prompt": "Photorealistic photo of a healed color realism tattoo on the side of a calf: a hummingbird in flight next to a red hibiscus flower, smooth color blending in emerald green, turquoise and red, soft realistic shadows, no outlines. Fair skin with real texture, soft natural studio light, sharp focus on the tattoo, vertical 3:4. No text, no watermark, no logo."
+    },
+    {
+      "arquivo": "galeria-08.svg", "largura": 1600, "altura": 1600, "proporcao": "1:1",
+      "rotulo": "Cartoon · coxa",
+      "alt": "Tatuagem cartoon colorida na coxa: gato astronauta original flutuando entre estrelas",
+      "prompt": "Photorealistic photo of a healed cartoon-style color tattoo on the front of a thigh: an original cute cat in an astronaut suit floating among small stars and a ringed planet, bold clean black outlines, flat bright colors in orange, teal and yellow. Light-brown skin with real texture, soft natural studio light, sharp focus, square 1:1. No text, no watermark, no logo, not based on any existing character."
+    },
+    {
+      "arquivo": "processo-stencil.svg", "largura": 1600, "altura": 1200, "proporcao": "4:3",
+      "rotulo": "Stencil no braço",
+      "alt": "Mãos de luvas pretas posicionando o stencil roxo do desenho no antebraço antes da sessão",
+      "prompt": "Photorealistic close-up photo of a tattoo artist's hands in black nitrile gloves carefully peeling a transfer paper away from a client's forearm, revealing a fresh purple stencil of a floral line drawing on the skin. Clean workstation with clear barrier film in the background, deep ink-blue wall softly out of focus, soft natural window light, shallow depth of field, horizontal 4:3. No text, no watermark, no logo."
+    },
+    {
+      "arquivo": "bio-material.svg", "largura": 1600, "altura": 1200, "proporcao": "4:3",
+      "rotulo": "Material descartável",
+      "alt": "Mãos de luvas pretas abrindo a embalagem lacrada de um cartucho de agulha sobre a bancada protegida",
+      "prompt": "Photorealistic close-up photo of hands in black nitrile gloves opening a sealed sterile blister package of a tattoo needle cartridge, above a stainless steel workstation covered with clear protective film, with more sealed cartridges, small ink caps and folded paper towels nearby. Deep ink-blue wall softly out of focus, soft natural window light, clean and reassuring atmosphere, horizontal 4:3. No text, no labels, no brand names, no watermark, no logo."
+    }
+  ]
+}

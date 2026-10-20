@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1600" viewBox="0 0 1600 1600" role="img" aria-label="Detalhe · contorno cicatrizado">
+<rect width="1600" height="1600" fill="#efe6d2"/>
+<rect x="115.2" y="115.2" width="1369.6" height="1369.6" fill="none" stroke="rgba(12,11,9,0.28)" stroke-width="3.2"/>
+<path d="M72 184V72H184M1528 184V72H1416M72 1416V1528H184M1528 1416V1528H1416" fill="none" stroke="#7d5a12" stroke-width="9.6" stroke-linecap="square"/>
+<g transform="translate(560.0 432.0) scale(7.5000)" fill="none" stroke="#7d5a12" stroke-width="0.85" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d='M6 22L14 19C19 15 25 16 29 20C36 27 44 33 52 38L62 41L54 41L59 52L49 43C41 40 33 36 26 31C20 28 16 25 14 24Z'/><path d='M28 20C34 11 44 5 60 3C53 9 47 15 43 23'/><path d='M24 30C22 39 16 47 6 54C16 51 24 45 31 35'/></g>
+<g fill="#0c0b09" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">
+<text x="800" y="1088" font-size="99" font-family="Rockwell, 'Arial Black', Georgia, serif">Sua foto aqui</text>
+<text x="800" y="1197" font-size="54" opacity="0.8">Detalhe · contorno cicatrizado</text>
+<text x="800" y="1413" font-size="42" letter-spacing="10.5" opacity="0.55">1:1 · 1600 × 1600 PX OU MAIS</text>
+</g>
+</svg>

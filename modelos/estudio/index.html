@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Casa Nanquim — Estúdio de Tatuagem</title>
+  <meta name="description" content="Casa Nanquim, estúdio de tatuagem com artistas de fine line, blackwork, realismo e anime. Avaliação sem pressa, biossegurança à vista e atendimento com hora marcada.">
+  <meta name="theme-color" content="#0f1720">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Casa Nanquim — Estúdio de Tatuagem">
+  <meta property="og:description" content="Tatuagem com projeto, cuidado e calma. Conheça os artistas e agende uma avaliação.">
+  <meta property="og:type" content="website">
+  <!-- [PREENCHER] trocar por URL absoluta de uma foto real do estúdio (https://…/assets/images/hero-estudio.jpg) quando o domínio estiver definido -->
+  <meta property="og:image" content="assets/images/hero-estudio.svg">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <!-- Tipografia: Instrument Serif nos títulos, Instrument Sans no texto (carrega sem travar a primeira pintura) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet"></noscript>
+
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Intro "a gota de nanquim": decidida aqui, antes da primeira pintura, para cobrir a página sem piscar. Não toca com
+       movimento reduzido, com âncora na URL, com a página já rolada ou se já foi vista nesta sessão. ?intro=1 força e ?intro=0 desliga. -->
+  <script>(function(){var d=document.documentElement;d.classList.add("js");try{var q=location.search;if(/[?&]intro=0\b/.test(q)||matchMedia("(prefers-reduced-motion: reduce)").matches)return;if(!/[?&]intro=1\b/.test(q)&&(location.hash||document.hidden||window.pageYOffset>4||sessionStorage.getItem("modelo-estudio-intro")==="1"))return;d.classList.add("intro-ativa")}catch(e){}})();</script>
+  <link rel="preload" as="image" href="assets/images/hero-estudio.svg">
+  <script src="js/intro.js" defer onerror="document.documentElement.classList.remove('intro-ativa')"></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <!-- [PREENCHER] Site modelo. Antes de publicar, trocar:
+       · WhatsApp: todos os links https://wa.me/ → https://wa.me/55DDDNUMERO (com a mensagem, se quiser)
+       · Instagram: todos os links https://www.instagram.com/ → perfil do estúdio e, nos cards dos artistas, o perfil de cada um
+       · Endereço (seção Visite e rodapé) e o link https://maps.google.com/ → link do Google Maps do estúdio
+       · Nomes, especialidades e fotos dos artistas (assets/images/*.svg são molduras; ver imagens.json)
+       · og:image com URL absoluta -->
+
+  <!-- Sublinhado à mão sob as palavras em destaque -->
+  <svg class="svg-lib" aria-hidden="true" focusable="false"><symbol id="risco" viewBox="0 0 300 24" preserveAspectRatio="none"><path pathLength="1" d="M4 15C60 10 118 8 172 9c46 1 84 4 124 9"/></symbol></svg>
+
+  <!-- Cursor contextual (somente desktop / fine pointer) -->
+  <div class="cursor" id="cursor" aria-hidden="true"><span class="cursor__label" id="cursorLabel"></span></div>
+
+  <a class="skip-link" href="#hero">Pular para o conteúdo</a>
+
+  <header class="site-head">
+    <a href="#hero" class="site-head__brand" aria-label="Casa Nanquim, voltar ao topo">
+      <span class="font-display">CN</span>
+    </a>
+    <p class="site-head__meta">Casa Nanquim — Estúdio de Tatuagem</p>
+  </header>
+
+  <main id="main">
+
+    <!-- ============================== HERO ==============================
+         A entrada é só CSS (existe sem JavaScript) e, com a intro, espera a cortina subir (--rise-start). -->
+    <section class="hero section--light" id="hero" aria-label="Apresentação">
+      <div class="hero__grid">
+        <div class="hero__text">
+          <p class="hero__eyebrow"><span>Casa Nanquim — Estúdio de Tatuagem</span></p>
+          <h1 class="hero__title">
+            <span class="hero__title-row"><span class="font-display">Tatuagem</span></span>
+            <span class="hero__title-row"><span class="font-display">com projeto,</span></span>
+            <span class="hero__title-row"><span class="font-display">cuidado e <em class="accent tem-risco">calma.<svg class="risco" aria-hidden="true" focusable="false"><use href="#risco"/></svg></em></span></span>
+          </h1>
+          <p class="hero__sub">Artistas de estilos diferentes e um jeito de trabalhar em comum: ouvir antes de desenhar.</p>
+          <div class="hero__acoes">
+            <a class="cta-line hero__cta" href="https://wa.me/" target="_blank" rel="noopener noreferrer" data-cursor="Abrir">
+              <span class="cta-line__text">Agendar avaliação</span>
+              <span class="cta-line__arrow" aria-hidden="true">→</span>
+            </a>
+            <a class="cta-line cta-line--suave hero__cta2" href="#artistas">
+              <span class="cta-line__text">Conhecer os artistas</span>
+            </a>
+          </div>
+        </div>
+        <figure class="hero__media">
+          <div class="foto hero__foto">
+            <img src="assets/images/hero-estudio.svg" alt="Sala de atendimento da Casa Nanquim: maca coberta com filme protetor, bancada organizada e luz natural entrando pela janela" width="1280" height="1600" fetchpriority="high" data-parallax="foto">
+          </div>
+          <figcaption class="hero__caption">A sala de atendimento</figcaption>
+        </figure>
+      </div>
+      <div class="hero__footer">
+        <p class="micro">Role para conhecer a casa</p>
+        <span class="hero__scrollline" aria-hidden="true"></span>
+        <p class="micro">Fine line · Blackwork · Realismo · Anime</p>
+      </div>
+    </section>
+
+    <!-- ============================== 01 · O ESTÚDIO ============================== -->
+    <section class="estudio section--rose" id="estudio" aria-label="O estúdio">
+      <div class="estudio__grid">
+        <figure class="estudio__media" data-revela-foto>
+          <div class="foto estudio__foto">
+            <img src="assets/images/estudio-bancada.svg" alt="Bancada de trabalho preparada para a sessão: cartuchos de agulha lacrados, batoques de tinta, luvas e filme protetor sobre a mesa" loading="lazy" width="1200" height="1600" data-parallax="foto">
+          </div>
+          <figcaption class="estudio__caption micro">A bancada, preparada para cada sessão</figcaption>
+        </figure>
+        <div class="estudio__text">
+          <p class="section-label reveal">01 — O estúdio</p>
+          <h2 class="section-title" data-titulo>
+            <span class="font-display">Uma casa feita</span><br>
+            <span class="font-display">para <em class="accent">tatuar bem.</em></span>
+          </h2>
+          <p class="estudio__lead reveal">A Casa Nanquim reúne artistas de estilos diferentes num mesmo endereço, com a mesma forma de trabalhar: ouvir antes de desenhar, explicar cada etapa e não ter pressa.</p>
+          <p class="reveal">Aqui a tatuagem começa numa conversa e termina com você sabendo cuidar dela. No meio, tem desenho feito para o seu corpo, sessão sem correria e um ambiente que você pode olhar de perto.</p>
+        </div>
+      </div>
+      <ol class="principios revela-grupo" aria-label="Como a casa trabalha">
+        <li class="principio">
+          <span class="principio__num font-display" aria-hidden="true">i.</span>
+          <h3>Projeto para cada pessoa</h3>
+          <p>Nenhum desenho sai de catálogo. O artista adapta a ideia ao seu corpo e ao lugar onde a tatuagem vai ficar.</p>
+        </li>
+        <li class="principio">
+          <span class="principio__num font-display" aria-hidden="true">ii.</span>
+          <h3>Atendimento sem pressa</h3>
+          <p>A avaliação é uma conversa, com tempo para olhar referências, tirar dúvidas e decidir junto o melhor caminho.</p>
+        </li>
+        <li class="principio">
+          <span class="principio__num font-display" aria-hidden="true">iii.</span>
+          <h3>Ambiente limpo e seguro</h3>
+          <p>Material descartável, esterilização e uma sala preparada antes de cada atendimento. Tudo à vista.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ============================== 02 · ARTISTAS ============================== -->
+    <section class="artistas section--light" id="artistas" aria-label="Artistas">
+      <div class="section-head">
+        <p class="section-label reveal">02 — Artistas</p>
+        <h2 class="section-title" data-titulo>
+          <span class="font-display">Quem tatua</span><br>
+          <span class="font-display"><em class="accent">aqui.</em></span>
+        </h2>
+        <p class="section-sub reveal">Cada artista tem o seu estilo. Na avaliação, a gente indica quem combina com a sua ideia.</p>
+      </div>
+      <!-- [PREENCHER] nomes, especialidades, fotos e o Instagram de cada artista -->
+      <ul class="artistas__grade revela-grupo">
+        <li class="artista">
+          <figure class="artista__foto">
+            <img src="assets/images/artista-helena.svg" alt="Helena Duarte sentada à bancada, segurando a máquina de tatuagem e sorrindo de leve" loading="lazy" width="1200" height="1600">
+            <figcaption class="artista__estilos" aria-hidden="true">Fine line · botânico · floral</figcaption>
+          </figure>
+          <h3 class="artista__nome font-display">Helena Duarte</h3>
+          <p class="artista__esp">Fine line, botânico e floral</p>
+          <a class="artista__link" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" data-cursor="Abrir">Ver trabalhos<span class="visualmente-oculto"> de Helena Duarte</span> <span aria-hidden="true">→</span></a>
+        </li>
+        <li class="artista">
+          <figure class="artista__foto">
+            <img src="assets/images/artista-caio.svg" alt="Caio Ventura de braços cruzados ao lado da maca, com os braços fechados de tatuagens em preto" loading="lazy" width="1200" height="1600">
+            <figcaption class="artista__estilos" aria-hidden="true">Blackwork · tradicional · cover-up</figcaption>
+          </figure>
+          <h3 class="artista__nome font-display">Caio Ventura</h3>
+          <p class="artista__esp">Blackwork e tradicional</p>
+          <a class="artista__link" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" data-cursor="Abrir">Ver trabalhos<span class="visualmente-oculto"> de Caio Ventura</span> <span aria-hidden="true">→</span></a>
+        </li>
+        <li class="artista">
+          <figure class="artista__foto">
+            <img src="assets/images/artista-marina.svg" alt="Marina Sato concentrada, tatuando um braço com luvas pretas e óculos redondos" loading="lazy" width="1200" height="1600">
+            <figcaption class="artista__estilos" aria-hidden="true">Realismo · preto e cinza · colorido</figcaption>
+          </figure>
+          <h3 class="artista__nome font-display">Marina Sato</h3>
+          <p class="artista__esp">Realismo em preto e cinza e colorido</p>
+          <a class="artista__link" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" data-cursor="Abrir">Ver trabalhos<span class="visualmente-oculto"> de Marina Sato</span> <span aria-hidden="true">→</span></a>
+        </li>
+        <li class="artista">
+          <figure class="artista__foto">
+            <img src="assets/images/artista-theo.svg" alt="Theo Barros desenhando num tablet sobre a bancada, com pequenas tatuagens coloridas nas mãos" loading="lazy" width="1200" height="1600">
+            <figcaption class="artista__estilos" aria-hidden="true">Anime · cartoon · cor</figcaption>
+          </figure>
+          <h3 class="artista__nome font-display">Theo Barros</h3>
+          <p class="artista__esp">Anime e cartoon</p>
+          <a class="artista__link" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" data-cursor="Abrir">Ver trabalhos<span class="visualmente-oculto"> de Theo Barros</span> <span aria-hidden="true">→</span></a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ============================== 03 · TRABALHOS (cabeçalho) ============================== -->
+    <section class="work section--light" id="work" aria-label="Trabalhos da casa">
+      <div class="section-head">
+        <p class="section-label reveal">03 — Trabalhos</p>
+        <h2 class="section-title" data-titulo>
+          <span class="font-display">Trabalhos</span><br>
+          <span class="font-display">da <em class="accent tem-risco">casa.<svg class="risco" aria-hidden="true" focusable="false"><use href="#risco"/></svg></em></span>
+        </h2>
+        <p class="section-sub reveal">Uma seleção de cada artista. Os portfólios completos estão no Instagram do estúdio.</p>
+      </div>
+    </section>
+
+    <!-- ============================== GALERIA HORIZONTAL ==============================
+         Desktop com JS: a faixa anda para o lado enquanto a página desce (presa na tela). Celular, sem JS ou com
+         movimento reduzido: rolagem lateral nativa. -->
+    <section class="gallery section--light" id="gallery" aria-label="Galeria de trabalhos" data-galeria>
+      <div class="gallery__pin">
+        <div class="gallery__track revela-grupo" id="galleryTrack" data-cursor="Arrastar" tabindex="0" role="region" aria-label="Galeria horizontal — use as setas ou arraste">
+          <figure class="gcard gcard--tall">
+            <div class="gcard__foto"><img src="assets/images/galeria-01.svg" alt="Tatuagem fine line de um ramo de flores silvestres no antebraço, traço fino e sombreado leve" loading="lazy" width="1200" height="1600"></div>
+            <figcaption><span class="gcard__num">01</span> Fine line · Helena Duarte</figcaption>
+          </figure>
+          <figure class="gcard gcard--mid gcard--down">
+            <div class="gcard__foto"><img src="assets/images/galeria-02.svg" alt="Tatuagem blackwork ornamental no ombro, com mandala de preto sólido e pontilhismo" loading="lazy" width="1280" height="1600"></div>
+            <figcaption><span class="gcard__num">02</span> Blackwork · Caio Ventura</figcaption>
+          </figure>
+          <figure class="gcard gcard--tall">
+            <div class="gcard__foto"><img src="assets/images/galeria-03.svg" alt="Tatuagem realista em preto e cinza de um rosto de leão na parte de fora do braço" loading="lazy" width="1200" height="1800"></div>
+            <figcaption><span class="gcard__num">03</span> Realismo · Marina Sato</figcaption>
+          </figure>
+          <figure class="gcard gcard--mid gcard--up">
+            <div class="gcard__foto"><img src="assets/images/galeria-04.svg" alt="Tatuagem em estilo anime na panturrilha: personagem original de cabelo ao vento com detalhes coloridos" loading="lazy" width="1200" height="1600"></div>
+            <figcaption><span class="gcard__num">04</span> Anime · Theo Barros</figcaption>
+          </figure>
+          <figure class="gcard gcard--small">
+            <div class="gcard__foto"><img src="assets/images/galeria-05.svg" alt="Tatuagem botânica delicada acompanhando a clavícula, com folhas de oliveira em traço fino" loading="lazy" width="1600" height="1200"></div>
+            <figcaption><span class="gcard__num">05</span> Botânico · Helena Duarte</figcaption>
+          </figure>
+          <figure class="gcard gcard--mid">
+            <div class="gcard__foto"><img src="assets/images/galeria-06.svg" alt="Tatuagem tradicional americana no antebraço: andorinha com rosa, contorno preto grosso e cores sólidas" loading="lazy" width="1280" height="1600"></div>
+            <figcaption><span class="gcard__num">06</span> Tradicional · Caio Ventura</figcaption>
+          </figure>
+          <figure class="gcard gcard--tall gcard--down">
+            <div class="gcard__foto"><img src="assets/images/galeria-07.svg" alt="Tatuagem realista colorida na panturrilha: beija-flor em voo diante de uma flor de hibisco" loading="lazy" width="1200" height="1600"></div>
+            <figcaption><span class="gcard__num">07</span> Realismo colorido · Marina Sato</figcaption>
+          </figure>
+          <figure class="gcard gcard--small gcard--up">
+            <div class="gcard__foto"><img src="assets/images/galeria-08.svg" alt="Tatuagem cartoon colorida na coxa: gato astronauta original flutuando entre estrelas" loading="lazy" width="1600" height="1600"></div>
+            <figcaption><span class="gcard__num">08</span> Cartoon · Theo Barros</figcaption>
+          </figure>
+          <div class="gcard gcard--text">
+            <p class="font-display gcard__end">Cada artista<br>tem o seu<br><em class="accent">portfólio.</em></p>
+            <a class="cta-line" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" data-cursor="Abrir">
+              <span class="cta-line__text">Ver no Instagram</span>
+              <span class="cta-line__arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== FAIXA ==============================
+         As duas linhas andam só com a rolagem, em sentidos opostos (sem loop automático). -->
+    <div class="marquee section--dark" aria-hidden="true" data-faixa>
+      <div class="marquee__row" data-faixa-linha="-1">
+        <span class="marquee__chunk font-display">Fine line <i>·</i> Botânico <i>·</i> Blackwork <i>·</i> Tradicional <i>·</i> Realismo <i>·</i> Anime <i>·</i> Cartoon <i>·</i> Cover-up <i>·</i>&nbsp;</span>
+        <span class="marquee__chunk font-display">Fine line <i>·</i> Botânico <i>·</i> Blackwork <i>·</i> Tradicional <i>·</i> Realismo <i>·</i> Anime <i>·</i> Cartoon <i>·</i> Cover-up <i>·</i>&nbsp;</span>
+        <span class="marquee__chunk font-display">Fine line <i>·</i> Botânico <i>·</i> Blackwork <i>·</i> Tradicional <i>·</i> Realismo <i>·</i> Anime <i>·</i> Cartoon <i>·</i> Cover-up <i>·</i>&nbsp;</span>
+      </div>
+      <div class="marquee__row marquee__row--stencil" data-faixa-linha="1">
+        <span class="marquee__chunk font-display">Projeto <i>·</i> Avaliação <i>·</i> Desenho <i>·</i> Sessão <i>·</i> Cuidado <i>·</i> Projeto <i>·</i> Avaliação <i>·</i> Desenho <i>·</i> Sessão <i>·</i> Cuidado <i>·</i>&nbsp;</span>
+        <span class="marquee__chunk font-display">Projeto <i>·</i> Avaliação <i>·</i> Desenho <i>·</i> Sessão <i>·</i> Cuidado <i>·</i> Projeto <i>·</i> Avaliação <i>·</i> Desenho <i>·</i> Sessão <i>·</i> Cuidado <i>·</i>&nbsp;</span>
+        <span class="marquee__chunk font-display">Projeto <i>·</i> Avaliação <i>·</i> Desenho <i>·</i> Sessão <i>·</i> Cuidado <i>·</i> Projeto <i>·</i> Avaliação <i>·</i> Desenho <i>·</i> Sessão <i>·</i> Cuidado <i>·</i>&nbsp;</span>
+      </div>
+    </div>
+
+    <!-- ============================== 04 · ESTILOS ============================== -->
+    <section class="styles section--dark" id="styles" aria-label="Estilos">
+      <div class="section-head">
+        <p class="section-label section-label--light reveal">04 — Estilos</p>
+        <h2 class="section-title section-title--light" data-titulo>
+          <span class="font-display">Estilos e</span><br>
+          <span class="font-display"><em class="accent">quem faz.</em></span>
+        </h2>
+        <p class="section-sub section-sub--light reveal">Escolha pelo estilo ou pelo artista. Se a ideia mistura caminhos, a avaliação ajuda a decidir.</p>
+      </div>
+      <div class="styles__grid">
+        <ul class="styles__list revela-grupo" id="stylesList">
+          <li><button type="button" class="styles__item is-active" data-style="fineline" aria-pressed="true"><span class="styles__num">01</span><span class="styles__corpo"><span class="styles__name font-display">Fine line</span><span class="styles__quem">com Helena Duarte</span></span></button></li>
+          <li><button type="button" class="styles__item" data-style="botanico" aria-pressed="false"><span class="styles__num">02</span><span class="styles__corpo"><span class="styles__name font-display">Botânico e floral</span><span class="styles__quem">com Helena Duarte</span></span></button></li>
+          <li><button type="button" class="styles__item" data-style="blackwork" aria-pressed="false"><span class="styles__num">03</span><span class="styles__corpo"><span class="styles__name font-display">Blackwork</span><span class="styles__quem">com Caio Ventura</span></span></button></li>
+          <li><button type="button" class="styles__item" data-style="tradicional" aria-pressed="false"><span class="styles__num">04</span><span class="styles__corpo"><span class="styles__name font-display">Tradicional</span><span class="styles__quem">com Caio Ventura</span></span></button></li>
+          <li><button type="button" class="styles__item" data-style="realismo" aria-pressed="false"><span class="styles__num">05</span><span class="styles__corpo"><span class="styles__name font-display">Realismo</span><span class="styles__quem">com Marina Sato</span></span></button></li>
+          <li><button type="button" class="styles__item" data-style="anime" aria-pressed="false"><span class="styles__num">06</span><span class="styles__corpo"><span class="styles__name font-display">Anime e cartoon</span><span class="styles__quem">com Theo Barros</span></span></button></li>
+        </ul>
+        <div class="styles__media" data-revela-foto>
+          <figure class="styles__img is-active" data-style-img="fineline">
+            <img src="assets/images/galeria-01.svg" alt="Fine line floral no antebraço" loading="lazy" width="1200" height="1600">
+          </figure>
+          <figure class="styles__img" data-style-img="botanico">
+            <img src="assets/images/galeria-05.svg" alt="Botânico delicado na clavícula" loading="lazy" width="1600" height="1200">
+          </figure>
+          <figure class="styles__img" data-style-img="blackwork">
+            <img src="assets/images/galeria-02.svg" alt="Blackwork ornamental no ombro" loading="lazy" width="1280" height="1600">
+          </figure>
+          <figure class="styles__img" data-style-img="tradicional">
+            <img src="assets/images/galeria-06.svg" alt="Andorinha com rosa em estilo tradicional no antebraço" loading="lazy" width="1280" height="1600">
+          </figure>
+          <figure class="styles__img" data-style-img="realismo">
+            <img src="assets/images/galeria-03.svg" alt="Leão em realismo preto e cinza no braço" loading="lazy" width="1200" height="1800">
+          </figure>
+          <figure class="styles__img" data-style-img="anime">
+            <img src="assets/images/galeria-04.svg" alt="Personagem original em estilo anime na panturrilha" loading="lazy" width="1200" height="1600">
+          </figure>
+          <span class="styles__frame" aria-hidden="true" data-parallax="moldura"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== MANIFESTO ============================== -->
+    <section class="manifesto section--black" id="manifesto" aria-label="Manifesto">
+      <!-- gota de nanquim -->
+      <svg class="flash flash--gota" viewBox="0 0 48 64" aria-hidden="true" focusable="false" data-desenha data-parallax="flash" data-vel="1"><path pathLength="1" d="M24 4C24 4 7 28 7 41a17 17 0 0 0 34 0C41 28 24 4 24 4Z" fill="none" stroke="currentColor" stroke-width="1.6"/><path pathLength="1" d="M15 43a9 9 0 0 0 6 9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      <!-- frasco de nanquim -->
+      <svg class="flash flash--frasco" viewBox="0 0 48 64" aria-hidden="true" focusable="false" data-desenha data-parallax="flash" data-vel="-1.3"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path pathLength="1" d="M17 4h14v9H17Z"/><path pathLength="1" d="M15 13h18l7 11v32a4 4 0 0 1-4 4H12a4 4 0 0 1-4-4V24Z"/><path pathLength="1" d="M12 33h24v13H12Z"/></g><path class="flash__tinta" d="M9 50h30v6a3 3 0 0 1-3 3H12a3 3 0 0 1-3-3Z" fill="currentColor"/></svg>
+      <!-- máquina de tatuagem (pen) -->
+      <svg class="flash flash--maquina" viewBox="0 0 64 64" aria-hidden="true" focusable="false" data-desenha data-parallax="flash" data-vel="1.6"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path pathLength="1" d="M44 6l14 14-20 20-14-14Z"/><path pathLength="1" d="M24 26l14 14-8 8-14-14Z"/><path pathLength="1" d="M16 34l14 14-10 6-10-10Z"/><path pathLength="1" d="M10 44L3 61"/><path pathLength="1" d="M49 11l4 4M45 15l4 4"/></g></svg>
+      <div class="manifesto__inner">
+        <h2 class="manifesto__title" data-titulo>
+          <span class="font-display">Para sempre</span><br>
+          <span class="font-display">pede <em class="accent">cuidado.</em></span>
+        </h2>
+        <p class="manifesto__sub reveal">Por isso a gente não tem pressa.</p>
+      </div>
+    </section>
+
+    <!-- ============================== 05 · BIOSSEGURANÇA ==============================
+         [CONFIRMAR] O estúdio deve validar cada item abaixo com a rotina real e com as normas sanitárias da sua cidade
+         (equipamento de esterilização, descarte, licença sanitária) antes de publicar. -->
+    <section class="bio section--light" id="biosseguranca" aria-label="Biossegurança">
+      <div class="bio__grid">
+        <div class="bio__text">
+          <p class="section-label reveal">05 — Biossegurança</p>
+          <h2 class="section-title" data-titulo>
+            <span class="font-display">Limpo, seguro</span><br>
+            <span class="font-display">e <em class="accent">à vista.</em></span>
+          </h2>
+          <p class="section-sub reveal">O cuidado com a sua saúde vem antes do desenho, e você acompanha cada etapa.</p>
+          <figure class="bio__media" data-revela-foto>
+            <div class="foto bio__foto">
+              <img src="assets/images/bio-material.svg" alt="Mãos de luvas pretas abrindo a embalagem lacrada de um cartucho de agulha sobre a bancada protegida" loading="lazy" width="1600" height="1200">
+            </div>
+            <figcaption class="micro">Cada embalagem é aberta na sua frente</figcaption>
+          </figure>
+        </div>
+        <ul class="bio__lista revela-grupo">
+          <li class="bio__item">
+            <svg class="bio__icone" viewBox="0 0 48 48" aria-hidden="true" focusable="false" data-desenha><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"><path pathLength="1" d="M8 14l4-4 4 4 4-4 4 4 4-4 4 4 4-4 4 4v26H8Z"/><path pathLength="1" d="M17 34l14-14"/><path pathLength="1" d="M31 20l3-3"/></g></svg>
+            <h3>Material descartável</h3>
+            <p>Agulhas, biqueiras, luvas e filmes protetores são de uso único e abertos na sua frente, no começo da sessão.</p>
+          </li>
+          <li class="bio__item">
+            <svg class="bio__icone" viewBox="0 0 48 48" aria-hidden="true" focusable="false" data-desenha><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"><path pathLength="1" d="M6 16h36v26H6Z"/><circle pathLength="1" cx="24" cy="29" r="7"/><path pathLength="1" d="M15 11c-2-2 2-4 0-6M24 11c-2-2 2-4 0-6M33 11c-2-2 2-4 0-6"/></g></svg>
+            <h3>Esterilização</h3>
+            <p>O que não é descartável passa por limpeza e esterilização antes de voltar para a bancada.</p>
+          </li>
+          <li class="bio__item">
+            <svg class="bio__icone" viewBox="0 0 48 48" aria-hidden="true" focusable="false" data-desenha><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"><path pathLength="1" d="M4 28h40"/><path pathLength="1" d="M9 28v14M39 28v14"/><path pathLength="1" d="M12 28c0-5 3-8 8-8h20"/><path pathLength="1" d="M33 3c1 4 2.5 5.5 6.5 6.5-4 1-5.5 2.5-6.5 6.5-1-4-2.5-5.5-6.5-6.5 4-1 5.5-2.5 6.5-6.5Z"/></g></svg>
+            <h3>Sala preparada</h3>
+            <p>A bancada e a maca são higienizadas e protegidas antes de cada atendimento.</p>
+          </li>
+          <li class="bio__item">
+            <svg class="bio__icone" viewBox="0 0 48 48" aria-hidden="true" focusable="false" data-desenha><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"><path pathLength="1" d="M24 42C11 33 6 25 6 18a9 9 0 0 1 18-3 9 9 0 0 1 18 3c0 7-5 15-18 24Z"/><path pathLength="1" d="M17 24l5 5 9-10"/></g></svg>
+            <h3>Cuidados depois</h3>
+            <p>Você sai com as orientações explicadas e pode chamar o estúdio durante a cicatrização.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================== 06 · COMO AGENDAR ============================== -->
+    <section class="process section--dark" id="process" aria-label="Como agendar">
+      <div class="section-head">
+        <p class="section-label section-label--light reveal">06 — Como agendar</p>
+        <h2 class="section-title section-title--light" data-titulo>
+          <span class="font-display">Do primeiro contato</span><br>
+          <span class="font-display">à <em class="accent">cicatrização.</em></span>
+        </h2>
+      </div>
+      <div class="process__grid">
+        <div class="process__trilho" data-passos>
+          <span class="process__linha" aria-hidden="true"></span>
+          <!-- [CONFIRMAR] regras do sinal (valor, prazo, remarcação) -->
+          <ol class="process__steps">
+            <li class="pstep"><span class="pstep__num font-display">01</span><div><h3>Ideia e artista</h3><p>Conte a sua ideia e mande referências. Se já tiver um artista em mente, é só dizer; se não, a gente indica.</p></div></li>
+            <li class="pstep"><span class="pstep__num font-display">02</span><div><h3>Avaliação</h3><p>Uma conversa com o artista, no estúdio ou por mensagem, para entender tamanho, lugar do corpo e estilo.</p></div></li>
+            <li class="pstep"><span class="pstep__num font-display">03</span><div><h3>Orçamento e sinal</h3><p>Com o projeto definido, você recebe o orçamento. O sinal reserva a data e o tempo do artista para desenhar.</p></div></li>
+            <li class="pstep"><span class="pstep__num font-display">04</span><div><h3>Sessão</h3><p>No dia, o desenho é ajustado no seu corpo antes de começar. Sem pressa.</p></div></li>
+            <li class="pstep"><span class="pstep__num font-display">05</span><div><h3>Pós</h3><p>Orientações de cuidado na saída e acompanhamento durante a cicatrização.</p></div></li>
+          </ol>
+        </div>
+        <figure class="process__media" data-revela-foto>
+          <div class="foto process__foto">
+            <img src="assets/images/processo-stencil.svg" alt="Mãos de luvas pretas posicionando o stencil roxo do desenho no antebraço antes da sessão" loading="lazy" width="1600" height="1200">
+          </div>
+          <figcaption class="micro">O stencil é ajustado no corpo antes de começar</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============================== 07 · VISITE ============================== -->
+    <section class="visite section--rose" id="visite" aria-label="Visite o estúdio">
+      <!-- [PREENCHER] endereço real, cidade/UF e o link do Google Maps (nos dois links abaixo e no rodapé) -->
+      <div class="visite__grid">
+        <div class="visite__text">
+          <p class="section-label reveal">07 — Visite</p>
+          <h2 class="section-title" data-titulo>
+            <span class="font-display">Venha conhecer</span><br>
+            <span class="font-display"><em class="accent">a casa.</em></span>
+          </h2>
+          <address class="visite__endereco reveal">Rua do Exemplo, 123 — Centro<br>Sua Cidade/UF</address>
+          <p class="visite__nota reveal">Atendimento com hora marcada. Avise antes de vir, para um dos artistas estar livre para conversar com você.</p>
+          <div class="reveal">
+            <a class="cta-line" href="https://maps.google.com/" target="_blank" rel="noopener noreferrer" data-cursor="Abrir">
+              <span class="cta-line__text">Abrir no mapa</span>
+              <span class="cta-line__arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+        <a class="visite__mapa" href="https://maps.google.com/" target="_blank" rel="noopener noreferrer" aria-label="Abrir o endereço do estúdio no mapa" data-cursor="Abrir">
+          <!-- Mapa ilustrado (não é o mapa real): ruas, praça e o rio se desenham; a gota marca a casa -->
+          <svg class="visite__svg" viewBox="0 0 400 300" aria-hidden="true" focusable="false" data-desenha>
+            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <path class="mapa__rio" pathLength="1" d="M0 247C60 236 92 270 160 262s120-40 180-34c28 3 44 10 60 13" stroke-width="10"/>
+              <g stroke-width="1.4">
+                <path pathLength="1" d="M0 70H400M0 82H400"/>
+                <path pathLength="1" d="M0 172H400M0 184H400"/>
+                <path pathLength="1" d="M92 0V230M104 0V230"/>
+                <path pathLength="1" d="M212 0V226M224 0V226"/>
+                <path pathLength="1" d="M318 0V222M330 0V222"/>
+                <path pathLength="1" d="M236 0L400 151M247 0L400 141"/>
+              </g>
+              <circle pathLength="1" cx="276" cy="126" r="26" stroke-width="1.4"/>
+              <path pathLength="1" d="M264 122c4-6 10-6 14 0s10 6 14 0" stroke-width="1.2"/>
+            </g>
+            <g class="flash__tinta">
+              <path d="M158 92c0 0-16 22-16 33a16 16 0 0 0 32 0c0-11-16-33-16-33Z" fill="currentColor"/>
+              <circle class="mapa__furo" cx="158" cy="126" r="5"/>
+            </g>
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- ============================== 08 · FAQ ============================== -->
+    <section class="faq section--dark" id="faq" aria-label="Perguntas frequentes">
+      <div class="section-head">
+        <p class="section-label section-label--light reveal">08 — Dúvidas</p>
+        <h2 class="section-title section-title--light" data-titulo>
+          <span class="font-display">Perguntas</span><br>
+          <span class="font-display"><em class="accent">frequentes.</em></span>
+        </h2>
+        <p class="section-sub section-sub--light reveal">O que costumam perguntar antes de marcar.</p>
+      </div>
+      <div class="faq__grid">
+        <div class="faq__list revela-grupo" id="faqList">
+
+          <div class="faq__item" data-faq-img="ambiente">
+            <h3><button type="button" class="faq__q" aria-expanded="false" aria-controls="faq-a1" id="faq-q1"><span class="faq__num">01</span><span class="faq__question">Preciso agendar uma avaliação?</span></button></h3>
+            <div class="faq__a" id="faq-a1" role="region" aria-labelledby="faq-q1"><p>Para a maioria dos projetos, sim. É nela que o artista entende a ideia, o tamanho e o lugar do corpo, e só então passa o orçamento.</p></div>
+          </div>
+
+          <div class="faq__item" data-faq-img="artistas">
+            <h3><button type="button" class="faq__q" aria-expanded="false" aria-controls="faq-a2" id="faq-q2"><span class="faq__num">02</span><span class="faq__question">Como escolho o artista?</span></button></h3>
+            <div class="faq__a" id="faq-a2" role="region" aria-labelledby="faq-q2"><p>Pelo estilo que você procura. Se ficar em dúvida, mande a ideia e as referências: a gente indica quem combina com o projeto.</p></div>
+          </div>
+
+          <div class="faq__item" data-faq-img="stencil">
+            <h3><button type="button" class="faq__q" aria-expanded="false" aria-controls="faq-a3" id="faq-q3"><span class="faq__num">03</span><span class="faq__question">Como funciona o sinal?</span></button></h3>
+            <!-- [CONFIRMAR] valor e regras do sinal -->
+            <div class="faq__a" id="faq-a3" role="region" aria-labelledby="faq-q3"><p>O sinal reserva a data e o tempo do artista para desenvolver o desenho. O valor e as condições ficam combinados junto com o orçamento.</p></div>
+          </div>
+
+          <div class="faq__item" data-faq-img="ambiente">
+            <h3><button type="button" class="faq__q" aria-expanded="false" aria-controls="faq-a4" id="faq-q4"><span class="faq__num">04</span><span class="faq__question">Menores de idade podem tatuar?</span></button></h3>
+            <!-- [CONFIRMAR] regra da legislação local e documentos exigidos -->
+            <div class="faq__a" id="faq-a4" role="region" aria-labelledby="faq-q4"><p>Só com a presença e a autorização por escrito do responsável legal, conforme a legislação da sua cidade e do seu estado. Fale com a gente antes de agendar.</p></div>
+          </div>
+
+          <div class="faq__item" data-faq-img="coverup">
+            <h3><button type="button" class="faq__q" aria-expanded="false" aria-controls="faq-a5" id="faq-q5"><span class="faq__num">05</span><span class="faq__question">Vocês fazem cover-up?</span></button></h3>
+            <div class="faq__a" id="faq-a5" role="region" aria-labelledby="faq-q5"><p>Fazemos avaliação de cover-up e de reforma. O artista olha a tatuagem antiga e diz, com sinceridade, o que é possível fazer.</p></div>
+          </div>
+
+          <div class="faq__item" data-faq-img="referencia">
+            <h3><button type="button" class="faq__q" aria-expanded="false" aria-controls="faq-a6" id="faq-q6"><span class="faq__num">06</span><span class="faq__question">Posso levar referências?</span></button></h3>
+            <div class="faq__a" id="faq-a6" role="region" aria-labelledby="faq-q6"><p>Pode e deve. As referências mostram o caminho que você imagina; o desenho final é criado para você e para o seu corpo.</p></div>
+          </div>
+
+          <div class="faq__item" data-faq-img="cuidados">
+            <h3><button type="button" class="faq__q" aria-expanded="false" aria-controls="faq-a7" id="faq-q7"><span class="faq__num">07</span><span class="faq__question">Como cuido da tatuagem depois?</span></button></h3>
+            <div class="faq__a" id="faq-a7" role="region" aria-labelledby="faq-q7"><p>Você recebe as orientações explicadas na saída da sessão e pode chamar o estúdio a qualquer momento durante a cicatrização.</p></div>
+          </div>
+
+          <div class="faq__item" data-faq-img="ambiente">
+            <h3><button type="button" class="faq__q" aria-expanded="false" aria-controls="faq-a8" id="faq-q8"><span class="faq__num">08</span><span class="faq__question">Posso passar no estúdio sem marcar?</span></button></h3>
+            <div class="faq__a" id="faq-a8" role="region" aria-labelledby="faq-q8"><p>O atendimento é com hora marcada, para que um artista esteja livre para conversar com calma. Mande uma mensagem antes e a gente combina o melhor horário.</p></div>
+          </div>
+
+        </div>
+        <div class="faq__media" aria-hidden="true">
+          <figure class="faq__img is-active" data-img="ambiente"><img src="assets/images/hero-estudio.svg" alt="" loading="lazy" width="1280" height="1600"></figure>
+          <figure class="faq__img" data-img="artistas"><img src="assets/images/artista-marina.svg" alt="" loading="lazy" width="1200" height="1600"></figure>
+          <figure class="faq__img" data-img="stencil"><img src="assets/images/estudio-bancada.svg" alt="" loading="lazy" width="1200" height="1600"></figure>
+          <figure class="faq__img" data-img="coverup"><img src="assets/images/galeria-02.svg" alt="" loading="lazy" width="1280" height="1600"></figure>
+          <figure class="faq__img" data-img="referencia"><img src="assets/images/galeria-04.svg" alt="" loading="lazy" width="1200" height="1600"></figure>
+          <figure class="faq__img" data-img="cuidados"><img src="assets/images/galeria-01.svg" alt="" loading="lazy" width="1200" height="1600"></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== 09 · CONTATO ============================== -->
+    <section class="booking section--light" id="contact" aria-label="Contato">
+      <div class="booking__inner">
+        <a class="booking__phone-wrap" href="https://wa.me/" target="_blank" rel="noopener noreferrer" aria-label="Chamar a Casa Nanquim no WhatsApp" data-cursor="Abrir">
+          <span class="booking__ring micro" aria-hidden="true">Escreva pra gente</span>
+          <!-- Frasco de nanquim desenhado em traço; se desenha quando entra na tela e a tinta cai depois -->
+          <svg class="booking__phone" viewBox="0 0 220 220" aria-hidden="true" focusable="false" data-desenha>
+            <g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+              <!-- tampa -->
+              <path pathLength="1" d="M86 24h48v30H86Z"/>
+              <path pathLength="1" d="M92 32v14M104 32v14M116 32v14M128 32v14"/>
+              <!-- corpo -->
+              <path pathLength="1" d="M80 54h60l26 36v94a12 12 0 0 1-12 12H66a12 12 0 0 1-12-12V90Z"/>
+              <!-- rótulo -->
+              <path pathLength="1" d="M66 112h88v48H66Z"/>
+              <path pathLength="1" d="M80 128h60M88 144h44" stroke-width="1.8"/>
+            </g>
+            <!-- nanquim no fundo do frasco e a gota que caiu -->
+            <path class="flash__tinta" d="M56 170h108v14a10 10 0 0 1-10 10H66a10 10 0 0 1-10-10Z" fill="currentColor"/>
+            <path class="flash__tinta" d="M188 150c0 0-9 12-9 18a9 9 0 0 0 18 0c0-6-9-18-9-18Z" fill="currentColor"/>
+          </svg>
+        </a>
+        <div class="booking__text">
+          <p class="section-label reveal">09 — Contato</p>
+          <h2 class="booking__title" data-titulo>
+            <span class="font-display">Vamos conversar</span><br>
+            <span class="font-display">sobre a sua <em class="accent tem-risco">ideia?<svg class="risco" aria-hidden="true" focusable="false"><use href="#risco"/></svg></em></span>
+          </h2>
+          <p class="booking__sub reveal">Mande a ideia, as referências e o lugar do corpo. A gente responde com os próximos passos.</p>
+          <div class="reveal">
+            <a class="btn-editorial" href="https://wa.me/" target="_blank" rel="noopener noreferrer" data-cursor="Abrir">Chamar no WhatsApp</a>
+            <p class="micro booking__alt">ou mande um <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">direct no Instagram</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== FINAL ============================== -->
+    <section class="finale section--black" id="finale" aria-label="Agendar avaliação">
+      <svg class="flash flash--agulha" viewBox="0 0 48 64" aria-hidden="true" focusable="false" data-desenha data-parallax="flash" data-vel="-1.2"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path pathLength="1" d="M40 4L12 46"/><path pathLength="1" d="M44 8l-6-6"/></g><path class="flash__tinta" d="M10 50c0 0-5 7-5 10a5 5 0 0 0 10 0c0-3-5-10-5-10Z" fill="currentColor"/></svg>
+      <svg class="flash flash--gota2" viewBox="0 0 48 64" aria-hidden="true" focusable="false" data-desenha data-parallax="flash" data-vel="1.4"><path pathLength="1" d="M24 4C24 4 7 28 7 41a17 17 0 0 0 34 0C41 28 24 4 24 4Z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+      <div class="finale__grid">
+        <div class="finale__text">
+          <h2 class="finale__title" data-titulo>
+            <span class="font-display">Casa Nanquim.</span><br>
+            <span class="font-display">Tatuagem</span><br>
+            <span class="font-display">com <em class="accent tem-risco">calma.<svg class="risco" aria-hidden="true" focusable="false"><use href="#risco"/></svg></em></span>
+          </h2>
+          <div class="reveal">
+            <a class="btn-editorial btn-editorial--light" href="https://wa.me/" target="_blank" rel="noopener noreferrer" data-cursor="Abrir">Agendar avaliação</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== RODAPÉ ============================== -->
+    <footer class="footer section--black" aria-label="Rodapé">
+      <div class="footer__inner">
+        <p class="footer__brand"><span class="font-display">Casa Nanquim</span><span class="micro">Estúdio de Tatuagem · Rua do Exemplo, 123 — Sua Cidade/UF</span></p>
+        <nav class="footer__links" aria-label="Contatos">
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" data-cursor="Abrir">Instagram</a>
+          <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" data-cursor="Abrir">WhatsApp</a>
+          <a href="https://maps.google.com/" target="_blank" rel="noopener noreferrer" data-cursor="Abrir">Mapa</a>
+        </nav>
+        <div class="footer__fim">
+          <p class="micro">© Casa Nanquim</p>
+          <p class="micro footer__modelo">Site modelo — nomes, contatos e imagens de exemplo.</p>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- ============================== NAV INFERIOR ============================== -->
+  <nav class="nav" id="nav" aria-label="Navegação principal">
+    <ul class="nav__list">
+      <li><a href="#hero" class="nav__link is-active" data-section="hero" aria-current="location">Início</a></li>
+      <li><a href="#estudio" class="nav__link" data-section="estudio">Estúdio</a></li>
+      <li><a href="#artistas" class="nav__link" data-section="artistas">Artistas</a></li>
+      <li><a href="#work" class="nav__link" data-section="work">Trabalhos</a></li>
+      <li><a href="#visite" class="nav__link" data-section="visite">Visite</a></li>
+      <li><a href="#faq" class="nav__link" data-section="faq">Dúvidas</a></li>
+    </ul>
+    <a class="nav__cta" href="https://wa.me/" target="_blank" rel="noopener noreferrer">Agendar avaliação</a>
+  </nav>
+
+  <!-- Nav mobile compacta -->
+  <nav class="mnav" id="mnav" aria-label="Navegação">
+    <button type="button" class="mnav__toggle" id="mnavToggle" aria-expanded="false" aria-controls="mnavMenu">
+      <span class="mnav__toggle-label">Menu</span>
+    </button>
+    <a class="mnav__cta" href="https://wa.me/" target="_blank" rel="noopener noreferrer">Agendar</a>
+  </nav>
+  <div class="mnav__menu" id="mnavMenu" hidden>
+    <ul>
+      <li><a href="#hero"><span class="micro">01</span><span class="font-display">Início</span></a></li>
+      <li><a href="#estudio"><span class="micro">02</span><span class="font-display">O estúdio</span></a></li>
+      <li><a href="#artistas"><span class="micro">03</span><span class="font-display">Artistas</span></a></li>
+      <li><a href="#work"><span class="micro">04</span><span class="font-display">Trabalhos</span></a></li>
+      <li><a href="#biosseguranca"><span class="micro">05</span><span class="font-display">Biossegurança</span></a></li>
+      <li><a href="#process"><span class="micro">06</span><span class="font-display">Como agendar</span></a></li>
+      <li><a href="#visite"><span class="micro">07</span><span class="font-display">Visite</span></a></li>
+      <li><a href="#faq"><span class="micro">08</span><span class="font-display">Dúvidas</span></a></li>
+      <li><a href="#contact"><span class="micro">09</span><span class="font-display">Contato</span></a></li>
+    </ul>
+  </div>
+</body>
+</html>

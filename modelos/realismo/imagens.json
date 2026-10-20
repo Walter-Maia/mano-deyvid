@@ -1,0 +1,113 @@
+{
+  "tema": {
+    "fundo": "#1b1b1f",
+    "tinta": "#f4f2ee",
+    "linha": "rgba(244,242,238,0.2)",
+    "acento": "#ff6b4a",
+    "fonte": "'Helvetica Neue', Arial, sans-serif",
+    "fonteTitulo": "Impact, 'Arial Narrow', sans-serif",
+    "motivo": "<circle cx='38' cy='40' r='22'/><circle cx='62' cy='40' r='22'/><circle cx='50' cy='61' r='22'/>",
+    "motivoViewBox": "0 0 100 100"
+  },
+  "imagens": [
+    {
+      "arquivo": "obra-tigre.svg",
+      "largura": 1200,
+      "altura": 1600,
+      "proporcao": "3:4",
+      "rotulo": "Tigre-de-bengala · coxa",
+      "alt": "Tatuagem em realismo colorido de um rosto de tigre-de-bengala na coxa, pelagem laranja com listras pretas e olhos verde-dourados",
+      "prompt": "Photorealistic photograph of a freshly finished color realism tattoo of a Bengal tiger's face on the outer thigh of a person, vivid orange and amber fur with deep black stripes, glowing green-gold eyes, crisp white highlights on whiskers and fur, smooth color gradients, skin slightly glossy from a thin layer of aftercare ointment with faint natural redness at the edges, tight crop on the thigh and the tattoo only, real skin texture with pores and fine hairs, soft natural daylight from a large window in a clean tattoo studio, dark neutral background out of focus, 85mm lens, shallow depth of field, editorial tattoo portfolio quality, no text, no watermark, no logo, vertical 3:4"
+    },
+    {
+      "arquivo": "obra-retrato-pet.svg",
+      "largura": 1280,
+      "altura": 1600,
+      "proporcao": "4:5",
+      "rotulo": "Retrato de cachorro · antebraço",
+      "alt": "Tatuagem cicatrizada em realismo colorido de um cachorro caramelo de olhos cor de âmbar, na parte interna do antebraço",
+      "prompt": "Photorealistic photograph of a healed color realism tattoo portrait of a caramel-colored mixed-breed dog with expressive amber eyes, soft detailed fur and a wet nose highlight, on the inner forearm, a subtle blue-grey background wash fading softly into the skin, fully healed with settled colors and no redness, real skin texture with pores and fine hairs, forearm resting on a black leather tattoo bed, soft natural window light in a clean tattoo studio, 85mm lens, shallow depth of field, no text, no watermark, no logo, vertical 4:5"
+    },
+    {
+      "arquivo": "obra-beija-flor.svg",
+      "largura": 1200,
+      "altura": 1600,
+      "proporcao": "3:4",
+      "rotulo": "Beija-flor e ipê-amarelo · antebraço",
+      "alt": "Tatuagem cicatrizada em realismo colorido de um beija-flor verde e violeta junto a flores de ipê-amarelo, no antebraço",
+      "prompt": "Photorealistic photograph of a healed color realism tattoo on the outer forearm: a hummingbird with iridescent emerald green and violet feathers hovering beside a branch of bright yellow ipe flowers (Handroanthus), delicate wing motion, soft light falloff, fully healed with settled colors, real skin texture with pores and fine hairs, arm held naturally against a dark neutral background, soft natural daylight in a tattoo studio, 85mm lens, shallow depth of field, no text, no watermark, no logo, vertical 3:4"
+    },
+    {
+      "arquivo": "obra-olho.svg",
+      "largura": 1600,
+      "altura": 1600,
+      "proporcao": "1:1",
+      "rotulo": "Olho em macro · panturrilha",
+      "alt": "Tatuagem recém-feita em realismo colorido de um olho humano em macro, íris verde-avelã com reflexos, na panturrilha",
+      "prompt": "Photorealistic close-up photograph of a freshly finished color realism tattoo of a single human eye in extreme macro detail, hazel-green iris with amber flecks, wet reflections and crisp white catchlights, natural skin tones around the eye and fine eyelashes, on the back of the calf, slight natural redness and a light sheen of aftercare ointment, real skin texture with pores, soft natural studio light, 100mm macro lens, shallow depth of field, no text, no watermark, no logo, square 1:1"
+    },
+    {
+      "arquivo": "obra-koi.svg",
+      "largura": 1200,
+      "altura": 1800,
+      "proporcao": "2:3",
+      "rotulo": "Carpas e lótus · fechamento de braço",
+      "alt": "Fechamento de braço cicatrizado em realismo colorido com carpas laranja e brancas, flores de lótus rosa e água em tons de verde-azulado",
+      "prompt": "Photorealistic photograph of a healed full sleeve color realism tattoo on a man's arm, from shoulder to wrist: orange and white koi fish swimming among pink lotus flowers and lily pads, dark teal water with soft ripples and light reflections, smooth blended color, fully healed with settled colors, person wearing a plain black tank top, photographed from the side with the face out of frame, real skin texture, soft natural daylight in a clean tattoo studio, dark neutral background, 50mm lens, no text, no watermark, no logo, vertical 2:3"
+    },
+    {
+      "arquivo": "obra-arara.svg",
+      "largura": 1280,
+      "altura": 1600,
+      "proporcao": "4:5",
+      "rotulo": "Arara-azul · ombro",
+      "alt": "Tatuagem cicatrizada em realismo colorido de uma arara-azul, penas azul-cobalto e anel amarelo nos olhos, no ombro e braço",
+      "prompt": "Photorealistic photograph of a healed color realism tattoo of a hyacinth macaw perched on a branch, deep cobalt blue feathers with subtle violet sheen, bright yellow eye ring and yellow patch at the beak, placed on the shoulder and upper arm of a woman, face out of frame, fully healed with settled colors, real skin texture with pores, soft natural window light in a tattoo studio, dark neutral background, 85mm lens, shallow depth of field, no text, no watermark, no logo, vertical 4:5"
+    },
+    {
+      "arquivo": "obra-rosa.svg",
+      "largura": 1600,
+      "altura": 1600,
+      "proporcao": "1:1",
+      "rotulo": "Rosa com orvalho · braço",
+      "alt": "Tatuagem recém-feita em realismo colorido de uma rosa vermelha com gotas de orvalho nas pétalas e duas folhas verdes, no braço",
+      "prompt": "Photorealistic photograph of a freshly finished color realism tattoo of a deep red rose with clear water droplets on the petals and two green leaves, on the outer upper arm, rich crimson to dark red gradients, glossy droplet highlights, slight natural redness around the edges and a light sheen of aftercare ointment, real skin texture with pores and fine hairs, soft natural studio light, dark neutral background, 85mm lens, shallow depth of field, no text, no watermark, no logo, square 1:1"
+    },
+    {
+      "arquivo": "obra-retrato.svg",
+      "largura": 1200,
+      "altura": 1600,
+      "proporcao": "3:4",
+      "rotulo": "Retrato em cor · braço",
+      "alt": "Tatuagem cicatrizada em realismo colorido do retrato de uma senhora de cabelos prateados e sorriso tranquilo, no braço",
+      "prompt": "Photorealistic photograph of a healed color realism portrait tattoo of an anonymous elderly woman with silver hair, warm smile lines and natural soft skin tones, gentle warm light on one side of the face, on the outer upper arm, fully healed with settled colors, real skin texture with pores and fine hairs, soft natural window light in a tattoo studio, dark neutral background, 85mm lens, shallow depth of field, the tattooed person's face out of frame, no text, no watermark, no logo, vertical 3:4"
+    },
+    {
+      "arquivo": "obra-releitura.svg",
+      "largura": 1200,
+      "altura": 1600,
+      "proporcao": "3:4",
+      "rotulo": "Releitura de pintura · panturrilha",
+      "alt": "Tatuagem cicatrizada em cor que relê a pintura dos girassóis de Van Gogh, com textura de pinceladas, na panturrilha",
+      "prompt": "Photorealistic photograph of a healed color tattoo on the calf reinterpreting Vincent van Gogh's Sunflowers painting, a vase of sunflowers in yellow, ochre and warm orange tones, visible brushstroke texture translated into tattoo shading, fully healed with settled colors, real skin texture with pores and fine hairs, leg photographed from behind in soft natural daylight in a tattoo studio, dark neutral background, 85mm lens, shallow depth of field, no text, no watermark, no logo, vertical 3:4"
+    },
+    {
+      "arquivo": "artista.svg",
+      "largura": 1280,
+      "altura": 1600,
+      "proporcao": "4:5",
+      "rotulo": "Íris Valença em sessão",
+      "alt": "Íris Valença concentrada, tatuando um realismo colorido no antebraço de um cliente, com potes de tinta ciano, magenta e amarela na bancada",
+      "prompt": "Photorealistic portrait of a tattoo artist at work: a woman in her early thirties with shoulder-length dark curly hair tied back, light brown skin, small silver hoop earrings, wearing a black apron over a dark grey t-shirt and black nitrile gloves, focused expression, tattooing a colorful realism piece on a client's forearm with a pen-style rotary tattoo machine, ink caps with cyan, magenta and yellow inks on a covered tray, clean modern studio with soft window light and dark walls, 50mm lens, shallow depth of field, natural colors, no text, no watermark, no logo, vertical 4:5"
+    },
+    {
+      "arquivo": "processo-sessao.svg",
+      "largura": 1600,
+      "altura": 1200,
+      "proporcao": "4:3",
+      "rotulo": "Sessão em andamento · camadas de cor",
+      "alt": "Realismo colorido em andamento no antebraço: metade do beija-flor já em cor e a outra metade ainda na base em cinza, com a mão enluvada da artista segurando a máquina",
+      "prompt": "Photorealistic close-up photograph of a color realism tattoo in progress on a forearm: half of a hummingbird already fully colored in emerald green and violet, the other half still in grey wash base shading with faint purple stencil lines, the artist's hand in a black nitrile glove holding a pen-style rotary tattoo machine, folded paper towel, small ink caps with cyan, magenta and yellow ink, slight natural redness on the skin, soft natural studio light, 50mm lens, shallow depth of field, no text, no watermark, no logo, horizontal 4:3"
+    }
+  ]
+}

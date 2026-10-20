@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1600" viewBox="0 0 1200 1600" role="img" aria-label="Releitura de pintura · panturrilha">
+<rect width="1200" height="1600" fill="#1b1b1f"/>
+<rect x="86.4" y="86.4" width="1027.2" height="1427.2" fill="none" stroke="rgba(244,242,238,0.2)" stroke-width="2.4"/>
+<path d="M54 138V54H138M1146 138V54H1062M54 1462V1546H138M1146 1462V1546H1062" fill="none" stroke="#ff6b4a" stroke-width="7.2" stroke-linecap="square"/>
+<g transform="translate(420.0 492.0) scale(3.6000)" fill="none" stroke="#ff6b4a" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><circle cx='38' cy='40' r='22'/><circle cx='62' cy='40' r='22'/><circle cx='50' cy='61' r='22'/></g>
+<g fill="#f4f2ee" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif">
+<text x="600" y="984" font-size="74" font-family="Impact, 'Arial Narrow', sans-serif">Sua foto aqui</text>
+<text x="600" y="1065" font-size="41" opacity="0.8">Releitura de pintura · panturrilha</text>
+<text x="600" y="1460" font-size="31" letter-spacing="7.8" opacity="0.55">3:4 · 1200 × 1600 PX OU MAIS</text>
+</g>
+</svg>
